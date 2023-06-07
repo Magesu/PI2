@@ -71,5 +71,53 @@ namespace PI2
 
             MessageBox.Show("Resultado salvo.", "Salvar Curso Angular", MessageBoxButtons.OK);
         }
+
+        private void constanteElasticaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.constanteElasticaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.calculoSuspensaoDataSet);
+
+        }
+
+        private void Calculadora_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.CursoAngular' table. You can move, or remove it, as needed.
+            this.cursoAngularTableAdapter.Fill(this.calculoSuspensaoDataSet.CursoAngular);
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.EquipesParticipantes' table. You can move, or remove it, as needed.
+            this.equipesParticipantesTableAdapter.Fill(this.calculoSuspensaoDataSet.EquipesParticipantes);
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.EquipesParticipantes' table. You can move, or remove it, as needed.
+            this.equipesParticipantesTableAdapter.Fill(this.calculoSuspensaoDataSet.EquipesParticipantes);
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.calculoSuspensaoDataSet.Alunos);
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.Equipes' table. You can move, or remove it, as needed.
+            this.equipesTableAdapter.Fill(this.calculoSuspensaoDataSet.Equipes);
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.equipesTableAdapter.FillBy(this.calculoSuspensaoDataSet.Equipes);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.constanteElasticaTableAdapter.FillBy(this.calculoSuspensaoDataSet.ConstanteElastica);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
