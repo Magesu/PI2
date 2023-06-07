@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.cadastroAluno = new System.Windows.Forms.Button();
             this.cadastroEquipe = new System.Windows.Forms.Button();
             this.constanteElasticaButton = new System.Windows.Forms.Button();
@@ -36,9 +37,9 @@
             this.contaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fazerLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarEquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.salvarConstanteElasticaButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.resultadoConstanteElastica = new System.Windows.Forms.NumericUpDown();
             this.calcularConstanteElasticaButton = new System.Windows.Forms.Button();
             this.F = new System.Windows.Forms.NumericUpDown();
@@ -48,7 +49,6 @@
             this.bdLabel = new System.Windows.Forms.Label();
             this.FLabel = new System.Windows.Forms.Label();
             this.sdLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.salvarCursoAngularButton = new System.Windows.Forms.Button();
             this.resultadoCursoAngular = new System.Windows.Forms.NumericUpDown();
             this.calcularCursoAngularButton = new System.Windows.Forms.Button();
@@ -57,7 +57,8 @@
             this.b = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cadastrarEquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -114,6 +115,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -121,6 +123,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // contaToolStripMenuItem
             // 
@@ -144,6 +147,12 @@
             this.fazerLoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fazerLoginToolStripMenuItem.Text = "Login";
             // 
+            // cadastrarEquipeToolStripMenuItem
+            // 
+            this.cadastrarEquipeToolStripMenuItem.Name = "cadastrarEquipeToolStripMenuItem";
+            this.cadastrarEquipeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarEquipeToolStripMenuItem.Text = "Cadastrar equipe";
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -153,7 +162,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.salvarConstanteElasticaButton);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.resultadoConstanteElastica);
             this.splitContainer1.Panel1.Controls.Add(this.calcularConstanteElasticaButton);
             this.splitContainer1.Panel1.Controls.Add(this.F);
@@ -163,10 +171,10 @@
             this.splitContainer1.Panel1.Controls.Add(this.bdLabel);
             this.splitContainer1.Panel1.Controls.Add(this.FLabel);
             this.splitContainer1.Panel1.Controls.Add(this.sdLabel);
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.salvarCursoAngularButton);
             this.splitContainer1.Panel2.Controls.Add(this.resultadoCursoAngular);
             this.splitContainer1.Panel2.Controls.Add(this.calcularCursoAngularButton);
@@ -175,13 +183,14 @@
             this.splitContainer1.Panel2.Controls.Add(this.b);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 426);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 377);
             this.splitContainer1.SplitterDistance = 393;
             this.splitContainer1.TabIndex = 0;
             // 
             // salvarConstanteElasticaButton
             // 
-            this.salvarConstanteElasticaButton.Location = new System.Drawing.Point(169, 296);
+            this.salvarConstanteElasticaButton.Location = new System.Drawing.Point(212, 297);
             this.salvarConstanteElasticaButton.Name = "salvarConstanteElasticaButton";
             this.salvarConstanteElasticaButton.Size = new System.Drawing.Size(75, 23);
             this.salvarConstanteElasticaButton.TabIndex = 20;
@@ -189,24 +198,16 @@
             this.salvarConstanteElasticaButton.UseVisualStyleBackColor = true;
             this.salvarConstanteElasticaButton.Click += new System.EventHandler(this.salvarConstanteElasticaButton_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(136, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Calcular Constante Elástica";
-            // 
             // resultadoConstanteElastica
             // 
+            this.resultadoConstanteElastica.BackColor = System.Drawing.SystemColors.Window;
             this.resultadoConstanteElastica.DecimalPlaces = 2;
             this.resultadoConstanteElastica.Increment = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.resultadoConstanteElastica.Location = new System.Drawing.Point(152, 204);
+            this.resultadoConstanteElastica.Location = new System.Drawing.Point(144, 234);
             this.resultadoConstanteElastica.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -219,7 +220,7 @@
             // 
             // calcularConstanteElasticaButton
             // 
-            this.calcularConstanteElasticaButton.Location = new System.Drawing.Point(169, 251);
+            this.calcularConstanteElasticaButton.Location = new System.Drawing.Point(113, 297);
             this.calcularConstanteElasticaButton.Name = "calcularConstanteElasticaButton";
             this.calcularConstanteElasticaButton.Size = new System.Drawing.Size(75, 23);
             this.calcularConstanteElasticaButton.TabIndex = 19;
@@ -230,7 +231,7 @@
             // F
             // 
             this.F.DecimalPlaces = 2;
-            this.F.Location = new System.Drawing.Point(152, 74);
+            this.F.Location = new System.Drawing.Point(144, 104);
             this.F.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -243,7 +244,7 @@
             // bd
             // 
             this.bd.DecimalPlaces = 2;
-            this.bd.Location = new System.Drawing.Point(152, 114);
+            this.bd.Location = new System.Drawing.Point(144, 144);
             this.bd.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -256,7 +257,8 @@
             // resultadoLabel
             // 
             this.resultadoLabel.AutoSize = true;
-            this.resultadoLabel.Location = new System.Drawing.Point(91, 206);
+            this.resultadoLabel.BackColor = System.Drawing.Color.LightGray;
+            this.resultadoLabel.Location = new System.Drawing.Point(83, 236);
             this.resultadoLabel.Name = "resultadoLabel";
             this.resultadoLabel.Size = new System.Drawing.Size(55, 13);
             this.resultadoLabel.TabIndex = 17;
@@ -265,7 +267,7 @@
             // sd
             // 
             this.sd.DecimalPlaces = 2;
-            this.sd.Location = new System.Drawing.Point(152, 157);
+            this.sd.Location = new System.Drawing.Point(144, 187);
             this.sd.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -278,7 +280,8 @@
             // bdLabel
             // 
             this.bdLabel.AutoSize = true;
-            this.bdLabel.Location = new System.Drawing.Point(133, 116);
+            this.bdLabel.BackColor = System.Drawing.Color.LightGray;
+            this.bdLabel.Location = new System.Drawing.Point(125, 146);
             this.bdLabel.Name = "bdLabel";
             this.bdLabel.Size = new System.Drawing.Size(15, 13);
             this.bdLabel.TabIndex = 16;
@@ -287,7 +290,8 @@
             // FLabel
             // 
             this.FLabel.AutoSize = true;
-            this.FLabel.Location = new System.Drawing.Point(133, 76);
+            this.FLabel.BackColor = System.Drawing.Color.LightGray;
+            this.FLabel.Location = new System.Drawing.Point(125, 106);
             this.FLabel.Name = "FLabel";
             this.FLabel.Size = new System.Drawing.Size(13, 13);
             this.FLabel.TabIndex = 14;
@@ -296,24 +300,16 @@
             // sdLabel
             // 
             this.sdLabel.AutoSize = true;
-            this.sdLabel.Location = new System.Drawing.Point(133, 159);
+            this.sdLabel.BackColor = System.Drawing.Color.LightGray;
+            this.sdLabel.Location = new System.Drawing.Point(125, 189);
             this.sdLabel.Name = "sdLabel";
             this.sdLabel.Size = new System.Drawing.Size(13, 13);
             this.sdLabel.TabIndex = 15;
             this.sdLabel.Text = "d";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(151, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 13);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Calcular Curso Angular";
-            // 
             // salvarCursoAngularButton
             // 
-            this.salvarCursoAngularButton.Location = new System.Drawing.Point(170, 296);
+            this.salvarCursoAngularButton.Location = new System.Drawing.Point(211, 297);
             this.salvarCursoAngularButton.Name = "salvarCursoAngularButton";
             this.salvarCursoAngularButton.Size = new System.Drawing.Size(75, 23);
             this.salvarCursoAngularButton.TabIndex = 28;
@@ -323,13 +319,14 @@
             // 
             // resultadoCursoAngular
             // 
+            this.resultadoCursoAngular.BackColor = System.Drawing.SystemColors.Window;
             this.resultadoCursoAngular.DecimalPlaces = 2;
             this.resultadoCursoAngular.Increment = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.resultadoCursoAngular.Location = new System.Drawing.Point(154, 207);
+            this.resultadoCursoAngular.Location = new System.Drawing.Point(141, 234);
             this.resultadoCursoAngular.Maximum = new decimal(new int[] {
             1874919423,
             2328306,
@@ -342,7 +339,7 @@
             // 
             // calcularCursoAngularButton
             // 
-            this.calcularCursoAngularButton.Location = new System.Drawing.Point(170, 253);
+            this.calcularCursoAngularButton.Location = new System.Drawing.Point(111, 297);
             this.calcularCursoAngularButton.Name = "calcularCursoAngularButton";
             this.calcularCursoAngularButton.Size = new System.Drawing.Size(75, 23);
             this.calcularCursoAngularButton.TabIndex = 27;
@@ -353,7 +350,7 @@
             // a
             // 
             this.a.DecimalPlaces = 2;
-            this.a.Location = new System.Drawing.Point(154, 76);
+            this.a.Location = new System.Drawing.Point(141, 106);
             this.a.Maximum = new decimal(new int[] {
             1874919423,
             2328306,
@@ -366,7 +363,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 209);
+            this.label3.BackColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(80, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 26;
@@ -375,7 +373,7 @@
             // b
             // 
             this.b.DecimalPlaces = 2;
-            this.b.Location = new System.Drawing.Point(154, 114);
+            this.b.Location = new System.Drawing.Point(141, 144);
             this.b.Maximum = new decimal(new int[] {
             1874919423,
             2328306,
@@ -388,7 +386,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 116);
+            this.label2.BackColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(122, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 25;
@@ -397,29 +396,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 78);
+            this.label1.BackColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(122, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 24;
             this.label1.Text = "a";
             // 
-            // cadastrarEquipeToolStripMenuItem
+            // groupBox1
             // 
-            this.cadastrarEquipeToolStripMenuItem.Name = "cadastrarEquipeToolStripMenuItem";
-            this.cadastrarEquipeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarEquipeToolStripMenuItem.Text = "Cadastrar equipe";
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.Location = new System.Drawing.Point(79, 41);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(241, 302);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Calcular Constante Elástica";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox2.Location = new System.Drawing.Point(72, 41);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(249, 302);
+            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Calcular Curso Angular";
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 401);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.cursoAngularButton);
             this.Controls.Add(this.constanteElasticaButton);
             this.Controls.Add(this.cadastroEquipe);
             this.Controls.Add(this.cadastroAluno);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(18000, -18000);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Calculadora";
             this.Text = "Calculadora";
@@ -461,8 +478,6 @@
         private System.Windows.Forms.Label bdLabel;
         private System.Windows.Forms.Label FLabel;
         private System.Windows.Forms.Label sdLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button salvarCursoAngularButton;
         private System.Windows.Forms.NumericUpDown resultadoCursoAngular;
         private System.Windows.Forms.Button calcularCursoAngularButton;
@@ -475,5 +490,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fazerLoginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarEquipeToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
