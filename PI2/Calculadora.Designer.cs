@@ -436,7 +436,7 @@
             this.Controls.Add(this.cadastroAluno);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(1800, -800);
+            this.Location = new System.Drawing.Point(18000, -18000);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Calculadora";
             this.Text = "Calculadora";

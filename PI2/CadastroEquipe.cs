@@ -23,5 +23,10 @@ namespace PI2
             EquipesTableAdapter equipesTableAdapter = new EquipesTableAdapter();
             equipesTableAdapter.Insert(Convert.ToInt32(numCarro.Value), nomeCarro.Text);
         }
+
+        private void numCarroLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
