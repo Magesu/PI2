@@ -82,6 +82,10 @@ namespace PI2
 
         private void Calculadora_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.Equipes' table. You can move, or remove it, as needed.
+            this.equipesTableAdapter.Fill(this.calculoSuspensaoDataSet.Equipes);
+            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.calculoSuspensaoDataSet.Alunos);
             // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.EquipesParticipantes' table. You can move, or remove it, as needed.
             this.equipesParticipantesTableAdapter.Fill(this.calculoSuspensaoDataSet.EquipesParticipantes);
             // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.CursoAngular' table. You can move, or remove it, as needed.
@@ -118,6 +122,14 @@ namespace PI2
             alunosTableAdapter.Insert(ra.Text, nome.Text, null);
 
             MessageBox.Show("Aluno cadastrado", "Cadastrar aluno", MessageBoxButtons.OK);
+        }
+
+        private void cadastroEquipeButton_Click(object sender, EventArgs e)
+        {
+            EquipesTableAdapter equipesTableAdapter = new EquipesTableAdapter();
+            equipesTableAdapter.Insert(Convert.ToInt32(numCarro.Value), nomeCarro.Text);
+
+            MessageBox.Show("Equipe cadastrada", "Cadastrar aluno", MessageBoxButtons.OK);
         }
     }
 }

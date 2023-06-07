@@ -42,6 +42,7 @@
             this.nomeCarro.Name = "nomeCarro";
             this.nomeCarro.Size = new System.Drawing.Size(104, 20);
             this.nomeCarro.TabIndex = 1;
+            this.nomeCarro.TextChanged += new System.EventHandler(this.nomeCarro_TextChanged);
             // 
             // numCarro
             // 
@@ -54,6 +55,7 @@
             this.numCarro.Name = "numCarro";
             this.numCarro.Size = new System.Drawing.Size(104, 20);
             this.numCarro.TabIndex = 2;
+            this.numCarro.ValueChanged += new System.EventHandler(this.numCarro_ValueChanged);
             // 
             // numCarroLabel
             // 
@@ -64,6 +66,7 @@
             this.numCarroLabel.Size = new System.Drawing.Size(86, 13);
             this.numCarroLabel.TabIndex = 3;
             this.numCarroLabel.Text = "Número do carro";
+            this.numCarroLabel.Click += new System.EventHandler(this.numCarroLabel_Click);
             // 
             // nomeCarroLabel
             // 
@@ -74,6 +77,7 @@
             this.nomeCarroLabel.Size = new System.Drawing.Size(77, 13);
             this.nomeCarroLabel.TabIndex = 4;
             this.nomeCarroLabel.Text = "Nome do carro";
+            this.nomeCarroLabel.Click += new System.EventHandler(this.nomeCarroLabel_Click);
             // 
             // cadastroEquipeButton
             // 
