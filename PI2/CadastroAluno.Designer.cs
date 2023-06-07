@@ -29,20 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroAluno));
-            this.calculoSuspensaoDataSet = new PI2.calculoSuspensaoDataSet();
             this.nome = new System.Windows.Forms.TextBox();
             this.raLabel = new System.Windows.Forms.Label();
             this.nomeLabel = new System.Windows.Forms.Label();
             this.cadastroAlunoButton = new System.Windows.Forms.Button();
             this.ra = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // calculoSuspensaoDataSet
-            // 
-            this.calculoSuspensaoDataSet.DataSetName = "calculoSuspensaoDataSet";
-            this.calculoSuspensaoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nome
             // 
@@ -120,15 +113,12 @@
             this.Location = new System.Drawing.Point(18000, -18000);
             this.Name = "CadastroAluno";
             this.Text = "CadastroAluno";
-            ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private calculoSuspensaoDataSet calculoSuspensaoDataSet;
         private System.Windows.Forms.TextBox nome;
         private System.Windows.Forms.Label raLabel;
         private System.Windows.Forms.Label nomeLabel;
