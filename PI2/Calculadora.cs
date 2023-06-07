@@ -111,5 +111,13 @@ namespace PI2
             this.tableAdapterManager.UpdateAll(this.calculoSuspensaoDataSet);
 
         }
+
+        private void cadastroAlunoButton_Click(object sender, EventArgs e)
+        {
+            AlunosTableAdapter alunosTableAdapter = new AlunosTableAdapter();
+            alunosTableAdapter.Insert(ra.Text, nome.Text, null);
+
+            MessageBox.Show("Aluno cadastrado", "Cadastrar aluno", MessageBoxButtons.OK);
+        }
     }
 }

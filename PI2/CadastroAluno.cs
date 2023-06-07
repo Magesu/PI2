@@ -23,5 +23,25 @@ namespace PI2
             AlunosTableAdapter alunosTableAdapter = new AlunosTableAdapter();
             alunosTableAdapter.Insert(ra.Text, nome.Text, null);
         }
+
+        private void ra_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void nomeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void raLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

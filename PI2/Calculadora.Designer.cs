@@ -96,6 +96,12 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.ra = new System.Windows.Forms.MaskedTextBox();
+            this.cadastroAlunoButton = new System.Windows.Forms.Button();
+            this.nomeLabel = new System.Windows.Forms.Label();
+            this.raLabel = new System.Windows.Forms.Label();
+            this.nome = new System.Windows.Forms.TextBox();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -121,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoAngularBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingSource)).BeginInit();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -433,6 +440,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -467,7 +475,7 @@
             this.constanteElasticaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.constanteElasticaBindingNavigator.Name = "constanteElasticaBindingNavigator";
             this.constanteElasticaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.constanteElasticaBindingNavigator.Size = new System.Drawing.Size(309, 25);
+            this.constanteElasticaBindingNavigator.Size = new System.Drawing.Size(278, 25);
             this.constanteElasticaBindingNavigator.TabIndex = 5;
             this.constanteElasticaBindingNavigator.Text = "bindingNavigator1";
             this.constanteElasticaBindingNavigator.Visible = false;
@@ -763,6 +771,70 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "nome";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.ra);
+            this.tabPage5.Controls.Add(this.cadastroAlunoButton);
+            this.tabPage5.Controls.Add(this.nomeLabel);
+            this.tabPage5.Controls.Add(this.raLabel);
+            this.tabPage5.Controls.Add(this.nome);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(792, 421);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Cadastrar aluno";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // ra
+            // 
+            this.ra.BeepOnError = true;
+            this.ra.HidePromptOnLeave = true;
+            this.ra.Location = new System.Drawing.Point(367, 154);
+            this.ra.Mask = "0000000000";
+            this.ra.Name = "ra";
+            this.ra.PromptChar = ' ';
+            this.ra.Size = new System.Drawing.Size(100, 20);
+            this.ra.TabIndex = 10;
+            this.ra.ValidatingType = typeof(System.DateTime);
+            // 
+            // cadastroAlunoButton
+            // 
+            this.cadastroAlunoButton.Location = new System.Drawing.Point(367, 244);
+            this.cadastroAlunoButton.Name = "cadastroAlunoButton";
+            this.cadastroAlunoButton.Size = new System.Drawing.Size(75, 23);
+            this.cadastroAlunoButton.TabIndex = 9;
+            this.cadastroAlunoButton.Text = "Cadastrar";
+            this.cadastroAlunoButton.UseVisualStyleBackColor = true;
+            this.cadastroAlunoButton.Click += new System.EventHandler(this.cadastroAlunoButton_Click);
+            // 
+            // nomeLabel
+            // 
+            this.nomeLabel.AutoSize = true;
+            this.nomeLabel.Location = new System.Drawing.Point(326, 198);
+            this.nomeLabel.Name = "nomeLabel";
+            this.nomeLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nomeLabel.Size = new System.Drawing.Size(35, 13);
+            this.nomeLabel.TabIndex = 8;
+            this.nomeLabel.Text = "Nome";
+            // 
+            // raLabel
+            // 
+            this.raLabel.AutoSize = true;
+            this.raLabel.Location = new System.Drawing.Point(339, 161);
+            this.raLabel.Name = "raLabel";
+            this.raLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.raLabel.Size = new System.Drawing.Size(22, 13);
+            this.raLabel.TabIndex = 7;
+            this.raLabel.Text = "RA";
+            // 
+            // nome
+            // 
+            this.nome.Location = new System.Drawing.Point(367, 191);
+            this.nome.Name = "nome";
+            this.nome.Size = new System.Drawing.Size(100, 20);
+            this.nome.TabIndex = 6;
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,6 +873,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoAngularBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingSource)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -872,5 +946,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.MaskedTextBox ra;
+        private System.Windows.Forms.Button cadastroAlunoButton;
+        private System.Windows.Forms.Label nomeLabel;
+        private System.Windows.Forms.Label raLabel;
+        private System.Windows.Forms.TextBox nome;
     }
 }

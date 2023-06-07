@@ -48,6 +48,7 @@
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(100, 20);
             this.nome.TabIndex = 1;
+            this.nome.TextChanged += new System.EventHandler(this.nome_TextChanged);
             // 
             // raLabel
             // 
@@ -58,6 +59,7 @@
             this.raLabel.Size = new System.Drawing.Size(22, 13);
             this.raLabel.TabIndex = 2;
             this.raLabel.Text = "RA";
+            this.raLabel.Click += new System.EventHandler(this.raLabel_Click);
             // 
             // nomeLabel
             // 
@@ -68,6 +70,7 @@
             this.nomeLabel.Size = new System.Drawing.Size(35, 13);
             this.nomeLabel.TabIndex = 3;
             this.nomeLabel.Text = "Nome";
+            this.nomeLabel.Click += new System.EventHandler(this.nomeLabel_Click);
             // 
             // cadastroAlunoButton
             // 
@@ -90,6 +93,7 @@
             this.ra.Size = new System.Drawing.Size(100, 20);
             this.ra.TabIndex = 5;
             this.ra.ValidatingType = typeof(System.DateTime);
+            this.ra.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.ra_MaskInputRejected);
             // 
             // CadastroAluno
             // 
