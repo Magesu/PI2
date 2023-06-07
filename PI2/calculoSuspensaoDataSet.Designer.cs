@@ -3052,13 +3052,15 @@ namespace PI2 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EquipesParticipantesDataTable : global::System.Data.TypedTableBase<EquipesParticipantesRow> {
             
-            private global::System.Data.DataColumn columnid;
-            
             private global::System.Data.DataColumn columnnumCarro;
             
             private global::System.Data.DataColumn columnnomeCarro;
             
             private global::System.Data.DataColumn columnnome;
+            
+            private global::System.Data.DataColumn columnra;
+            
+            private global::System.Data.DataColumn columnid;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3095,14 +3097,6 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
-                get {
-                    return this.columnid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn numCarroColumn {
                 get {
                     return this.columnnumCarro;
@@ -3122,6 +3116,22 @@ namespace PI2 {
             public global::System.Data.DataColumn nomeColumn {
                 get {
                     return this.columnnome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn raColumn {
+                get {
+                    return this.columnra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
                 }
             }
             
@@ -3162,13 +3172,14 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EquipesParticipantesRow AddEquipesParticipantesRow(int numCarro, string nomeCarro, string nome) {
+            public EquipesParticipantesRow AddEquipesParticipantesRow(int numCarro, string nomeCarro, string nome, string ra) {
                 EquipesParticipantesRow rowEquipesParticipantesRow = ((EquipesParticipantesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         numCarro,
                         nomeCarro,
-                        nome};
+                        nome,
+                        ra,
+                        null};
                 rowEquipesParticipantesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEquipesParticipantesRow);
                 return rowEquipesParticipantesRow;
@@ -3176,8 +3187,9 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EquipesParticipantesRow FindByid(int id) {
+            public EquipesParticipantesRow FindByraid(string ra, int id) {
                 return ((EquipesParticipantesRow)(this.Rows.Find(new object[] {
+                            ra,
                             id})));
             }
             
@@ -3198,36 +3210,41 @@ namespace PI2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
                 this.columnnumCarro = base.Columns["numCarro"];
                 this.columnnomeCarro = base.Columns["nomeCarro"];
                 this.columnnome = base.Columns["nome"];
+                this.columnra = base.Columns["ra"];
+                this.columnid = base.Columns["id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
                 this.columnnumCarro = new global::System.Data.DataColumn("numCarro", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumCarro);
                 this.columnnomeCarro = new global::System.Data.DataColumn("nomeCarro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnomeCarro);
                 this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnome);
+                this.columnra = new global::System.Data.DataColumn("ra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnra);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnra,
                                 this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
                 this.columnnumCarro.AllowDBNull = false;
                 this.columnnomeCarro.AllowDBNull = false;
                 this.columnnomeCarro.MaxLength = 100;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 100;
+                this.columnra.AllowDBNull = false;
+                this.columnra.MaxLength = 100;
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4133,17 +4150,6 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
-                get {
-                    return ((int)(this[this.tableEquipesParticipantes.idColumn]));
-                }
-                set {
-                    this[this.tableEquipesParticipantes.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int numCarro {
                 get {
                     return ((int)(this[this.tableEquipesParticipantes.numCarroColumn]));
@@ -4172,6 +4178,28 @@ namespace PI2 {
                 }
                 set {
                     this[this.tableEquipesParticipantes.nomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ra {
+                get {
+                    return ((string)(this[this.tableEquipesParticipantes.raColumn]));
+                }
+                set {
+                    this[this.tableEquipesParticipantes.raColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tableEquipesParticipantes.idColumn]));
+                }
+                set {
+                    this[this.tableEquipesParticipantes.idColumn] = value;
                 }
             }
         }
@@ -7530,10 +7558,11 @@ SELECT id, idCalculo, idParametro, valor FROM ValoresDeEntrada WHERE (id = @id)"
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "EquipesParticipantes";
-            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("numCarro", "numCarro");
             tableMapping.ColumnMappings.Add("nomeCarro", "nomeCarro");
             tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("ra", "ra");
+            tableMapping.ColumnMappings.Add("id", "id");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7550,8 +7579,8 @@ SELECT id, idCalculo, idParametro, valor FROM ValoresDeEntrada WHERE (id = @id)"
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        e.id, e.numCarro, e.nomeCarro, a.nome\r\nFROM            Equipes AS e" +
-                " INNER JOIN\r\n                         Alunos AS a ON e.id = a.idEquipe";
+            this._commandCollection[0].CommandText = "SELECT        e.numCarro, e.nomeCarro, a.nome, a.ra, e.id\r\nFROM            Equipe" +
+                "s AS e INNER JOIN\r\n                         Alunos AS a ON e.id = a.idEquipe";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

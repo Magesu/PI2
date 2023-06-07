@@ -30,39 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
-            this.constanteElasticaTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.ConstanteElasticaTableAdapter();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.equipesParticipantesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.equipesParticipantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.calculoSuspensaoDataSet = new PI2.calculoSuspensaoDataSet();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.equipesParticipantesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.equipesParticipantesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.cursoAngularBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.constanteElasticaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.constanteElasticaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.salvarConstanteElasticaButton = new System.Windows.Forms.Button();
@@ -86,28 +56,49 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.equipesParticipantesTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesParticipantesTableAdapter();
-            this.tableAdapterManager = new PI2.calculoSuspensaoDataSetTableAdapters.TableAdapterManager();
-            this.alunosTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
-            this.cursoAngularTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.CursoAngularTableAdapter();
-            this.equipesTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
+            this.constanteElasticaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.constanteElasticaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.constanteElasticaDataGridView = new System.Windows.Forms.DataGridView();
             this.cursoAngularDataGridView = new System.Windows.Forms.DataGridView();
+            this.equipesParticipantesDataGridView = new System.Windows.Forms.DataGridView();
+            this.constanteElasticaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calculoSuspensaoDataSet = new PI2.calculoSuspensaoDataSet();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoAngularBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.equipesParticipantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.constanteElasticaTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.ConstanteElasticaTableAdapter();
+            this.tableAdapterManager = new PI2.calculoSuspensaoDataSetTableAdapters.TableAdapterManager();
+            this.cursoAngularTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.CursoAngularTableAdapter();
+            this.equipesParticipantesTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesParticipantesTableAdapter();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingNavigator)).BeginInit();
-            this.equipesParticipantesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesDataGridView)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoAngularBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -121,17 +112,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.b)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaBindingNavigator)).BeginInit();
+            this.constanteElasticaBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoAngularDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoAngularBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // constanteElasticaTableAdapter
-            // 
-            this.constanteElasticaTableAdapter.ClearBeforeFill = true;
             // 
             // tabPage4
             // 
             this.tabPage4.AutoScroll = true;
-            this.tabPage4.Controls.Add(this.equipesParticipantesBindingNavigator);
             this.tabPage4.Controls.Add(this.equipesParticipantesDataGridView);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -139,181 +133,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Equipes";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // equipesParticipantesBindingNavigator
-            // 
-            this.equipesParticipantesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.equipesParticipantesBindingNavigator.BindingSource = this.equipesParticipantesBindingSource;
-            this.equipesParticipantesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.equipesParticipantesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.equipesParticipantesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.equipesParticipantesBindingNavigatorSaveItem});
-            this.equipesParticipantesBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.equipesParticipantesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.equipesParticipantesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.equipesParticipantesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.equipesParticipantesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.equipesParticipantesBindingNavigator.Name = "equipesParticipantesBindingNavigator";
-            this.equipesParticipantesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.equipesParticipantesBindingNavigator.Size = new System.Drawing.Size(792, 25);
-            this.equipesParticipantesBindingNavigator.TabIndex = 5;
-            this.equipesParticipantesBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // equipesParticipantesBindingSource
-            // 
-            this.equipesParticipantesBindingSource.DataMember = "EquipesParticipantes";
-            this.equipesParticipantesBindingSource.DataSource = this.calculoSuspensaoDataSet;
-            // 
-            // calculoSuspensaoDataSet
-            // 
-            this.calculoSuspensaoDataSet.DataSetName = "calculoSuspensaoDataSet";
-            this.calculoSuspensaoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // equipesParticipantesBindingNavigatorSaveItem
-            // 
-            this.equipesParticipantesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.equipesParticipantesBindingNavigatorSaveItem.Enabled = false;
-            this.equipesParticipantesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("equipesParticipantesBindingNavigatorSaveItem.Image")));
-            this.equipesParticipantesBindingNavigatorSaveItem.Name = "equipesParticipantesBindingNavigatorSaveItem";
-            this.equipesParticipantesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.equipesParticipantesBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // equipesParticipantesDataGridView
-            // 
-            this.equipesParticipantesDataGridView.AutoGenerateColumns = false;
-            this.equipesParticipantesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.equipesParticipantesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.equipesParticipantesDataGridView.DataSource = this.equipesParticipantesBindingSource;
-            this.equipesParticipantesDataGridView.Location = new System.Drawing.Point(8, 28);
-            this.equipesParticipantesDataGridView.Name = "equipesParticipantesDataGridView";
-            this.equipesParticipantesDataGridView.Size = new System.Drawing.Size(776, 388);
-            this.equipesParticipantesDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "numCarro";
-            this.dataGridViewTextBoxColumn2.HeaderText = "numCarro";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nomeCarro";
-            this.dataGridViewTextBoxColumn3.HeaderText = "nomeCarro";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn4.HeaderText = "nome";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // tabPage3
             // 
@@ -326,13 +145,9 @@
             this.tabPage3.Text = "Cálculos do Curso Angular";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // cursoAngularBindingSource
-            // 
-            this.cursoAngularBindingSource.DataMember = "CursoAngular";
-            this.cursoAngularBindingSource.DataSource = this.calculoSuspensaoDataSet;
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.constanteElasticaBindingNavigator);
             this.tabPage2.Controls.Add(this.constanteElasticaDataGridView);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -341,66 +156,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cálculos da constante elástica";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // constanteElasticaDataGridView
-            // 
-            this.constanteElasticaDataGridView.AutoGenerateColumns = false;
-            this.constanteElasticaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.constanteElasticaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.constanteElasticaDataGridView.DataSource = this.constanteElasticaBindingSource;
-            this.constanteElasticaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.constanteElasticaDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.constanteElasticaDataGridView.Name = "constanteElasticaDataGridView";
-            this.constanteElasticaDataGridView.Size = new System.Drawing.Size(786, 415);
-            this.constanteElasticaDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn5.HeaderText = "id";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "idEquipe";
-            this.dataGridViewTextBoxColumn6.HeaderText = "idEquipe";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "f";
-            this.dataGridViewTextBoxColumn7.HeaderText = "f";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "bd";
-            this.dataGridViewTextBoxColumn8.HeaderText = "bd";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "sd";
-            this.dataGridViewTextBoxColumn9.HeaderText = "sd";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "resultado";
-            this.dataGridViewTextBoxColumn10.HeaderText = "resultado";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // constanteElasticaBindingSource
-            // 
-            this.constanteElasticaBindingSource.DataMember = "ConstanteElastica";
-            this.constanteElasticaBindingSource.DataSource = this.calculoSuspensaoDataSet;
             // 
             // tabPage1
             // 
@@ -684,45 +439,162 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 447);
             this.tabControl1.TabIndex = 4;
             // 
-            // equipesParticipantesTableAdapter
+            // constanteElasticaBindingNavigator
             // 
-            this.equipesParticipantesTableAdapter.ClearBeforeFill = true;
+            this.constanteElasticaBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.constanteElasticaBindingNavigator.BindingSource = this.constanteElasticaBindingSource;
+            this.constanteElasticaBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.constanteElasticaBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.constanteElasticaBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.constanteElasticaBindingNavigator.Enabled = false;
+            this.constanteElasticaBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.constanteElasticaBindingNavigatorSaveItem});
+            this.constanteElasticaBindingNavigator.Location = new System.Drawing.Point(5, 3);
+            this.constanteElasticaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.constanteElasticaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.constanteElasticaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.constanteElasticaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.constanteElasticaBindingNavigator.Name = "constanteElasticaBindingNavigator";
+            this.constanteElasticaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.constanteElasticaBindingNavigator.Size = new System.Drawing.Size(309, 25);
+            this.constanteElasticaBindingNavigator.TabIndex = 5;
+            this.constanteElasticaBindingNavigator.Text = "bindingNavigator1";
+            this.constanteElasticaBindingNavigator.Visible = false;
             // 
-            // tableAdapterManager
+            // bindingNavigatorMoveFirstItem
             // 
-            this.tableAdapterManager.AlunosTableAdapter = this.alunosTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CalculosTableAdapter = null;
-            this.tableAdapterManager.ConstanteElasticaTableAdapter = this.constanteElasticaTableAdapter;
-            this.tableAdapterManager.CursoAngularTableAdapter = this.cursoAngularTableAdapter;
-            this.tableAdapterManager.EquipesTableAdapter = this.equipesTableAdapter;
-            this.tableAdapterManager.FormulasTableAdapter = null;
-            this.tableAdapterManager.ParametrosTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = PI2.calculoSuspensaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.ValoresDeEntradaTableAdapter = null;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
-            // alunosTableAdapter
+            // bindingNavigatorMovePreviousItem
             // 
-            this.alunosTableAdapter.ClearBeforeFill = true;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
-            // cursoAngularTableAdapter
+            // bindingNavigatorSeparator
             // 
-            this.cursoAngularTableAdapter.ClearBeforeFill = true;
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // equipesTableAdapter
+            // bindingNavigatorPositionItem
             // 
-            this.equipesTableAdapter.ClearBeforeFill = true;
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // constanteElasticaBindingNavigatorSaveItem
+            // 
+            this.constanteElasticaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.constanteElasticaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("constanteElasticaBindingNavigatorSaveItem.Image")));
+            this.constanteElasticaBindingNavigatorSaveItem.Name = "constanteElasticaBindingNavigatorSaveItem";
+            this.constanteElasticaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.constanteElasticaBindingNavigatorSaveItem.Text = "Save Data";
+            this.constanteElasticaBindingNavigatorSaveItem.Click += new System.EventHandler(this.constanteElasticaBindingNavigatorSaveItem_Click_1);
+            // 
+            // constanteElasticaDataGridView
+            // 
+            this.constanteElasticaDataGridView.AutoGenerateColumns = false;
+            this.constanteElasticaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.constanteElasticaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.constanteElasticaDataGridView.DataSource = this.constanteElasticaBindingSource;
+            this.constanteElasticaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.constanteElasticaDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.constanteElasticaDataGridView.Name = "constanteElasticaDataGridView";
+            this.constanteElasticaDataGridView.Size = new System.Drawing.Size(786, 415);
+            this.constanteElasticaDataGridView.TabIndex = 0;
             // 
             // cursoAngularDataGridView
             // 
             this.cursoAngularDataGridView.AutoGenerateColumns = false;
             this.cursoAngularDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cursoAngularDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
             this.cursoAngularDataGridView.DataSource = this.cursoAngularBindingSource;
             this.cursoAngularDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cursoAngularDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -730,36 +602,166 @@
             this.cursoAngularDataGridView.Size = new System.Drawing.Size(792, 421);
             this.cursoAngularDataGridView.TabIndex = 0;
             // 
+            // equipesParticipantesDataGridView
+            // 
+            this.equipesParticipantesDataGridView.AutoGenerateColumns = false;
+            this.equipesParticipantesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.equipesParticipantesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn14});
+            this.equipesParticipantesDataGridView.DataSource = this.equipesParticipantesBindingSource;
+            this.equipesParticipantesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.equipesParticipantesDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.equipesParticipantesDataGridView.Name = "equipesParticipantesDataGridView";
+            this.equipesParticipantesDataGridView.Size = new System.Drawing.Size(792, 421);
+            this.equipesParticipantesDataGridView.TabIndex = 0;
+            // 
+            // constanteElasticaBindingSource
+            // 
+            this.constanteElasticaBindingSource.DataMember = "ConstanteElastica";
+            this.constanteElasticaBindingSource.DataSource = this.calculoSuspensaoDataSet;
+            // 
+            // calculoSuspensaoDataSet
+            // 
+            this.calculoSuspensaoDataSet.DataSetName = "calculoSuspensaoDataSet";
+            this.calculoSuspensaoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idEquipe";
+            this.dataGridViewTextBoxColumn2.HeaderText = "idEquipe";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "f";
+            this.dataGridViewTextBoxColumn3.HeaderText = "f";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "bd";
+            this.dataGridViewTextBoxColumn4.HeaderText = "bd";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "sd";
+            this.dataGridViewTextBoxColumn5.HeaderText = "sd";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "resultado";
+            this.dataGridViewTextBoxColumn6.HeaderText = "resultado";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn7.HeaderText = "id";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "idEquipe";
+            this.dataGridViewTextBoxColumn8.HeaderText = "idEquipe";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "a";
+            this.dataGridViewTextBoxColumn9.HeaderText = "a";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "b";
+            this.dataGridViewTextBoxColumn10.HeaderText = "b";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
             // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "id";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "resultado";
+            this.dataGridViewTextBoxColumn11.HeaderText = "resultado";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // cursoAngularBindingSource
+            // 
+            this.cursoAngularBindingSource.DataMember = "CursoAngular";
+            this.cursoAngularBindingSource.DataSource = this.calculoSuspensaoDataSet;
+            // 
+            // equipesParticipantesBindingSource
+            // 
+            this.equipesParticipantesBindingSource.DataMember = "EquipesParticipantes";
+            this.equipesParticipantesBindingSource.DataSource = this.calculoSuspensaoDataSet;
+            // 
+            // constanteElasticaTableAdapter
+            // 
+            this.constanteElasticaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AlunosTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CalculosTableAdapter = null;
+            this.tableAdapterManager.ConstanteElasticaTableAdapter = this.constanteElasticaTableAdapter;
+            this.tableAdapterManager.CursoAngularTableAdapter = this.cursoAngularTableAdapter;
+            this.tableAdapterManager.EquipesTableAdapter = null;
+            this.tableAdapterManager.FormulasTableAdapter = null;
+            this.tableAdapterManager.ParametrosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = PI2.calculoSuspensaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ValoresDeEntradaTableAdapter = null;
+            // 
+            // cursoAngularTableAdapter
+            // 
+            this.cursoAngularTableAdapter.ClearBeforeFill = true;
+            // 
+            // equipesParticipantesTableAdapter
+            // 
+            this.equipesParticipantesTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn16.HeaderText = "id";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "idEquipe";
-            this.dataGridViewTextBoxColumn12.HeaderText = "idEquipe";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "numCarro";
+            this.dataGridViewTextBoxColumn12.HeaderText = "numCarro";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
             // dataGridViewTextBoxColumn13
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "a";
-            this.dataGridViewTextBoxColumn13.HeaderText = "a";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "nomeCarro";
+            this.dataGridViewTextBoxColumn13.HeaderText = "nomeCarro";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "b";
-            this.dataGridViewTextBoxColumn14.HeaderText = "b";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // dataGridViewTextBoxColumn15
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "resultado";
-            this.dataGridViewTextBoxColumn15.HeaderText = "resultado";
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "ra";
+            this.dataGridViewTextBoxColumn15.HeaderText = "ra";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn14.HeaderText = "nome";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // Calculadora
             // 
@@ -771,18 +773,9 @@
             this.Text = "Calculadora";
             this.Load += new System.EventHandler(this.Calculadora_Load);
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingNavigator)).EndInit();
-            this.equipesParticipantesBindingNavigator.ResumeLayout(false);
-            this.equipesParticipantesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesDataGridView)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cursoAngularBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaBindingSource)).EndInit();
+            this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -798,13 +791,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.b)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaBindingNavigator)).EndInit();
+            this.constanteElasticaBindingNavigator.ResumeLayout(false);
+            this.constanteElasticaBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoAngularDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.constanteElasticaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoAngularBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipesParticipantesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private calculoSuspensaoDataSetTableAdapters.ConstanteElasticaTableAdapter constanteElasticaTableAdapter;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage2;
@@ -832,10 +833,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private calculoSuspensaoDataSet calculoSuspensaoDataSet;
-        private System.Windows.Forms.BindingSource equipesParticipantesBindingSource;
-        private calculoSuspensaoDataSetTableAdapters.EquipesParticipantesTableAdapter equipesParticipantesTableAdapter;
+        private System.Windows.Forms.BindingSource constanteElasticaBindingSource;
+        private calculoSuspensaoDataSetTableAdapters.ConstanteElasticaTableAdapter constanteElasticaTableAdapter;
         private calculoSuspensaoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator equipesParticipantesBindingNavigator;
+        private System.Windows.Forms.BindingNavigator constanteElasticaBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -847,29 +848,29 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton equipesParticipantesBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView equipesParticipantesDataGridView;
+        private System.Windows.Forms.ToolStripButton constanteElasticaBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView constanteElasticaDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridView constanteElasticaDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private calculoSuspensaoDataSetTableAdapters.CursoAngularTableAdapter cursoAngularTableAdapter;
+        private System.Windows.Forms.BindingSource cursoAngularBindingSource;
+        private System.Windows.Forms.DataGridView cursoAngularDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.BindingSource constanteElasticaBindingSource;
-        private calculoSuspensaoDataSetTableAdapters.CursoAngularTableAdapter cursoAngularTableAdapter;
-        private System.Windows.Forms.BindingSource cursoAngularBindingSource;
-        private calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter;
-        private calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter equipesTableAdapter;
-        private System.Windows.Forms.DataGridView cursoAngularDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.BindingSource equipesParticipantesBindingSource;
+        private calculoSuspensaoDataSetTableAdapters.EquipesParticipantesTableAdapter equipesParticipantesTableAdapter;
+        private System.Windows.Forms.DataGridView equipesParticipantesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
     }
 }
