@@ -793,9 +793,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(5, 6);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Peso total";
+            this.label11.Text = "Peso Total";
             // 
             // panel1
             // 
