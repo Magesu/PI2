@@ -29,468 +29,848 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
-            this.cadastroAluno = new System.Windows.Forms.Button();
-            this.cadastroEquipe = new System.Windows.Forms.Button();
-            this.constanteElasticaButton = new System.Windows.Forms.Button();
-            this.cursoAngularButton = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fazerLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarEquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.salvarConstanteElasticaButton = new System.Windows.Forms.Button();
-            this.resultadoConstanteElastica = new System.Windows.Forms.NumericUpDown();
-            this.calcularConstanteElasticaButton = new System.Windows.Forms.Button();
-            this.F = new System.Windows.Forms.NumericUpDown();
-            this.bd = new System.Windows.Forms.NumericUpDown();
-            this.resultadoLabel = new System.Windows.Forms.Label();
-            this.sd = new System.Windows.Forms.NumericUpDown();
-            this.bdLabel = new System.Windows.Forms.Label();
-            this.FLabel = new System.Windows.Forms.Label();
-            this.sdLabel = new System.Windows.Forms.Label();
-            this.salvarCursoAngularButton = new System.Windows.Forms.Button();
-            this.resultadoCursoAngular = new System.Windows.Forms.NumericUpDown();
-            this.calcularCursoAngularButton = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.NumericUpDown();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.b = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.peso_total = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoConstanteElastica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.F)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoCursoAngular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b)).BeginInit();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cadastroAluno
+            // textBox8
             // 
-            this.cadastroAluno.Location = new System.Drawing.Point(296, 141);
-            this.cadastroAluno.Name = "cadastroAluno";
-            this.cadastroAluno.Size = new System.Drawing.Size(167, 23);
-            this.cadastroAluno.TabIndex = 0;
-            this.cadastroAluno.Text = "Cadastrar";
-            this.cadastroAluno.UseVisualStyleBackColor = true;
-            this.cadastroAluno.Click += new System.EventHandler(this.cadastro_Click);
+            this.textBox8.Location = new System.Drawing.Point(98, 76);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 3;
             // 
-            // cadastroEquipe
+            // label9
             // 
-            this.cadastroEquipe.Location = new System.Drawing.Point(296, 170);
-            this.cadastroEquipe.Name = "cadastroEquipe";
-            this.cadastroEquipe.Size = new System.Drawing.Size(167, 23);
-            this.cadastroEquipe.TabIndex = 1;
-            this.cadastroEquipe.Text = "Cadastrar equipe";
-            this.cadastroEquipe.UseVisualStyleBackColor = true;
-            this.cadastroEquipe.Click += new System.EventHandler(this.cadastroEquipe_Click);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Curso Angular";
             // 
-            // constanteElasticaButton
+            // label8
             // 
-            this.constanteElasticaButton.Location = new System.Drawing.Point(296, 199);
-            this.constanteElasticaButton.Name = "constanteElasticaButton";
-            this.constanteElasticaButton.Size = new System.Drawing.Size(167, 23);
-            this.constanteElasticaButton.TabIndex = 2;
-            this.constanteElasticaButton.Text = "Calcular Constante Elástica";
-            this.constanteElasticaButton.UseVisualStyleBackColor = true;
-            this.constanteElasticaButton.Click += new System.EventHandler(this.constanteElasticaButton_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 105);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Constante Elástica";
             // 
-            // cursoAngularButton
+            // label7
             // 
-            this.cursoAngularButton.Location = new System.Drawing.Point(296, 228);
-            this.cursoAngularButton.Name = "cursoAngularButton";
-            this.cursoAngularButton.Size = new System.Drawing.Size(167, 23);
-            this.cursoAngularButton.TabIndex = 3;
-            this.cursoAngularButton.Text = "Calcular Curso Angular";
-            this.cursoAngularButton.UseVisualStyleBackColor = true;
-            this.cursoAngularButton.Click += new System.EventHandler(this.cursoAngularButton_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Hipotenusa";
             // 
-            // menuStrip1
+            // textBox7
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.textBox7.Location = new System.Drawing.Point(120, 102);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 1;
             // 
-            // contaToolStripMenuItem
+            // label6
             // 
-            this.contaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.fazerLoginToolStripMenuItem,
-            this.cadastrarEquipeToolStripMenuItem});
-            this.contaToolStripMenuItem.Name = "contaToolStripMenuItem";
-            this.contaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.contaToolStripMenuItem.Text = "Conta";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Cateto Oposto";
             // 
-            // cadastrarToolStripMenuItem
+            // textBox6
             // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.textBox6.Location = new System.Drawing.Point(98, 50);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 1;
             // 
-            // fazerLoginToolStripMenuItem
+            // textBox5
             // 
-            this.fazerLoginToolStripMenuItem.Name = "fazerLoginToolStripMenuItem";
-            this.fazerLoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fazerLoginToolStripMenuItem.Text = "Login";
-            // 
-            // cadastrarEquipeToolStripMenuItem
-            // 
-            this.cadastrarEquipeToolStripMenuItem.Name = "cadastrarEquipeToolStripMenuItem";
-            this.cadastrarEquipeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarEquipeToolStripMenuItem.Text = "Cadastrar equipe";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.salvarConstanteElasticaButton);
-            this.splitContainer1.Panel1.Controls.Add(this.resultadoConstanteElastica);
-            this.splitContainer1.Panel1.Controls.Add(this.calcularConstanteElasticaButton);
-            this.splitContainer1.Panel1.Controls.Add(this.F);
-            this.splitContainer1.Panel1.Controls.Add(this.bd);
-            this.splitContainer1.Panel1.Controls.Add(this.resultadoLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.sd);
-            this.splitContainer1.Panel1.Controls.Add(this.bdLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.FLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.sdLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.salvarCursoAngularButton);
-            this.splitContainer1.Panel2.Controls.Add(this.resultadoCursoAngular);
-            this.splitContainer1.Panel2.Controls.Add(this.calcularCursoAngularButton);
-            this.splitContainer1.Panel2.Controls.Add(this.a);
-            this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Panel2.Controls.Add(this.b);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 377);
-            this.splitContainer1.SplitterDistance = 393;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // salvarConstanteElasticaButton
-            // 
-            this.salvarConstanteElasticaButton.Location = new System.Drawing.Point(212, 297);
-            this.salvarConstanteElasticaButton.Name = "salvarConstanteElasticaButton";
-            this.salvarConstanteElasticaButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarConstanteElasticaButton.TabIndex = 20;
-            this.salvarConstanteElasticaButton.Text = "Salvar";
-            this.salvarConstanteElasticaButton.UseVisualStyleBackColor = true;
-            this.salvarConstanteElasticaButton.Click += new System.EventHandler(this.salvarConstanteElasticaButton_Click);
-            // 
-            // resultadoConstanteElastica
-            // 
-            this.resultadoConstanteElastica.BackColor = System.Drawing.SystemColors.Window;
-            this.resultadoConstanteElastica.DecimalPlaces = 2;
-            this.resultadoConstanteElastica.Increment = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.resultadoConstanteElastica.Location = new System.Drawing.Point(144, 234);
-            this.resultadoConstanteElastica.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.resultadoConstanteElastica.Name = "resultadoConstanteElastica";
-            this.resultadoConstanteElastica.ReadOnly = true;
-            this.resultadoConstanteElastica.Size = new System.Drawing.Size(120, 20);
-            this.resultadoConstanteElastica.TabIndex = 18;
-            // 
-            // calcularConstanteElasticaButton
-            // 
-            this.calcularConstanteElasticaButton.Location = new System.Drawing.Point(113, 297);
-            this.calcularConstanteElasticaButton.Name = "calcularConstanteElasticaButton";
-            this.calcularConstanteElasticaButton.Size = new System.Drawing.Size(75, 23);
-            this.calcularConstanteElasticaButton.TabIndex = 19;
-            this.calcularConstanteElasticaButton.Text = "Calcular";
-            this.calcularConstanteElasticaButton.UseVisualStyleBackColor = true;
-            this.calcularConstanteElasticaButton.Click += new System.EventHandler(this.calcularConstanteElasticaButton_Click);
-            // 
-            // F
-            // 
-            this.F.DecimalPlaces = 2;
-            this.F.Location = new System.Drawing.Point(144, 104);
-            this.F.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.F.Name = "F";
-            this.F.Size = new System.Drawing.Size(120, 20);
-            this.F.TabIndex = 11;
-            // 
-            // bd
-            // 
-            this.bd.DecimalPlaces = 2;
-            this.bd.Location = new System.Drawing.Point(144, 144);
-            this.bd.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.bd.Name = "bd";
-            this.bd.Size = new System.Drawing.Size(120, 20);
-            this.bd.TabIndex = 12;
-            // 
-            // resultadoLabel
-            // 
-            this.resultadoLabel.AutoSize = true;
-            this.resultadoLabel.BackColor = System.Drawing.Color.LightGray;
-            this.resultadoLabel.Location = new System.Drawing.Point(83, 236);
-            this.resultadoLabel.Name = "resultadoLabel";
-            this.resultadoLabel.Size = new System.Drawing.Size(55, 13);
-            this.resultadoLabel.TabIndex = 17;
-            this.resultadoLabel.Text = "Resultado";
-            // 
-            // sd
-            // 
-            this.sd.DecimalPlaces = 2;
-            this.sd.Location = new System.Drawing.Point(144, 187);
-            this.sd.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.sd.Name = "sd";
-            this.sd.Size = new System.Drawing.Size(120, 20);
-            this.sd.TabIndex = 13;
-            // 
-            // bdLabel
-            // 
-            this.bdLabel.AutoSize = true;
-            this.bdLabel.BackColor = System.Drawing.Color.LightGray;
-            this.bdLabel.Location = new System.Drawing.Point(125, 146);
-            this.bdLabel.Name = "bdLabel";
-            this.bdLabel.Size = new System.Drawing.Size(15, 13);
-            this.bdLabel.TabIndex = 16;
-            this.bdLabel.Text = "D";
-            // 
-            // FLabel
-            // 
-            this.FLabel.AutoSize = true;
-            this.FLabel.BackColor = System.Drawing.Color.LightGray;
-            this.FLabel.Location = new System.Drawing.Point(125, 106);
-            this.FLabel.Name = "FLabel";
-            this.FLabel.Size = new System.Drawing.Size(13, 13);
-            this.FLabel.TabIndex = 14;
-            this.FLabel.Text = "F";
-            // 
-            // sdLabel
-            // 
-            this.sdLabel.AutoSize = true;
-            this.sdLabel.BackColor = System.Drawing.Color.LightGray;
-            this.sdLabel.Location = new System.Drawing.Point(125, 189);
-            this.sdLabel.Name = "sdLabel";
-            this.sdLabel.Size = new System.Drawing.Size(13, 13);
-            this.sdLabel.TabIndex = 15;
-            this.sdLabel.Text = "d";
-            // 
-            // salvarCursoAngularButton
-            // 
-            this.salvarCursoAngularButton.Location = new System.Drawing.Point(211, 297);
-            this.salvarCursoAngularButton.Name = "salvarCursoAngularButton";
-            this.salvarCursoAngularButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarCursoAngularButton.TabIndex = 28;
-            this.salvarCursoAngularButton.Text = "Salvar";
-            this.salvarCursoAngularButton.UseVisualStyleBackColor = true;
-            this.salvarCursoAngularButton.Click += new System.EventHandler(this.salvarCursoAngularButton_Click);
-            // 
-            // resultadoCursoAngular
-            // 
-            this.resultadoCursoAngular.BackColor = System.Drawing.SystemColors.Window;
-            this.resultadoCursoAngular.DecimalPlaces = 2;
-            this.resultadoCursoAngular.Increment = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.resultadoCursoAngular.Location = new System.Drawing.Point(141, 234);
-            this.resultadoCursoAngular.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.resultadoCursoAngular.Name = "resultadoCursoAngular";
-            this.resultadoCursoAngular.ReadOnly = true;
-            this.resultadoCursoAngular.Size = new System.Drawing.Size(120, 20);
-            this.resultadoCursoAngular.TabIndex = 23;
-            // 
-            // calcularCursoAngularButton
-            // 
-            this.calcularCursoAngularButton.Location = new System.Drawing.Point(111, 297);
-            this.calcularCursoAngularButton.Name = "calcularCursoAngularButton";
-            this.calcularCursoAngularButton.Size = new System.Drawing.Size(75, 23);
-            this.calcularCursoAngularButton.TabIndex = 27;
-            this.calcularCursoAngularButton.Text = "Calcular";
-            this.calcularCursoAngularButton.UseVisualStyleBackColor = true;
-            this.calcularCursoAngularButton.Click += new System.EventHandler(this.calcularCursoAngularButton_Click);
-            // 
-            // a
-            // 
-            this.a.DecimalPlaces = 2;
-            this.a.Location = new System.Drawing.Point(141, 106);
-            this.a.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(120, 20);
-            this.a.TabIndex = 21;
+            this.textBox5.Location = new System.Drawing.Point(98, 24);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(80, 236);
+            this.label3.Location = new System.Drawing.Point(99, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Resultado";
-            // 
-            // b
-            // 
-            this.b.DecimalPlaces = 2;
-            this.b.Location = new System.Drawing.Point(141, 144);
-            this.b.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(120, 20);
-            this.b.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(122, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "b";
+            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "d";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(122, 108);
+            this.label1.Location = new System.Drawing.Point(101, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "a";
+            this.label1.TabIndex = 2;
+            this.label1.Text = "F";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(99, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "D";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(120, 76);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(120, 50);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(120, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(324, 511);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Calcular";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // peso_total
+            // 
+            this.peso_total.Location = new System.Drawing.Point(480, 22);
+            this.peso_total.Name = "peso_total";
+            this.peso_total.Size = new System.Drawing.Size(100, 20);
+            this.peso_total.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(420, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Peso total";
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Location = new System.Drawing.Point(79, 41);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 230);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 302);
-            this.groupBox1.TabIndex = 30;
+            this.groupBox1.Size = new System.Drawing.Size(494, 181);
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Calcular Constante Elástica";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox1.Text = "Roda Dianteira Direita";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Location = new System.Drawing.Point(265, 23);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(213, 144);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Curso Angular";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox2.Location = new System.Drawing.Point(72, 41);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(15, 23);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 302);
-            this.groupBox2.TabIndex = 31;
+            this.groupBox2.Size = new System.Drawing.Size(244, 144);
+            this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Calcular Curso Angular";
+            this.groupBox2.Text = "Constante Elástica";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Location = new System.Drawing.Point(12, 417);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(494, 181);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Roda Dianteira Direita";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.textBox9);
+            this.groupBox5.Controls.Add(this.textBox10);
+            this.groupBox5.Location = new System.Drawing.Point(265, 23);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(213, 144);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Curso Angular";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cateto Oposto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(31, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Hipotenusa";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 79);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Curso Angular";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(98, 76);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 3;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(98, 50);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 1;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(98, 24);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 1;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.textBox11);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.textBox12);
+            this.groupBox6.Controls.Add(this.textBox13);
+            this.groupBox6.Controls.Add(this.textBox14);
+            this.groupBox6.Controls.Add(this.label16);
+            this.groupBox6.Controls.Add(this.label17);
+            this.groupBox6.Location = new System.Drawing.Point(15, 23);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(244, 144);
+            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Constante Elástica";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(101, 27);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "F";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(120, 24);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 20);
+            this.textBox11.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(19, 105);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 13);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Constante Elástica";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(120, 50);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 1;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(120, 102);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.TabIndex = 1;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(120, 76);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(99, 53);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(15, 13);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "D";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(99, 79);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 13);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "d";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.groupBox8);
+            this.groupBox7.Controls.Add(this.groupBox9);
+            this.groupBox7.Location = new System.Drawing.Point(512, 230);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(494, 181);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Roda Dianteira Direita";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.label19);
+            this.groupBox8.Controls.Add(this.label20);
+            this.groupBox8.Controls.Add(this.textBox15);
+            this.groupBox8.Controls.Add(this.textBox16);
+            this.groupBox8.Controls.Add(this.textBox17);
+            this.groupBox8.Location = new System.Drawing.Point(265, 23);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(213, 144);
+            this.groupBox8.TabIndex = 7;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Curso Angular";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(17, 27);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Cateto Oposto";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(31, 53);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(61, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Hipotenusa";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(19, 79);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(73, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Curso Angular";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(98, 76);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 20);
+            this.textBox15.TabIndex = 3;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(98, 50);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(100, 20);
+            this.textBox16.TabIndex = 1;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(98, 24);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.TabIndex = 1;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label21);
+            this.groupBox9.Controls.Add(this.textBox18);
+            this.groupBox9.Controls.Add(this.label22);
+            this.groupBox9.Controls.Add(this.textBox19);
+            this.groupBox9.Controls.Add(this.textBox20);
+            this.groupBox9.Controls.Add(this.textBox21);
+            this.groupBox9.Controls.Add(this.label23);
+            this.groupBox9.Controls.Add(this.label34);
+            this.groupBox9.Location = new System.Drawing.Point(15, 23);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(244, 144);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Constante Elástica";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(101, 27);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "F";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(120, 24);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 20);
+            this.textBox18.TabIndex = 1;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(19, 105);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(95, 13);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Constante Elástica";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(120, 50);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.TabIndex = 1;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(120, 102);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(100, 20);
+            this.textBox20.TabIndex = 1;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(120, 76);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 20);
+            this.textBox21.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(99, 53);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(15, 13);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "D";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(99, 79);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(13, 13);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "d";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.groupBox11);
+            this.groupBox10.Controls.Add(this.groupBox12);
+            this.groupBox10.Location = new System.Drawing.Point(512, 417);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(494, 181);
+            this.groupBox10.TabIndex = 8;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Roda Dianteira Direita";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.label35);
+            this.groupBox11.Controls.Add(this.label36);
+            this.groupBox11.Controls.Add(this.label37);
+            this.groupBox11.Controls.Add(this.textBox31);
+            this.groupBox11.Controls.Add(this.textBox32);
+            this.groupBox11.Controls.Add(this.textBox33);
+            this.groupBox11.Location = new System.Drawing.Point(265, 23);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(213, 144);
+            this.groupBox11.TabIndex = 7;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Curso Angular";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(17, 27);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(75, 13);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "Cateto Oposto";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(31, 53);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(61, 13);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Hipotenusa";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(19, 79);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(73, 13);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "Curso Angular";
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(98, 76);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(100, 20);
+            this.textBox31.TabIndex = 3;
+            // 
+            // textBox32
+            // 
+            this.textBox32.Location = new System.Drawing.Point(98, 50);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(100, 20);
+            this.textBox32.TabIndex = 1;
+            // 
+            // textBox33
+            // 
+            this.textBox33.Location = new System.Drawing.Point(98, 24);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(100, 20);
+            this.textBox33.TabIndex = 1;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.label38);
+            this.groupBox12.Controls.Add(this.textBox34);
+            this.groupBox12.Controls.Add(this.label39);
+            this.groupBox12.Controls.Add(this.textBox35);
+            this.groupBox12.Controls.Add(this.textBox36);
+            this.groupBox12.Controls.Add(this.textBox37);
+            this.groupBox12.Controls.Add(this.label40);
+            this.groupBox12.Controls.Add(this.label41);
+            this.groupBox12.Location = new System.Drawing.Point(15, 23);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(244, 144);
+            this.groupBox12.TabIndex = 6;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Constante Elástica";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(101, 27);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(13, 13);
+            this.label38.TabIndex = 2;
+            this.label38.Text = "F";
+            // 
+            // textBox34
+            // 
+            this.textBox34.Location = new System.Drawing.Point(120, 24);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(100, 20);
+            this.textBox34.TabIndex = 1;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(19, 105);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(95, 13);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "Constante Elástica";
+            // 
+            // textBox35
+            // 
+            this.textBox35.Location = new System.Drawing.Point(120, 50);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new System.Drawing.Size(100, 20);
+            this.textBox35.TabIndex = 1;
+            // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(120, 102);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(100, 20);
+            this.textBox36.TabIndex = 1;
+            // 
+            // textBox37
+            // 
+            this.textBox37.Location = new System.Drawing.Point(120, 76);
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new System.Drawing.Size(100, 20);
+            this.textBox37.TabIndex = 1;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(99, 53);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(15, 13);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "D";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(99, 79);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(13, 13);
+            this.label41.TabIndex = 2;
+            this.label41.Text = "d";
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 401);
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.cursoAngularButton);
-            this.Controls.Add(this.constanteElasticaButton);
-            this.Controls.Add(this.cadastroEquipe);
-            this.Controls.Add(this.cadastroAluno);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1022, 610);
+            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.peso_total);
+            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(18000, -18000);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Calculadora";
             this.Text = "Calculadora";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoConstanteElastica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.F)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoCursoAngular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cadastroAluno;
-        private System.Windows.Forms.Button cadastroEquipe;
-        private System.Windows.Forms.Button constanteElasticaButton;
-        private System.Windows.Forms.Button cursoAngularButton;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button salvarConstanteElasticaButton;
-        private System.Windows.Forms.NumericUpDown resultadoConstanteElastica;
-        private System.Windows.Forms.Button calcularConstanteElasticaButton;
-        private System.Windows.Forms.NumericUpDown F;
-        private System.Windows.Forms.NumericUpDown bd;
-        private System.Windows.Forms.Label resultadoLabel;
-        private System.Windows.Forms.NumericUpDown sd;
-        private System.Windows.Forms.Label bdLabel;
-        private System.Windows.Forms.Label FLabel;
-        private System.Windows.Forms.Label sdLabel;
-        private System.Windows.Forms.Button salvarCursoAngularButton;
-        private System.Windows.Forms.NumericUpDown resultadoCursoAngular;
-        private System.Windows.Forms.Button calcularCursoAngularButton;
-        private System.Windows.Forms.NumericUpDown a;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown b;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem contaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fazerLoginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarEquipeToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox peso_total;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
     }
 }

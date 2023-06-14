@@ -29,8 +29,9 @@ namespace PI2
         public static decimal RadianosParaGraus(decimal a)
         {
             decimal resultado;
+            decimal PI = Convert.ToDecimal(Math.PI);
 
-            resultado = a * 180 / Convert.ToDecimal(Math.PI);
+            resultado = a * 180 / PI;
 
             return resultado;
         }
@@ -38,8 +39,9 @@ namespace PI2
         public static decimal GrausParaRadianos(decimal a)
         {
             decimal resultado;
+            decimal PI = Convert.ToDecimal(Math.PI);
 
-            resultado = a * Convert.ToDecimal(Math.PI) / 180;
+            resultado = a * PI / 180;
 
             return resultado;
         }
