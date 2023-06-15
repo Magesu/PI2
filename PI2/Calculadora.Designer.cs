@@ -770,7 +770,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(626, 430);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(636, 400);
             this.flowLayoutPanel1.TabIndex = 12;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -780,7 +780,7 @@
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.peso_total);
-            this.panel1.Location = new System.Drawing.Point(75, 4);
+            this.panel1.Location = new System.Drawing.Point(49, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 26);
             this.panel1.TabIndex = 13;
@@ -804,7 +804,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(278, 10);
+            this.button1.Location = new System.Drawing.Point(283, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 30);
             this.button1.TabIndex = 14;
@@ -823,7 +823,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(626, 51);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(636, 41);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // tableLayoutPanel3
@@ -838,7 +838,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(314, 34);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 40);
             this.tableLayoutPanel3.TabIndex = 16;
             // 
             // splitContainer1
@@ -856,13 +856,14 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(944, 485);
-            this.splitContainer1.SplitterDistance = 314;
+            this.splitContainer1.Size = new System.Drawing.Size(903, 445);
+            this.splitContainer1.SplitterDistance = 263;
             this.splitContainer1.TabIndex = 17;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.IsSplitterFixed = true;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
@@ -875,13 +876,14 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer2.Size = new System.Drawing.Size(626, 485);
-            this.splitContainer2.SplitterDistance = 430;
+            this.splitContainer2.Size = new System.Drawing.Size(636, 445);
+            this.splitContainer2.SplitterDistance = 400;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer3.IsSplitterFixed = true;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
             this.splitContainer3.Name = "splitContainer3";
@@ -894,8 +896,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer3.Size = new System.Drawing.Size(314, 485);
-            this.splitContainer3.SplitterDistance = 34;
+            this.splitContainer3.Size = new System.Drawing.Size(263, 445);
+            this.splitContainer3.SplitterDistance = 40;
             this.splitContainer3.TabIndex = 0;
             // 
             // pictureBox1
@@ -905,7 +907,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 447);
+            this.pictureBox1.Size = new System.Drawing.Size(263, 401);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -914,10 +916,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 485);
+            this.ClientSize = new System.Drawing.Size(903, 445);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(18000, -18000);
+            this.MinimumSize = new System.Drawing.Size(836, 253);
             this.Name = "Calculadora";
             this.Text = "Calculadora";
             this.groupBox1.ResumeLayout(false);
