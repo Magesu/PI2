@@ -73,7 +73,7 @@
             // pictureBox1
             // 
             pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            pictureBox1.Image = global::PI2.Properties.Resources.baseCarro;
             pictureBox1.Location = new System.Drawing.Point(0, 0);
             pictureBox1.Margin = new System.Windows.Forms.Padding(10);
             pictureBox1.Name = "pictureBox1";
@@ -106,7 +106,8 @@
             this.roda1.Distancia_Bitola = 0D;
             this.roda1.Distancia_Mola = 0D;
             this.roda1.Distribuicao_Peso = 0D;
-            this.roda1.GroupBoxText = "roda1";
+            this.roda1.Eh_Par_Rodas = false;
+            this.roda1.GroupBoxText = "Roda1";
             this.roda1.Location = new System.Drawing.Point(3, 3);
             this.roda1.Name = "roda1";
             this.roda1.Peso = 0D;
@@ -123,6 +124,7 @@
             this.roda2.Distancia_Bitola = 0D;
             this.roda2.Distancia_Mola = 0D;
             this.roda2.Distribuicao_Peso = 0D;
+            this.roda2.Eh_Par_Rodas = false;
             this.roda2.GroupBoxText = "roda2";
             this.roda2.Location = new System.Drawing.Point(3, 184);
             this.roda2.Name = "roda2";
@@ -140,6 +142,7 @@
             this.roda3.Distancia_Bitola = 0D;
             this.roda3.Distancia_Mola = 0D;
             this.roda3.Distribuicao_Peso = 0D;
+            this.roda3.Eh_Par_Rodas = false;
             this.roda3.GroupBoxText = "roda3";
             this.roda3.Location = new System.Drawing.Point(3, 365);
             this.roda3.Name = "roda3";
@@ -157,6 +160,7 @@
             this.roda4.Distancia_Bitola = 0D;
             this.roda4.Distancia_Mola = 0D;
             this.roda4.Distribuicao_Peso = 0D;
+            this.roda4.Eh_Par_Rodas = false;
             this.roda4.GroupBoxText = "roda4";
             this.roda4.Location = new System.Drawing.Point(3, 546);
             this.roda4.Name = "roda4";
