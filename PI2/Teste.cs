@@ -1,5 +1,4 @@
-﻿using PI2.calculoSuspensaoDataSetTableAdapters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +10,12 @@ using System.Windows.Forms;
 
 namespace PI2
 {
-    public partial class Calculadora : Form
+    public partial class Teste : Form
     {
-        public Calculadora()
+        public Teste()
         {
             InitializeComponent();
+            
         }
     }
 }

@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PI2
 {
     public partial class Roda : UserControl
     {
-        private double peso_total;
-        [Browsable(false)]
-        public double Peso_Total
+        private Carro carro_parente;
+        public Carro Carro_Parente
         {
-            get { return peso_total; }
+            get { return carro_parente; }
             set
             {
-                peso_total = value;
-                AtualizarPeso();
+                carro_parente = value;
             }
         }
-        private double distribuicao_peso;
+        private float distribuicao_peso;
         [Browsable(false)]
-        public double Distribuicao_Peso
+        public float Distribuicao_Peso
         {
             get { return distribuicao_peso; }
             set
@@ -43,18 +43,19 @@ namespace PI2
                 eh_par_rodas = value;
                 if (eh_par_rodas)
                 {
-                    label2.Text = "Comprimento da bitola";
+                    AtualizarParaParRoda();
                 }
                 else
                 {
-                    label2.Text = "Distância da bitola até o centro";
+                    AtualizarParaRodaUnica();
                 }
                 AtualizarConstanteElastica();
+                AtualizarTextBoxes();
             }
         }
-        private double peso;
+        private float peso;
         [Browsable(false)]
-        public double Peso
+        public float Peso
         {
             get { return peso; }
             set
@@ -63,9 +64,9 @@ namespace PI2
                 AtualizarConstanteElastica();
             }
         }
-        private double distancia_bitola;
+        private float distancia_bitola;
         [Browsable(false)]
-        public double Distancia_Bitola
+        public float Distancia_Bitola
         {
             get { return distancia_bitola; }
             set
@@ -74,9 +75,9 @@ namespace PI2
                 AtualizarConstanteElastica();
             }
         }
-        private double distancia_mola;
+        private float distancia_mola;
         [Browsable(false)]
-        public double Distancia_Mola
+        public float Distancia_Mola
         {
             get { return distancia_mola; }
             set
@@ -85,9 +86,9 @@ namespace PI2
                 AtualizarConstanteElastica();
             }
         }
-        private double constante_elastica;
+        private float constante_elastica;
         [Browsable(false)]
-        public double Constante_Elastica
+        public float Constante_Elastica
         {
             get { return constante_elastica; }
             set
@@ -95,9 +96,9 @@ namespace PI2
                 constante_elastica = value;
             }
         }
-        private double comprimento_braco;
+        private float comprimento_braco;
         [Browsable(false)]
-        public double Comprimento_Braco
+        public float Comprimento_Braco
         {
             get { return comprimento_braco; }
             set
@@ -106,9 +107,9 @@ namespace PI2
                 AtualizarCursoAngular();
             }
         }
-        private double altura;
+        private float altura;
         [Browsable(false)]
-        public double Altura
+        public float Altura
         {
             get { return altura; }
             set
@@ -117,9 +118,9 @@ namespace PI2
                 AtualizarCursoAngular();
             }
         }
-        private double curso_angular;
+        private float curso_angular;
         [Browsable(false)]
-        public double Curso_Angular
+        public float Curso_Angular
         {
             get { return curso_angular; }
             set
@@ -143,7 +144,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (double.TryParse(textBox.Text, out double parsedValue))
+                if (float.TryParse(textBox.Text, out float parsedValue))
                 {
                     Distribuicao_Peso = parsedValue;
                 }
@@ -158,7 +159,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (double.TryParse(textBox.Text, out double parsedValue))
+                if (float.TryParse(textBox.Text, out float parsedValue))
                 {
                     Distancia_Bitola = parsedValue;
                 }
@@ -173,7 +174,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (double.TryParse(textBox.Text, out double parsedValue))
+                if (float.TryParse(textBox.Text, out float parsedValue))
                 {
                     Distancia_Mola = parsedValue;
                 }
@@ -188,7 +189,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (double.TryParse(textBox.Text, out double parsedValue))
+                if (float.TryParse(textBox.Text, out float parsedValue))
                 {
                     Comprimento_Braco = parsedValue;
                 }
@@ -203,7 +204,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (double.TryParse(textBox.Text, out double parsedValue))
+                if (float.TryParse(textBox.Text, out float parsedValue))
                 {
                     Altura = parsedValue;
                 }
@@ -216,14 +217,33 @@ namespace PI2
 
         private void AtualizarPeso()
         {
-            if (eh_par_rodas)
+            try
             {
-                Peso = ((Peso_Total * Distribuicao_Peso) / 100) / 2;
+                if (Carro_Parente == null)
+                {
+                    throw new ArgumentNullException("Carro_Parente", "Objeto 'Carro_Parente' é nulo.");
+                }
+
+                float peso_total = Carro_Parente.Peso_Total;
+
+                if (eh_par_rodas)
+                {
+                    Peso = ((peso_total * Distribuicao_Peso) / 100) / 2;
+                }
+                else
+                {
+                    Peso = (peso_total * Distribuicao_Peso) / 100;
+                }
             }
-            else
+            catch (ArgumentNullException ex)
             {
-                Peso = (Peso_Total * Distribuicao_Peso) / 100;
+                Console.WriteLine(ex.Message);
             }
+        }
+
+        public void ForcarAtualizarPeso()
+        {
+            AtualizarPeso();
         }
 
         private void AtualizarConstanteElastica()
@@ -244,7 +264,7 @@ namespace PI2
                 Console.WriteLine("Error: " + ex.Message);
             }
 
-            TextBox_constante_elastica.Text = Convert.ToString(Constante_Elastica);
+            TextBox_constante_elastica.Text = Constante_Elastica.ToString("F2");
         }
 
         private void AtualizarCursoAngular()
@@ -258,7 +278,41 @@ namespace PI2
                 Console.WriteLine("Error: " + ex.Message);
             }
 
-            TextBox_curso_angular.Text = Convert.ToString(Curso_Angular);
+            TextBox_curso_angular.Text = Curso_Angular.ToString("F2");
+        }
+
+        private void AtualizarParaParRoda()
+        {
+            label2.Text = "Comprimento da bitola";
+            Distribuicao_Peso = Distribuicao_Peso * 2;
+            Distancia_Bitola = Distancia_Bitola * 2;
+        }
+
+        private void AtualizarParaRodaUnica()
+        {
+            label2.Text = "Distância da bitola até o centro";
+            Distribuicao_Peso = Distribuicao_Peso / 2;
+            Distancia_Bitola = Distancia_Bitola / 2;
+        }
+
+        public void CopiarAtributos(Roda outro)
+        {
+            Eh_Par_Rodas = outro.Eh_Par_Rodas;
+            Distribuicao_Peso = outro.Distribuicao_Peso;
+            Distancia_Bitola = outro.Distancia_Bitola;
+            Distancia_Mola = outro.Distancia_Mola;
+            Comprimento_Braco = outro.Comprimento_Braco;
+            Altura = outro.Altura;
+            AtualizarTextBoxes();
+        }
+
+        private void AtualizarTextBoxes()
+        {
+            TextBox_distribuicao_peso.Text = Distribuicao_Peso.ToString("F2");
+            TextBox_distancia_bitola.Text = Distancia_Bitola.ToString("F2");
+            TextBox_distancia_mola.Text = Distancia_Mola.ToString("F2");
+            TextBox_comprimento_braco.Text = Comprimento_Braco.ToString("F2");
+            TextBox_altura.Text = Altura.ToString("F2");
         }
     }
 }
