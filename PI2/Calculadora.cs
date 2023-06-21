@@ -17,5 +17,11 @@ namespace PI2
         {
             InitializeComponent();
         }
+
+        private void button_salvar_Click(object sender, EventArgs e)
+        {
+            carro1.SalvarCalculo();
+            MessageBox.Show("Resultado salvo.", "Salvar resultado", MessageBoxButtons.OK);
+        }
     }
 }

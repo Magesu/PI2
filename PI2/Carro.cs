@@ -1,7 +1,11 @@
-﻿using System;
+﻿using PI2.calculoSuspensaoDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.Entity.Infrastructure.Design;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -120,6 +124,70 @@ namespace PI2
                     rodas.ElementAt(3).Visible = false;
                     rodas.ElementAt(2).GroupBoxText = "Rodas Dianteiras";
                     rodas.ElementAt(2).Eh_Par_Rodas = true;
+                }
+            }
+        }
+
+        public void SalvarCalculo()
+        {
+            string connectionString = Properties.Settings.Default.calculoSuspensaoConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total) VALUES (@id_equipe, @peso_total); SELECT SCOPE_IDENTITY();", connection))
+                {
+                    calculosInsertCommand.Parameters.AddWithValue("@id_equipe", 1);
+                    calculosInsertCommand.Parameters.AddWithValue("@peso_total", Peso_Total);
+
+                    int id_calculo = Convert.ToInt32(calculosInsertCommand.ExecuteScalar());
+
+                    foreach(Roda r in rodas)
+                    {
+                        using (SqlCommand rodaInsertCommand = new SqlCommand("INSERT INTO Rodas VALUES(@id_calculo, @nome, @distribuicao_peso, @distancia_bitola, @distancia_mola, @constante_elastica, @comprimento_braco, @altura, @curso_angular)", connection))
+                        {
+                            rodaInsertCommand.Parameters.AddWithValue("@id_calculo", id_calculo);
+                            rodaInsertCommand.Parameters.AddWithValue("@nome", r.GroupBoxText);
+                            rodaInsertCommand.Parameters.AddWithValue("@distribuicao_peso", r.Distribuicao_Peso);
+                            rodaInsertCommand.Parameters.AddWithValue("@distancia_bitola", r.Distancia_Bitola);
+                            rodaInsertCommand.Parameters.AddWithValue("@distancia_mola", r.Distancia_Mola);
+                            rodaInsertCommand.Parameters.AddWithValue("@constante_elastica", r.Constante_Elastica);
+                            rodaInsertCommand.Parameters.AddWithValue("@comprimento_braco", r.Comprimento_Braco);
+                            rodaInsertCommand.Parameters.AddWithValue("@altura", r.Altura);
+                            rodaInsertCommand.Parameters.AddWithValue("@curso_angular", r.Curso_Angular);
+
+                            rodaInsertCommand.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+        }
+
+        public void CarregarCalculo()
+        {
+            string connectionString = Properties.Settings.Default.calculoSuspensaoConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand calculosSelectCommand = new SqlCommand("SELECT id_calculo, peso_total FROM Calculos WHERE id_calculo = @id_calculo", connection))
+                {
+                    calculosSelectCommand.Parameters.AddWithValue("@id_calculo", "(SELECT IDENT_CURRENT('Calculos'))");
+
+                    using (SqlDataReader reader = calculosSelectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id_calculo = reader.GetInt32(0);
+                            float peso_total_from_db = reader.GetFloat(1);
+
+                            Peso_Total = peso_total_from_db;
+                        }
+                    }
                 }
             }
         }
