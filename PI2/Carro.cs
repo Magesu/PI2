@@ -136,6 +136,18 @@ namespace PI2
             {
                 connection.Open();
 
+                bool rd_assimetricas = rodas_dianteiras_assimetricas, rt_assimetricas = rodas_traseiras_assimetricas;
+
+                if (rodas_dianteiras_assimetricas)
+                {
+                    rodas_dianteiras_assimetricas = false;
+                }
+
+                if (rodas_traseiras_assimetricas)
+                {
+                    rodas_traseiras_assimetricas = false;
+                }    
+
                 using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total) VALUES (@id_equipe, @peso_total); SELECT SCOPE_IDENTITY();", connection))
                 {
                     calculosInsertCommand.Parameters.AddWithValue("@id_equipe", 1);
@@ -160,6 +172,16 @@ namespace PI2
                             rodaInsertCommand.ExecuteNonQuery();
                         }
                     }
+                }
+
+                if (rodas_dianteiras_assimetricas)
+                {
+                    rodas_dianteiras_assimetricas = false;
+                }
+
+                if (rodas_traseiras_assimetricas)
+                {
+                    rodas_traseiras_assimetricas = false;
                 }
 
                 connection.Close();
