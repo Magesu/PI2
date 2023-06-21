@@ -93,7 +93,7 @@ namespace PI2
                     rodas.ElementAt(0).GroupBoxText = "Roda Dianteira Direita";
                     rodas.ElementAt(1).GroupBoxText = "Roda Dianteira Esquerda";
                     rodas.ElementAt(0).Eh_Par_Rodas = false;
-                    rodas.ElementAt(1).CopiarAtributos(rodas.ElementAt(0));
+                    rodas.ElementAt(1).Povoar(rodas.ElementAt(0));
                 }
                 else
                 {
@@ -116,7 +116,7 @@ namespace PI2
                     rodas.ElementAt(2).GroupBoxText = "Roda Traseira Direita";
                     rodas.ElementAt(3).GroupBoxText = "Roda Traseira Esquerda";
                     rodas.ElementAt(2).Eh_Par_Rodas = false;
-                    rodas.ElementAt(3).CopiarAtributos(rodas.ElementAt(2));
+                    rodas.ElementAt(3).Povoar(rodas.ElementAt(2));
                 }
                 else
                 {
@@ -174,18 +174,35 @@ namespace PI2
             {
                 connection.Open();
 
-                using (SqlCommand calculosSelectCommand = new SqlCommand("SELECT id_calculo, peso_total FROM Calculos WHERE id_calculo = @id_calculo", connection))
+                using (SqlCommand calculosSelectCommand = new SqlCommand("select c.id_calculo, c.peso_total, r.distribuicao_peso, r.distancia_bitola, r.distancia_mola, r.comprimento_braco, r.altura from Calculos c join Rodas r on r.id_calculo = c.id_calculo where c.id_calculo = (SELECT IDENT_CURRENT('Calculos'));", connection))
                 {
-                    calculosSelectCommand.Parameters.AddWithValue("@id_calculo", "(SELECT IDENT_CURRENT('Calculos'))");
+                    //calculosSelectCommand.Parameters.AddWithValue("@id_calculo", "(SELECT IDENT_CURRENT('Calculos'))");
 
                     using (SqlDataReader reader = calculosSelectCommand.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.Read())
                         {
                             int id_calculo = reader.GetInt32(0);
+                            Console.WriteLine(reader.GetValue(1).GetType());
+                            Console.WriteLine("Batata");
                             float peso_total_from_db = reader.GetFloat(1);
 
                             Peso_Total = peso_total_from_db;
+
+                            int rodaIndex = 0;
+
+                            while (rodaIndex < rodas.Count)
+                            {
+                                float distribuicao_peso_from_db = reader.GetFloat(2);
+                                float distancia_bitola_from_db = reader.GetFloat(3);
+                                float distancia_mola_from_db = reader.GetFloat(4);
+                                float comprimento_braco_from_db = reader.GetFloat(5);
+                                float altura_from_db = reader.GetFloat(6);
+
+                                rodas[rodaIndex].Povoar(distribuicao_peso_from_db, distancia_bitola_from_db, distancia_mola_from_db, comprimento_braco_from_db, altura_from_db);
+
+                                rodaIndex++;
+                            }
                         }
                     }
                 }

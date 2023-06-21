@@ -23,5 +23,10 @@ namespace PI2
             carro1.SalvarCalculo();
             MessageBox.Show("Resultado salvo.", "Salvar resultado", MessageBoxButtons.OK);
         }
+
+        private void button_carregar_Click(object sender, EventArgs e)
+        {
+            carro1.CarregarCalculo();
+        }
     }
 }

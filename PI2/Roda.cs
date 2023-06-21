@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -295,7 +296,7 @@ namespace PI2
             Distancia_Bitola = Distancia_Bitola / 2;
         }
 
-        public void CopiarAtributos(Roda outro)
+        public void Povoar(Roda outro)
         {
             Eh_Par_Rodas = outro.Eh_Par_Rodas;
             Distribuicao_Peso = outro.Distribuicao_Peso;
@@ -303,6 +304,17 @@ namespace PI2
             Distancia_Mola = outro.Distancia_Mola;
             Comprimento_Braco = outro.Comprimento_Braco;
             Altura = outro.Altura;
+            AtualizarTextBoxes();
+        }
+
+        public void Povoar(float dp, float db, float dm, float cb, float a, bool eh_par = false)
+        {
+            Eh_Par_Rodas = eh_par;
+            Distribuicao_Peso = dp;
+            Distancia_Bitola = db;
+            Distancia_Mola = dm;
+            Comprimento_Braco = cb;
+            Altura = a;
             AtualizarTextBoxes();
         }
 
