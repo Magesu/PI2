@@ -101,15 +101,6 @@
             label8.Text = "Constante Elástica";
             label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(42, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Distância da bitola até o centro";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // label3
             // 
             label3.Location = new System.Drawing.Point(11, 74);
@@ -119,10 +110,19 @@
             label3.Text = "Distância da mola até a ponta do eixo";
             label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(42, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Distância da bitola até o centro";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(600, 169);
@@ -133,11 +133,11 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(label6);
+            this.groupBox3.Controls.Add(this.TextBox_comprimento_braco);
             this.groupBox3.Controls.Add(label7);
+            this.groupBox3.Controls.Add(this.TextBox_altura);
             this.groupBox3.Controls.Add(label9);
             this.groupBox3.Controls.Add(this.TextBox_curso_angular);
-            this.groupBox3.Controls.Add(this.TextBox_altura);
-            this.groupBox3.Controls.Add(this.TextBox_comprimento_braco);
             this.groupBox3.Location = new System.Drawing.Point(336, 19);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(257, 137);
@@ -150,14 +150,14 @@
             this.TextBox_curso_angular.Location = new System.Drawing.Point(136, 100);
             this.TextBox_curso_angular.Name = "TextBox_curso_angular";
             this.TextBox_curso_angular.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_curso_angular.TabIndex = 3;
+            this.TextBox_curso_angular.TabIndex = 6;
             // 
             // TextBox_altura
             // 
             this.TextBox_altura.Location = new System.Drawing.Point(136, 45);
             this.TextBox_altura.Name = "TextBox_altura";
             this.TextBox_altura.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_altura.TabIndex = 1;
+            this.TextBox_altura.TabIndex = 5;
             this.TextBox_altura.TextChanged += new System.EventHandler(this.TextBox_altura_TextChanged);
             // 
             // TextBox_comprimento_braco
@@ -165,19 +165,19 @@
             this.TextBox_comprimento_braco.Location = new System.Drawing.Point(136, 19);
             this.TextBox_comprimento_braco.Name = "TextBox_comprimento_braco";
             this.TextBox_comprimento_braco.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_comprimento_braco.TabIndex = 1;
+            this.TextBox_comprimento_braco.TabIndex = 4;
             this.TextBox_comprimento_braco.TextChanged += new System.EventHandler(this.TextBox_comprimento_braco_TextChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(label1);
             this.groupBox2.Controls.Add(this.TextBox_distribuicao_peso);
-            this.groupBox2.Controls.Add(label8);
-            this.groupBox2.Controls.Add(this.TextBox_distancia_bitola);
-            this.groupBox2.Controls.Add(this.TextBox_constante_elastica);
-            this.groupBox2.Controls.Add(this.TextBox_distancia_mola);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.TextBox_distancia_bitola);
             this.groupBox2.Controls.Add(label3);
+            this.groupBox2.Controls.Add(this.TextBox_distancia_mola);
+            this.groupBox2.Controls.Add(label8);
+            this.groupBox2.Controls.Add(this.TextBox_constante_elastica);
             this.groupBox2.Location = new System.Drawing.Point(6, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(324, 137);
@@ -190,7 +190,7 @@
             this.TextBox_distribuicao_peso.Location = new System.Drawing.Point(202, 19);
             this.TextBox_distribuicao_peso.Name = "TextBox_distribuicao_peso";
             this.TextBox_distribuicao_peso.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_distribuicao_peso.TabIndex = 1;
+            this.TextBox_distribuicao_peso.TabIndex = 0;
             this.TextBox_distribuicao_peso.TextChanged += new System.EventHandler(this.TextBox_distribuicao_peso_TextChanged);
             // 
             // TextBox_distancia_bitola
@@ -206,14 +206,14 @@
             this.TextBox_constante_elastica.Location = new System.Drawing.Point(202, 97);
             this.TextBox_constante_elastica.Name = "TextBox_constante_elastica";
             this.TextBox_constante_elastica.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_constante_elastica.TabIndex = 1;
+            this.TextBox_constante_elastica.TabIndex = 3;
             // 
             // TextBox_distancia_mola
             // 
             this.TextBox_distancia_mola.Location = new System.Drawing.Point(202, 71);
             this.TextBox_distancia_mola.Name = "TextBox_distancia_mola";
             this.TextBox_distancia_mola.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_distancia_mola.TabIndex = 1;
+            this.TextBox_distancia_mola.TabIndex = 2;
             this.TextBox_distancia_mola.TextChanged += new System.EventHandler(this.TextBox_distancia_mola_TextChanged);
             // 
             // Roda

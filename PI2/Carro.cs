@@ -27,7 +27,24 @@ namespace PI2
             }
         }
         private bool rodas_dianteiras_assimetricas = false;
+        public bool Rodas_Dianteiras_Assimetricas
+        {
+            get { return rodas_dianteiras_assimetricas;}
+            set {
+                rodas_dianteiras_assimetricas = value;
+                AtualizarSimetriaRodas();
+            }
+        }
         private bool rodas_traseiras_assimetricas = false;
+        public bool Rodas_Traseiras_Assimetricas
+        {
+            get { return rodas_traseiras_assimetricas; }
+            set
+            {
+                rodas_traseiras_assimetricas = value;
+                AtualizarSimetriaRodas();
+            }
+        }
         private List<Roda> rodas = new List<Roda>();
 
         public Carro()
@@ -82,52 +99,55 @@ namespace PI2
             }
         }
 
-        private void CheckBox_rodas_dianteiras_assimetricas_CheckedChanged(object sender, EventArgs e)
+        private void CheckBox_Rodas_Dianteiras_Assimetricas_CheckedChanged(object sender, EventArgs e)
         {
             if (sender is CheckBox checkBox)
             {
-                if (checkBox.Checked)
-                {
-                    rodas_dianteiras_assimetricas = true;
-                    rodas.ElementAt(1).Visible = true;
-                    rodas.ElementAt(0).GroupBoxText = "Roda Dianteira Direita";
-                    rodas.ElementAt(1).GroupBoxText = "Roda Dianteira Esquerda";
-                    rodas.ElementAt(0).Eh_Par_Rodas = false;
-                    rodas.ElementAt(1).Povoar(rodas.ElementAt(0));
-                }
-                else
-                {
-                    rodas_dianteiras_assimetricas = false;
-                    rodas.ElementAt(1).Visible = false;
-                    rodas.ElementAt(0).GroupBoxText = "Rodas Dianteiras";
-                    rodas.ElementAt(0).Eh_Par_Rodas = true;
-                }
+                Rodas_Dianteiras_Assimetricas = checkBox.Checked;
             }
         }
 
-        private void CheckBox_rodas_traseiras_assimetricas_CheckedChanged(object sender, EventArgs e)
+        private void CheckBox_Rodas_Traseiras_Assimetricas_CheckedChanged(object sender, EventArgs e)
         {
             if (sender is CheckBox checkBox)
             {
-                if (checkBox.Checked)
-                {
-                    rodas_traseiras_assimetricas = true;
-                    rodas.ElementAt(3).Visible = true;
-                    rodas.ElementAt(2).GroupBoxText = "Roda Traseira Direita";
-                    rodas.ElementAt(3).GroupBoxText = "Roda Traseira Esquerda";
-                    rodas.ElementAt(2).Eh_Par_Rodas = false;
-                    rodas.ElementAt(3).Povoar(rodas.ElementAt(2));
-                }
-                else
-                {
-                    rodas_traseiras_assimetricas = false;
-                    rodas.ElementAt(3).Visible = false;
-                    rodas.ElementAt(2).GroupBoxText = "Rodas Dianteiras";
-                    rodas.ElementAt(2).Eh_Par_Rodas = true;
-                }
+                Rodas_Traseiras_Assimetricas = checkBox.Checked;
             }
         }
 
+        private void AtualizarSimetriaRodas()
+        {
+            if (Rodas_Dianteiras_Assimetricas)
+            {
+                rodas.ElementAt(1).Visible = true;
+                rodas.ElementAt(0).GroupBoxText = "Roda Dianteira Direita";
+                rodas.ElementAt(1).GroupBoxText = "Roda Dianteira Esquerda";
+                rodas.ElementAt(0).Eh_Par_Rodas = false;
+                rodas.ElementAt(1).Povoar(rodas.ElementAt(0));
+            }
+            else
+            {
+                rodas.ElementAt(1).Visible = false;
+                rodas.ElementAt(0).GroupBoxText = "Rodas Dianteiras";
+                rodas.ElementAt(0).Eh_Par_Rodas = true;
+            }
+
+            if (Rodas_Traseiras_Assimetricas)
+            {
+                rodas.ElementAt(3).Visible = true;
+                rodas.ElementAt(2).GroupBoxText = "Roda Traseira Direita";
+                rodas.ElementAt(3).GroupBoxText = "Roda Traseira Esquerda";
+                rodas.ElementAt(2).Eh_Par_Rodas = false;
+                rodas.ElementAt(3).Povoar(rodas.ElementAt(2));
+            }
+            else
+            {
+                rodas.ElementAt(3).Visible = false;
+                rodas.ElementAt(2).GroupBoxText = "Rodas Dianteiras";
+                rodas.ElementAt(2).Eh_Par_Rodas = true;
+            }
+        }
+        
         public void SalvarCalculo()
         {
             string connectionString = Properties.Settings.Default.calculoSuspensaoConnectionString;
@@ -136,52 +156,35 @@ namespace PI2
             {
                 connection.Open();
 
-                bool rd_assimetricas = rodas_dianteiras_assimetricas, rt_assimetricas = rodas_traseiras_assimetricas;
-
-                if (rodas_dianteiras_assimetricas)
-                {
-                    rodas_dianteiras_assimetricas = false;
-                }
-
-                if (rodas_traseiras_assimetricas)
-                {
-                    rodas_traseiras_assimetricas = false;
-                }    
-
-                using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total) VALUES (@id_equipe, @peso_total); SELECT SCOPE_IDENTITY();", connection))
+                using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_traseiras_assimetricas) VALUES (@id_equipe, @peso_total, @rodas_dianteiras_assimetricas, @rodas_traseiras_assimetricas); SELECT SCOPE_IDENTITY();", connection))
                 {
                     calculosInsertCommand.Parameters.AddWithValue("@id_equipe", 1);
                     calculosInsertCommand.Parameters.AddWithValue("@peso_total", Peso_Total);
+                    calculosInsertCommand.Parameters.AddWithValue("@rodas_dianteiras_assimetricas", Rodas_Dianteiras_Assimetricas);
+                    calculosInsertCommand.Parameters.AddWithValue("@rodas_traseiras_assimetricas", Rodas_Traseiras_Assimetricas);
 
                     int id_calculo = Convert.ToInt32(calculosInsertCommand.ExecuteScalar());
 
                     foreach(Roda r in rodas)
                     {
-                        using (SqlCommand rodaInsertCommand = new SqlCommand("INSERT INTO Rodas VALUES(@id_calculo, @nome, @distribuicao_peso, @distancia_bitola, @distancia_mola, @constante_elastica, @comprimento_braco, @altura, @curso_angular)", connection))
+                        if (r.Visible)
                         {
-                            rodaInsertCommand.Parameters.AddWithValue("@id_calculo", id_calculo);
-                            rodaInsertCommand.Parameters.AddWithValue("@nome", r.GroupBoxText);
-                            rodaInsertCommand.Parameters.AddWithValue("@distribuicao_peso", r.Distribuicao_Peso);
-                            rodaInsertCommand.Parameters.AddWithValue("@distancia_bitola", r.Distancia_Bitola);
-                            rodaInsertCommand.Parameters.AddWithValue("@distancia_mola", r.Distancia_Mola);
-                            rodaInsertCommand.Parameters.AddWithValue("@constante_elastica", r.Constante_Elastica);
-                            rodaInsertCommand.Parameters.AddWithValue("@comprimento_braco", r.Comprimento_Braco);
-                            rodaInsertCommand.Parameters.AddWithValue("@altura", r.Altura);
-                            rodaInsertCommand.Parameters.AddWithValue("@curso_angular", r.Curso_Angular);
+                            using (SqlCommand rodaInsertCommand = new SqlCommand("INSERT INTO Rodas VALUES(@id_calculo, @nome, @distribuicao_peso, @distancia_bitola, @distancia_mola, @constante_elastica, @comprimento_braco, @altura, @curso_angular)", connection))
+                            {
+                                rodaInsertCommand.Parameters.AddWithValue("@id_calculo", id_calculo);
+                                rodaInsertCommand.Parameters.AddWithValue("@nome", r.GroupBoxText);
+                                rodaInsertCommand.Parameters.AddWithValue("@distribuicao_peso", r.Distribuicao_Peso);
+                                rodaInsertCommand.Parameters.AddWithValue("@distancia_bitola", r.Distancia_Bitola);
+                                rodaInsertCommand.Parameters.AddWithValue("@distancia_mola", r.Distancia_Mola);
+                                rodaInsertCommand.Parameters.AddWithValue("@constante_elastica", r.Constante_Elastica);
+                                rodaInsertCommand.Parameters.AddWithValue("@comprimento_braco", r.Comprimento_Braco);
+                                rodaInsertCommand.Parameters.AddWithValue("@altura", r.Altura);
+                                rodaInsertCommand.Parameters.AddWithValue("@curso_angular", r.Curso_Angular);
 
-                            rodaInsertCommand.ExecuteNonQuery();
+                                rodaInsertCommand.ExecuteNonQuery();
+                            }
                         }
                     }
-                }
-
-                if (rodas_dianteiras_assimetricas)
-                {
-                    rodas_dianteiras_assimetricas = false;
-                }
-
-                if (rodas_traseiras_assimetricas)
-                {
-                    rodas_traseiras_assimetricas = false;
                 }
 
                 connection.Close();

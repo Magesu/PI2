@@ -79,6 +79,7 @@
             this.splitContainer1.Size = new System.Drawing.Size(903, 471);
             this.splitContainer1.SplitterDistance = 260;
             this.splitContainer1.TabIndex = 17;
+            this.splitContainer1.TabStop = false;
             // 
             // splitContainer2
             // 
@@ -99,6 +100,7 @@
             this.splitContainer2.Size = new System.Drawing.Size(639, 471);
             this.splitContainer2.SplitterDistance = 426;
             this.splitContainer2.TabIndex = 0;
+            this.splitContainer2.TabStop = false;
             // 
             // carro1
             // 
@@ -106,6 +108,8 @@
             this.carro1.Location = new System.Drawing.Point(0, 0);
             this.carro1.Name = "carro1";
             this.carro1.Peso_Total = 0F;
+            this.carro1.Rodas_Dianteiras_Assimetricas = false;
+            this.carro1.Rodas_Traseiras_Assimetricas = false;
             this.carro1.Size = new System.Drawing.Size(639, 426);
             this.carro1.TabIndex = 0;
             // 
@@ -114,8 +118,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button_salvar, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_carregar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_salvar, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -130,7 +134,7 @@
             this.button_salvar.Location = new System.Drawing.Point(427, 9);
             this.button_salvar.Name = "button_salvar";
             this.button_salvar.Size = new System.Drawing.Size(103, 23);
-            this.button_salvar.TabIndex = 0;
+            this.button_salvar.TabIndex = 2;
             this.button_salvar.Text = "Salvar resultado";
             this.button_salvar.UseVisualStyleBackColor = true;
             this.button_salvar.Click += new System.EventHandler(this.button_salvar_Click);
