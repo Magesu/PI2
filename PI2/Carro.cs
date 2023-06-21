@@ -150,6 +150,8 @@ namespace PI2
         
         public void SalvarCalculo()
         {
+            
+
             string connectionString = Properties.Settings.Default.calculoSuspensaoConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
