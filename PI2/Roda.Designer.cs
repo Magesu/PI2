@@ -35,30 +35,37 @@
             System.Windows.Forms.Label label8;
             System.Windows.Forms.Label label3;
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TextBox_distribuicao_peso = new System.Windows.Forms.TextBox();
             this.TextBox_distancia_bitola = new System.Windows.Forms.TextBox();
             this.TextBox_distancia_mola = new System.Windows.Forms.TextBox();
             this.TextBox_constante_elastica = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TextBox_comprimento_braco = new System.Windows.Forms.TextBox();
             this.TextBox_altura = new System.Windows.Forms.TextBox();
             this.TextBox_curso_angular = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nomeLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
             // 
-            label6.Location = new System.Drawing.Point(17, 22);
+            label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            label6.Location = new System.Drawing.Point(3, 6);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(113, 13);
             label6.TabIndex = 3;
@@ -67,7 +74,8 @@
             // 
             // label7
             // 
-            label7.Location = new System.Drawing.Point(42, 48);
+            label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            label7.Location = new System.Drawing.Point(28, 32);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(88, 13);
             label7.TabIndex = 4;
@@ -76,7 +84,8 @@
             // 
             // label9
             // 
-            label9.Location = new System.Drawing.Point(57, 103);
+            label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            label9.Location = new System.Drawing.Point(43, 84);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(73, 13);
             label9.TabIndex = 5;
@@ -85,7 +94,8 @@
             // 
             // label1
             // 
-            label1.Location = new System.Drawing.Point(93, 22);
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            label1.Location = new System.Drawing.Point(85, 6);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(103, 13);
             label1.TabIndex = 2;
@@ -94,7 +104,8 @@
             // 
             // label8
             // 
-            label8.Location = new System.Drawing.Point(101, 100);
+            label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            label8.Location = new System.Drawing.Point(93, 84);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(95, 13);
             label8.TabIndex = 2;
@@ -103,7 +114,8 @@
             // 
             // label3
             // 
-            label3.Location = new System.Drawing.Point(11, 74);
+            label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            label3.Location = new System.Drawing.Point(3, 58);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(185, 13);
             label3.TabIndex = 2;
@@ -112,48 +124,18 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(42, 48);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.Location = new System.Drawing.Point(34, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Distância da bitola até o centro";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(651, 169);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Roda";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Controls.Add(label1);
-            this.groupBox2.Controls.Add(this.TextBox_distribuicao_peso);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.TextBox_distancia_bitola);
-            this.groupBox2.Controls.Add(label3);
-            this.groupBox2.Controls.Add(this.TextBox_distancia_mola);
-            this.groupBox2.Controls.Add(label8);
-            this.groupBox2.Controls.Add(this.TextBox_constante_elastica);
-            this.groupBox2.Location = new System.Drawing.Point(20, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 137);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Constante Elástica";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
             // TextBox_distribuicao_peso
             // 
-            this.TextBox_distribuicao_peso.Location = new System.Drawing.Point(202, 19);
+            this.TextBox_distribuicao_peso.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_distribuicao_peso.Location = new System.Drawing.Point(194, 3);
             this.TextBox_distribuicao_peso.Name = "TextBox_distribuicao_peso";
             this.TextBox_distribuicao_peso.Size = new System.Drawing.Size(100, 20);
             this.TextBox_distribuicao_peso.TabIndex = 0;
@@ -161,7 +143,8 @@
             // 
             // TextBox_distancia_bitola
             // 
-            this.TextBox_distancia_bitola.Location = new System.Drawing.Point(202, 45);
+            this.TextBox_distancia_bitola.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_distancia_bitola.Location = new System.Drawing.Point(194, 29);
             this.TextBox_distancia_bitola.Name = "TextBox_distancia_bitola";
             this.TextBox_distancia_bitola.Size = new System.Drawing.Size(100, 20);
             this.TextBox_distancia_bitola.TabIndex = 1;
@@ -169,7 +152,8 @@
             // 
             // TextBox_distancia_mola
             // 
-            this.TextBox_distancia_mola.Location = new System.Drawing.Point(202, 71);
+            this.TextBox_distancia_mola.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_distancia_mola.Location = new System.Drawing.Point(194, 55);
             this.TextBox_distancia_mola.Name = "TextBox_distancia_mola";
             this.TextBox_distancia_mola.Size = new System.Drawing.Size(100, 20);
             this.TextBox_distancia_mola.TabIndex = 2;
@@ -177,30 +161,16 @@
             // 
             // TextBox_constante_elastica
             // 
-            this.TextBox_constante_elastica.Location = new System.Drawing.Point(202, 97);
+            this.TextBox_constante_elastica.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_constante_elastica.Location = new System.Drawing.Point(194, 81);
             this.TextBox_constante_elastica.Name = "TextBox_constante_elastica";
             this.TextBox_constante_elastica.Size = new System.Drawing.Size(100, 20);
             this.TextBox_constante_elastica.TabIndex = 3;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox3.Controls.Add(label6);
-            this.groupBox3.Controls.Add(this.TextBox_comprimento_braco);
-            this.groupBox3.Controls.Add(label7);
-            this.groupBox3.Controls.Add(this.TextBox_altura);
-            this.groupBox3.Controls.Add(label9);
-            this.groupBox3.Controls.Add(this.TextBox_curso_angular);
-            this.groupBox3.Location = new System.Drawing.Point(373, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 137);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Curso Angular";
-            // 
             // TextBox_comprimento_braco
             // 
-            this.TextBox_comprimento_braco.Location = new System.Drawing.Point(136, 19);
+            this.TextBox_comprimento_braco.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_comprimento_braco.Location = new System.Drawing.Point(122, 3);
             this.TextBox_comprimento_braco.Name = "TextBox_comprimento_braco";
             this.TextBox_comprimento_braco.Size = new System.Drawing.Size(100, 20);
             this.TextBox_comprimento_braco.TabIndex = 4;
@@ -208,7 +178,8 @@
             // 
             // TextBox_altura
             // 
-            this.TextBox_altura.Location = new System.Drawing.Point(136, 45);
+            this.TextBox_altura.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_altura.Location = new System.Drawing.Point(122, 29);
             this.TextBox_altura.Name = "TextBox_altura";
             this.TextBox_altura.Size = new System.Drawing.Size(100, 20);
             this.TextBox_altura.TabIndex = 5;
@@ -216,39 +187,179 @@
             // 
             // TextBox_curso_angular
             // 
-            this.TextBox_curso_angular.Location = new System.Drawing.Point(136, 100);
+            this.TextBox_curso_angular.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBox_curso_angular.Location = new System.Drawing.Point(122, 81);
             this.TextBox_curso_angular.Name = "TextBox_curso_angular";
             this.TextBox_curso_angular.Size = new System.Drawing.Size(100, 20);
             this.TextBox_curso_angular.TabIndex = 6;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(label8, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.TextBox_constante_elastica, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.TextBox_distancia_mola, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.TextBox_distancia_bitola, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TextBox_distribuicao_peso, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 31);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(297, 104);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.Controls.Add(label6, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(label9, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.TextBox_curso_angular, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(label7, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.TextBox_comprimento_braco, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.TextBox_altura, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label11, 0, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(375, 31);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(225, 104);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 25);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(637, 150);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(10, 5);
+            this.label5.Margin = new System.Windows.Forms.Padding(10, 5, 0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Constante Elástica";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(335, 5);
+            this.label10.Margin = new System.Windows.Forms.Padding(10, 5, 0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 17);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Curso Angular";
+            // 
+            // nomeLabel
+            // 
+            this.nomeLabel.AutoSize = true;
+            this.nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.nomeLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.nomeLabel.Location = new System.Drawing.Point(10, 5);
+            this.nomeLabel.Margin = new System.Windows.Forms.Padding(10, 5, 0, 0);
+            this.nomeLabel.Name = "nomeLabel";
+            this.nomeLabel.Size = new System.Drawing.Size(46, 20);
+            this.nomeLabel.TabIndex = 9;
+            this.nomeLabel.Text = "roda";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.nomeLabel, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(657, 175);
+            this.tableLayoutPanel4.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 55);
+            this.label11.Margin = new System.Windows.Forms.Padding(3);
+            this.label11.MinimumSize = new System.Drawing.Size(0, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(10, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = " ";
             // 
             // Roda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "Roda";
             this.Size = new System.Drawing.Size(657, 175);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox TextBox_curso_angular;
         private System.Windows.Forms.TextBox TextBox_altura;
         private System.Windows.Forms.TextBox TextBox_comprimento_braco;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TextBox_distribuicao_peso;
         private System.Windows.Forms.TextBox TextBox_distancia_bitola;
         private System.Windows.Forms.TextBox TextBox_constante_elastica;
         private System.Windows.Forms.TextBox TextBox_distancia_mola;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label nomeLabel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label11;
     }
 }

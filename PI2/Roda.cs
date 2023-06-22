@@ -24,9 +24,9 @@ namespace PI2
                 carro_parente = value;
             }
         }
-        private float distribuicao_peso;
+        private double distribuicao_peso;
         [Browsable(false)]
-        public float Distribuicao_Peso
+        public double Distribuicao_Peso
         {
             get { return distribuicao_peso; }
             set
@@ -54,9 +54,9 @@ namespace PI2
                 AtualizarTextBoxes();
             }
         }
-        private float peso;
+        private double peso;
         [Browsable(false)]
-        public float Peso
+        public double Peso
         {
             get { return peso; }
             set
@@ -65,9 +65,9 @@ namespace PI2
                 AtualizarConstanteElastica();
             }
         }
-        private float distancia_bitola;
+        private double distancia_bitola;
         [Browsable(false)]
-        public float Distancia_Bitola
+        public double Distancia_Bitola
         {
             get { return distancia_bitola; }
             set
@@ -76,9 +76,9 @@ namespace PI2
                 AtualizarConstanteElastica();
             }
         }
-        private float distancia_mola;
+        private double distancia_mola;
         [Browsable(false)]
-        public float Distancia_Mola
+        public double Distancia_Mola
         {
             get { return distancia_mola; }
             set
@@ -87,9 +87,9 @@ namespace PI2
                 AtualizarConstanteElastica();
             }
         }
-        private float constante_elastica;
+        private double constante_elastica;
         [Browsable(false)]
-        public float Constante_Elastica
+        public double Constante_Elastica
         {
             get { return constante_elastica; }
             set
@@ -97,9 +97,9 @@ namespace PI2
                 constante_elastica = value;
             }
         }
-        private float comprimento_braco;
+        private double comprimento_braco;
         [Browsable(false)]
-        public float Comprimento_Braco
+        public double Comprimento_Braco
         {
             get { return comprimento_braco; }
             set
@@ -108,9 +108,9 @@ namespace PI2
                 AtualizarCursoAngular();
             }
         }
-        private float altura;
+        private double altura;
         [Browsable(false)]
-        public float Altura
+        public double Altura
         {
             get { return altura; }
             set
@@ -119,9 +119,9 @@ namespace PI2
                 AtualizarCursoAngular();
             }
         }
-        private float curso_angular;
+        private double curso_angular;
         [Browsable(false)]
-        public float Curso_Angular
+        public double Curso_Angular
         {
             get { return curso_angular; }
             set
@@ -130,10 +130,10 @@ namespace PI2
             }
         }
         [Browsable(true)]
-        public string GroupBoxText
+        public string Nome
         {
-            get { return groupBox1.Text; }
-            set { groupBox1.Text = value; }
+            get { return nomeLabel.Text; }
+            set { nomeLabel.Text = value; }
         }
 
         public Roda()
@@ -145,7 +145,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (float.TryParse(textBox.Text, out float parsedValue))
+                if (double.TryParse(textBox.Text, out double parsedValue))
                 {
                     Distribuicao_Peso = parsedValue;
                 }
@@ -160,7 +160,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (float.TryParse(textBox.Text, out float parsedValue))
+                if (double.TryParse(textBox.Text, out double parsedValue))
                 {
                     Distancia_Bitola = parsedValue;
                 }
@@ -175,7 +175,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (float.TryParse(textBox.Text, out float parsedValue))
+                if (double.TryParse(textBox.Text, out double parsedValue))
                 {
                     Distancia_Mola = parsedValue;
                 }
@@ -190,7 +190,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (float.TryParse(textBox.Text, out float parsedValue))
+                if (double.TryParse(textBox.Text, out double parsedValue))
                 {
                     Comprimento_Braco = parsedValue;
                 }
@@ -205,7 +205,7 @@ namespace PI2
         {
             if (sender is TextBox textBox)
             {
-                if (float.TryParse(textBox.Text, out float parsedValue))
+                if (double.TryParse(textBox.Text, out double parsedValue))
                 {
                     Altura = parsedValue;
                 }
@@ -225,7 +225,7 @@ namespace PI2
                     throw new ArgumentNullException("Carro_Parente", "Objeto 'Carro_Parente' é nulo.");
                 }
 
-                float peso_total = Carro_Parente.Peso_Total;
+                double peso_total = Carro_Parente.Peso_Total;
 
                 if (eh_par_rodas)
                 {
@@ -307,9 +307,8 @@ namespace PI2
             AtualizarTextBoxes();
         }
 
-        public void Povoar(float dp, float db, float dm, float cb, float a, bool eh_par = false)
+        public void Povoar(double dp, double db, double dm, double cb, double a)
         {
-            Eh_Par_Rodas = eh_par;
             Distribuicao_Peso = dp;
             Distancia_Bitola = db;
             Distancia_Mola = dm;
@@ -325,16 +324,6 @@ namespace PI2
             TextBox_distancia_mola.Text = Distancia_Mola.ToString("F2");
             TextBox_comprimento_braco.Text = Comprimento_Braco.ToString("F2");
             TextBox_altura.Text = Altura.ToString("F2");
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -112,6 +112,7 @@
             this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carro1.Location = new System.Drawing.Point(0, 0);
             this.carro1.Name = "carro1";
+            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
             this.carro1.Peso_Total = 0F;
             this.carro1.Rodas_Dianteiras_Assimetricas = false;
             this.carro1.Rodas_Traseiras_Assimetricas = false;
