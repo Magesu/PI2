@@ -143,7 +143,7 @@ namespace PI2
             else
             {
                 rodas.ElementAt(3).Visible = false;
-                rodas.ElementAt(2).GroupBoxText = "Rodas Dianteiras";
+                rodas.ElementAt(2).GroupBoxText = "Rodas Traseiras";
                 rodas.ElementAt(2).Eh_Par_Rodas = true;
             }
         }

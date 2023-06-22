@@ -326,5 +326,15 @@ namespace PI2
             TextBox_comprimento_braco.Text = Comprimento_Braco.ToString("F2");
             TextBox_altura.Text = Altura.ToString("F2");
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

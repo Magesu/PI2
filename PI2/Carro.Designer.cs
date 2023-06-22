@@ -31,11 +31,11 @@
             System.Windows.Forms.Label label11;
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TextBox_peso_total = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.CheckBox_rodas_dianteiras_assimetricas = new System.Windows.Forms.CheckBox();
             this.CheckBox_rodas_traseiras_assimetricas = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TextBox_peso_total = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.roda1 = new PI2.Roda();
@@ -48,8 +48,8 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(634, 322);
+            this.splitContainer1.Size = new System.Drawing.Size(678, 322);
             this.splitContainer1.SplitterDistance = 40;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.TabStop = false;
@@ -96,8 +96,28 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(634, 40);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(678, 40);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(label11);
+            this.panel1.Controls.Add(this.TextBox_peso_total);
+            this.panel1.Location = new System.Drawing.Point(18, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(166, 26);
+            this.panel1.TabIndex = 0;
+            // 
+            // TextBox_peso_total
+            // 
+            this.TextBox_peso_total.Location = new System.Drawing.Point(63, 3);
+            this.TextBox_peso_total.Name = "TextBox_peso_total";
+            this.TextBox_peso_total.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_peso_total.TabIndex = 0;
+            this.TextBox_peso_total.Text = "0,00";
+            this.TextBox_peso_total.TextChanged += new System.EventHandler(this.TextBox_peso_total_TextChanged);
             // 
             // flowLayoutPanel2
             // 
@@ -105,7 +125,7 @@
             this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.Controls.Add(this.CheckBox_rodas_dianteiras_assimetricas);
             this.flowLayoutPanel2.Controls.Add(this.CheckBox_rodas_traseiras_assimetricas);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(240, 8);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(268, 8);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(344, 23);
             this.flowLayoutPanel2.TabIndex = 1;
@@ -132,26 +152,6 @@
             this.CheckBox_rodas_traseiras_assimetricas.UseVisualStyleBackColor = true;
             this.CheckBox_rodas_traseiras_assimetricas.CheckedChanged += new System.EventHandler(this.CheckBox_Rodas_Traseiras_Assimetricas_CheckedChanged);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(label11);
-            this.panel1.Controls.Add(this.TextBox_peso_total);
-            this.panel1.Location = new System.Drawing.Point(12, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 26);
-            this.panel1.TabIndex = 0;
-            // 
-            // TextBox_peso_total
-            // 
-            this.TextBox_peso_total.Location = new System.Drawing.Point(63, 3);
-            this.TextBox_peso_total.Name = "TextBox_peso_total";
-            this.TextBox_peso_total.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_peso_total.TabIndex = 0;
-            this.TextBox_peso_total.Text = "0,00";
-            this.TextBox_peso_total.TextChanged += new System.EventHandler(this.TextBox_peso_total_TextChanged);
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -163,7 +163,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(634, 278);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(678, 278);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -171,9 +171,10 @@
             // 
             this.groupBox1.Controls.Add(this.splitContainer1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(640, 341);
+            this.groupBox1.Size = new System.Drawing.Size(684, 341);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "id do cálculo";
@@ -181,6 +182,7 @@
             // roda1
             // 
             this.roda1.Altura = 0F;
+            this.roda1.AutoSize = true;
             this.roda1.Carro_Parente = null;
             this.roda1.Comprimento_Braco = 0F;
             this.roda1.Constante_Elastica = 0F;
@@ -193,12 +195,13 @@
             this.roda1.Location = new System.Drawing.Point(3, 3);
             this.roda1.Name = "roda1";
             this.roda1.Peso = 0F;
-            this.roda1.Size = new System.Drawing.Size(609, 175);
+            this.roda1.Size = new System.Drawing.Size(657, 175);
             this.roda1.TabIndex = 0;
             // 
             // roda2
             // 
             this.roda2.Altura = 0F;
+            this.roda2.AutoSize = true;
             this.roda2.Carro_Parente = null;
             this.roda2.Comprimento_Braco = 0F;
             this.roda2.Constante_Elastica = 0F;
@@ -211,12 +214,13 @@
             this.roda2.Location = new System.Drawing.Point(3, 184);
             this.roda2.Name = "roda2";
             this.roda2.Peso = 0F;
-            this.roda2.Size = new System.Drawing.Size(609, 175);
+            this.roda2.Size = new System.Drawing.Size(657, 175);
             this.roda2.TabIndex = 1;
             // 
             // roda3
             // 
             this.roda3.Altura = 0F;
+            this.roda3.AutoSize = true;
             this.roda3.Carro_Parente = null;
             this.roda3.Comprimento_Braco = 0F;
             this.roda3.Constante_Elastica = 0F;
@@ -229,12 +233,13 @@
             this.roda3.Location = new System.Drawing.Point(3, 365);
             this.roda3.Name = "roda3";
             this.roda3.Peso = 0F;
-            this.roda3.Size = new System.Drawing.Size(609, 175);
+            this.roda3.Size = new System.Drawing.Size(657, 175);
             this.roda3.TabIndex = 2;
             // 
             // roda4
             // 
             this.roda4.Altura = 0F;
+            this.roda4.AutoSize = true;
             this.roda4.Carro_Parente = null;
             this.roda4.Comprimento_Braco = 0F;
             this.roda4.Constante_Elastica = 0F;
@@ -247,7 +252,7 @@
             this.roda4.Location = new System.Drawing.Point(3, 546);
             this.roda4.Name = "roda4";
             this.roda4.Peso = 0F;
-            this.roda4.Size = new System.Drawing.Size(609, 175);
+            this.roda4.Size = new System.Drawing.Size(657, 175);
             this.roda4.TabIndex = 3;
             // 
             // Carro
@@ -256,18 +261,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "Carro";
-            this.Size = new System.Drawing.Size(640, 341);
+            this.Size = new System.Drawing.Size(684, 341);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

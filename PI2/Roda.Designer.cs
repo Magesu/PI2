@@ -36,15 +36,15 @@
             System.Windows.Forms.Label label3;
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.TextBox_curso_angular = new System.Windows.Forms.TextBox();
-            this.TextBox_altura = new System.Windows.Forms.TextBox();
-            this.TextBox_comprimento_braco = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TextBox_distribuicao_peso = new System.Windows.Forms.TextBox();
             this.TextBox_distancia_bitola = new System.Windows.Forms.TextBox();
-            this.TextBox_constante_elastica = new System.Windows.Forms.TextBox();
             this.TextBox_distancia_mola = new System.Windows.Forms.TextBox();
+            this.TextBox_constante_elastica = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TextBox_comprimento_braco = new System.Windows.Forms.TextBox();
+            this.TextBox_altura = new System.Windows.Forms.TextBox();
+            this.TextBox_curso_angular = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
@@ -52,8 +52,8 @@
             label8 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -121,55 +121,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(600, 169);
+            this.groupBox1.Size = new System.Drawing.Size(651, 169);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Roda";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(label6);
-            this.groupBox3.Controls.Add(this.TextBox_comprimento_braco);
-            this.groupBox3.Controls.Add(label7);
-            this.groupBox3.Controls.Add(this.TextBox_altura);
-            this.groupBox3.Controls.Add(label9);
-            this.groupBox3.Controls.Add(this.TextBox_curso_angular);
-            this.groupBox3.Location = new System.Drawing.Point(336, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 137);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Curso Angular";
-            // 
-            // TextBox_curso_angular
-            // 
-            this.TextBox_curso_angular.Location = new System.Drawing.Point(136, 100);
-            this.TextBox_curso_angular.Name = "TextBox_curso_angular";
-            this.TextBox_curso_angular.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_curso_angular.TabIndex = 6;
-            // 
-            // TextBox_altura
-            // 
-            this.TextBox_altura.Location = new System.Drawing.Point(136, 45);
-            this.TextBox_altura.Name = "TextBox_altura";
-            this.TextBox_altura.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_altura.TabIndex = 5;
-            this.TextBox_altura.TextChanged += new System.EventHandler(this.TextBox_altura_TextChanged);
-            // 
-            // TextBox_comprimento_braco
-            // 
-            this.TextBox_comprimento_braco.Location = new System.Drawing.Point(136, 19);
-            this.TextBox_comprimento_braco.Name = "TextBox_comprimento_braco";
-            this.TextBox_comprimento_braco.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_comprimento_braco.TabIndex = 4;
-            this.TextBox_comprimento_braco.TextChanged += new System.EventHandler(this.TextBox_comprimento_braco_TextChanged);
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Controls.Add(label1);
             this.groupBox2.Controls.Add(this.TextBox_distribuicao_peso);
             this.groupBox2.Controls.Add(this.label2);
@@ -178,12 +143,13 @@
             this.groupBox2.Controls.Add(this.TextBox_distancia_mola);
             this.groupBox2.Controls.Add(label8);
             this.groupBox2.Controls.Add(this.TextBox_constante_elastica);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
+            this.groupBox2.Location = new System.Drawing.Point(20, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(324, 137);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Constante Elástica";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // TextBox_distribuicao_peso
             // 
@@ -201,13 +167,6 @@
             this.TextBox_distancia_bitola.TabIndex = 1;
             this.TextBox_distancia_bitola.TextChanged += new System.EventHandler(this.TextBox_distancia_bitola_TextChanged);
             // 
-            // TextBox_constante_elastica
-            // 
-            this.TextBox_constante_elastica.Location = new System.Drawing.Point(202, 97);
-            this.TextBox_constante_elastica.Name = "TextBox_constante_elastica";
-            this.TextBox_constante_elastica.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_constante_elastica.TabIndex = 3;
-            // 
             // TextBox_distancia_mola
             // 
             this.TextBox_distancia_mola.Location = new System.Drawing.Point(202, 71);
@@ -216,18 +175,64 @@
             this.TextBox_distancia_mola.TabIndex = 2;
             this.TextBox_distancia_mola.TextChanged += new System.EventHandler(this.TextBox_distancia_mola_TextChanged);
             // 
+            // TextBox_constante_elastica
+            // 
+            this.TextBox_constante_elastica.Location = new System.Drawing.Point(202, 97);
+            this.TextBox_constante_elastica.Name = "TextBox_constante_elastica";
+            this.TextBox_constante_elastica.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_constante_elastica.TabIndex = 3;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(label6);
+            this.groupBox3.Controls.Add(this.TextBox_comprimento_braco);
+            this.groupBox3.Controls.Add(label7);
+            this.groupBox3.Controls.Add(this.TextBox_altura);
+            this.groupBox3.Controls.Add(label9);
+            this.groupBox3.Controls.Add(this.TextBox_curso_angular);
+            this.groupBox3.Location = new System.Drawing.Point(373, 19);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(257, 137);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Curso Angular";
+            // 
+            // TextBox_comprimento_braco
+            // 
+            this.TextBox_comprimento_braco.Location = new System.Drawing.Point(136, 19);
+            this.TextBox_comprimento_braco.Name = "TextBox_comprimento_braco";
+            this.TextBox_comprimento_braco.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_comprimento_braco.TabIndex = 4;
+            this.TextBox_comprimento_braco.TextChanged += new System.EventHandler(this.TextBox_comprimento_braco_TextChanged);
+            // 
+            // TextBox_altura
+            // 
+            this.TextBox_altura.Location = new System.Drawing.Point(136, 45);
+            this.TextBox_altura.Name = "TextBox_altura";
+            this.TextBox_altura.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_altura.TabIndex = 5;
+            this.TextBox_altura.TextChanged += new System.EventHandler(this.TextBox_altura_TextChanged);
+            // 
+            // TextBox_curso_angular
+            // 
+            this.TextBox_curso_angular.Location = new System.Drawing.Point(136, 100);
+            this.TextBox_curso_angular.Name = "TextBox_curso_angular";
+            this.TextBox_curso_angular.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_curso_angular.TabIndex = 6;
+            // 
             // Roda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "Roda";
-            this.Size = new System.Drawing.Size(609, 175);
+            this.Size = new System.Drawing.Size(657, 175);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }

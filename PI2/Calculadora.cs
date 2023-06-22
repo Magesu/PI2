@@ -28,5 +28,10 @@ namespace PI2
         {
             carro1.CarregarCalculo();
         }
+
+        private void Calculadora_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
