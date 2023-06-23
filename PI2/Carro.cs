@@ -45,6 +45,12 @@ namespace PI2
                 Atualizar();
             }
         }
+        [Browsable(true)]
+        public string Nome
+        {
+            get { return nomeLabel.Text; }
+            set { nomeLabel.Text = value; }
+        }
         private List<Roda> rodas = new List<Roda>();
 
         public Carro()

@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.carro1 = new PI2.Carro();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_carregar = new System.Windows.Forms.Button();
             this.button_salvar = new System.Windows.Forms.Button();
+            this.carro1 = new PI2.Carro();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -57,7 +57,7 @@
             pictureBox1.Location = new System.Drawing.Point(20, 20);
             pictureBox1.Margin = new System.Windows.Forms.Padding(10);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(230, 470);
+            pictureBox1.Size = new System.Drawing.Size(218, 470);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -80,7 +80,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(962, 510);
-            this.splitContainer1.SplitterDistance = 270;
+            this.splitContainer1.SplitterDistance = 258;
             this.splitContainer1.TabIndex = 17;
             this.splitContainer1.TabStop = false;
             // 
@@ -100,24 +100,10 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer2.Size = new System.Drawing.Size(688, 510);
-            this.splitContainer2.SplitterDistance = 432;
+            this.splitContainer2.Size = new System.Drawing.Size(700, 510);
+            this.splitContainer2.SplitterDistance = 460;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
-            // 
-            // carro1
-            // 
-            this.carro1.BackColor = System.Drawing.Color.Transparent;
-            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.carro1.Location = new System.Drawing.Point(0, 0);
-            this.carro1.Name = "carro1";
-            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
-            this.carro1.Peso_Total = 0F;
-            this.carro1.Rodas_Dianteiras_Assimetricas = false;
-            this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(688, 432);
-            this.carro1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -131,15 +117,15 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(688, 74);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 46);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button_carregar
             // 
             this.button_carregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_carregar.Location = new System.Drawing.Point(114, 25);
+            this.button_carregar.Location = new System.Drawing.Point(117, 12);
             this.button_carregar.Name = "button_carregar";
-            this.button_carregar.Size = new System.Drawing.Size(115, 23);
+            this.button_carregar.Size = new System.Drawing.Size(115, 21);
             this.button_carregar.TabIndex = 1;
             this.button_carregar.Text = "Carregar resultado";
             this.button_carregar.UseVisualStyleBackColor = true;
@@ -148,13 +134,28 @@
             // button_salvar
             // 
             this.button_salvar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_salvar.Location = new System.Drawing.Point(464, 25);
+            this.button_salvar.Location = new System.Drawing.Point(473, 12);
             this.button_salvar.Name = "button_salvar";
-            this.button_salvar.Size = new System.Drawing.Size(103, 23);
+            this.button_salvar.Size = new System.Drawing.Size(103, 21);
             this.button_salvar.TabIndex = 2;
             this.button_salvar.Text = "Salvar resultado";
             this.button_salvar.UseVisualStyleBackColor = true;
             this.button_salvar.Click += new System.EventHandler(this.button_salvar_Click);
+            // 
+            // carro1
+            // 
+            this.carro1.BackColor = System.Drawing.Color.Transparent;
+            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.carro1.Location = new System.Drawing.Point(0, 0);
+            this.carro1.Name = "carro1";
+            this.carro1.Nome = "Calculadora";
+            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
+            this.carro1.Peso_Total = 0D;
+            this.carro1.Rodas_Dianteiras_Assimetricas = false;
+            this.carro1.Rodas_Traseiras_Assimetricas = false;
+            this.carro1.Size = new System.Drawing.Size(700, 460);
+            this.carro1.TabIndex = 0;
             // 
             // Calculadora
             // 

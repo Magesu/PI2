@@ -36,14 +36,14 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.TextBox_peso_total = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.nomeLabel = new System.Windows.Forms.Label();
             this.roda1 = new PI2.Roda();
             this.roda2 = new PI2.Roda();
             this.roda3 = new PI2.Roda();
             this.roda4 = new PI2.Roda();
             this.roda5 = new PI2.Roda();
             this.roda6 = new PI2.Roda();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -56,11 +56,11 @@
             // 
             label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label11.ForeColor = System.Drawing.SystemColors.Info;
+            label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label11.ForeColor = System.Drawing.SystemColors.MenuText;
             label11.Location = new System.Drawing.Point(3, 6);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(68, 13);
+            label11.Size = new System.Drawing.Size(58, 13);
             label11.TabIndex = 8;
             label11.Text = "Peso Total";
             // 
@@ -85,19 +85,19 @@
             this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.Controls.Add(this.CheckBox_rodas_dianteiras_assimetricas);
             this.flowLayoutPanel2.Controls.Add(this.CheckBox_rodas_traseiras_assimetricas);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(244, 5);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(272, 5);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(401, 23);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(344, 23);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // CheckBox_rodas_dianteiras_assimetricas
             // 
             this.CheckBox_rodas_dianteiras_assimetricas.AutoSize = true;
-            this.CheckBox_rodas_dianteiras_assimetricas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBox_rodas_dianteiras_assimetricas.ForeColor = System.Drawing.SystemColors.Info;
+            this.CheckBox_rodas_dianteiras_assimetricas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox_rodas_dianteiras_assimetricas.ForeColor = System.Drawing.SystemColors.MenuText;
             this.CheckBox_rodas_dianteiras_assimetricas.Location = new System.Drawing.Point(3, 3);
             this.CheckBox_rodas_dianteiras_assimetricas.Name = "CheckBox_rodas_dianteiras_assimetricas";
-            this.CheckBox_rodas_dianteiras_assimetricas.Size = new System.Drawing.Size(197, 17);
+            this.CheckBox_rodas_dianteiras_assimetricas.Size = new System.Drawing.Size(168, 17);
             this.CheckBox_rodas_dianteiras_assimetricas.TabIndex = 0;
             this.CheckBox_rodas_dianteiras_assimetricas.Text = "Rodas Dianteiras Assimétricas";
             this.CheckBox_rodas_dianteiras_assimetricas.UseVisualStyleBackColor = true;
@@ -106,11 +106,11 @@
             // CheckBox_rodas_traseiras_assimetricas
             // 
             this.CheckBox_rodas_traseiras_assimetricas.AutoSize = true;
-            this.CheckBox_rodas_traseiras_assimetricas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBox_rodas_traseiras_assimetricas.ForeColor = System.Drawing.SystemColors.Info;
-            this.CheckBox_rodas_traseiras_assimetricas.Location = new System.Drawing.Point(206, 3);
+            this.CheckBox_rodas_traseiras_assimetricas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBox_rodas_traseiras_assimetricas.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.CheckBox_rodas_traseiras_assimetricas.Location = new System.Drawing.Point(177, 3);
             this.CheckBox_rodas_traseiras_assimetricas.Name = "CheckBox_rodas_traseiras_assimetricas";
-            this.CheckBox_rodas_traseiras_assimetricas.Size = new System.Drawing.Size(192, 17);
+            this.CheckBox_rodas_traseiras_assimetricas.Size = new System.Drawing.Size(164, 17);
             this.CheckBox_rodas_traseiras_assimetricas.TabIndex = 1;
             this.CheckBox_rodas_traseiras_assimetricas.Text = "Rodas Traseiras Assimétricas";
             this.CheckBox_rodas_traseiras_assimetricas.UseVisualStyleBackColor = true;
@@ -122,15 +122,15 @@
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Controls.Add(label11);
             this.flowLayoutPanel3.Controls.Add(this.TextBox_peso_total);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(17, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(180, 26);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(170, 26);
             this.flowLayoutPanel3.TabIndex = 4;
             // 
             // TextBox_peso_total
             // 
             this.TextBox_peso_total.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextBox_peso_total.Location = new System.Drawing.Point(77, 3);
+            this.TextBox_peso_total.Location = new System.Drawing.Point(67, 3);
             this.TextBox_peso_total.Name = "TextBox_peso_total";
             this.TextBox_peso_total.Size = new System.Drawing.Size(100, 20);
             this.TextBox_peso_total.TabIndex = 0;
@@ -154,6 +154,37 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(687, 265);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nomeLabel, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 341);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // nomeLabel
+            // 
+            this.nomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nomeLabel.AutoSize = true;
+            this.nomeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.nomeLabel.Location = new System.Drawing.Point(3, 6);
+            this.nomeLabel.Name = "nomeLabel";
+            this.nomeLabel.Size = new System.Drawing.Size(130, 24);
+            this.nomeLabel.TabIndex = 2;
+            this.nomeLabel.Text = "Id do cálculo";
             // 
             // roda1
             // 
@@ -263,37 +294,6 @@
             this.roda6.Size = new System.Drawing.Size(657, 175);
             this.roda6.TabIndex = 5;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackgroundImage = global::PI2.Properties.Resources.background1;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 341);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Id do cálculo";
-            // 
             // Carro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +329,6 @@
         private Roda roda3;
         private Roda roda6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label nomeLabel;
     }
 }
