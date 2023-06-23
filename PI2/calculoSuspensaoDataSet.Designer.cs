@@ -34,9 +34,9 @@ namespace PI2 {
         
         private global::System.Data.DataRelation relationFK__Alunos__id_equip__793DFFAF;
         
-        private global::System.Data.DataRelation relationFK__Calculos__id_equ__6AEFE058;
+        private global::System.Data.DataRelation relationFK__Calculos__id_equ__7FEAFD3E;
         
-        private global::System.Data.DataRelation relationFK__Rodas__id_calcul__74794A92;
+        private global::System.Data.DataRelation relationFK__Rodas__id_calcul__04AFB25B;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -273,8 +273,8 @@ namespace PI2 {
                 }
             }
             this.relationFK__Alunos__id_equip__793DFFAF = this.Relations["FK__Alunos__id_equip__793DFFAF"];
-            this.relationFK__Calculos__id_equ__6AEFE058 = this.Relations["FK__Calculos__id_equ__6AEFE058"];
-            this.relationFK__Rodas__id_calcul__74794A92 = this.Relations["FK__Rodas__id_calcul__74794A92"];
+            this.relationFK__Calculos__id_equ__7FEAFD3E = this.Relations["FK__Calculos__id_equ__7FEAFD3E"];
+            this.relationFK__Rodas__id_calcul__04AFB25B = this.Relations["FK__Rodas__id_calcul__04AFB25B"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -297,14 +297,14 @@ namespace PI2 {
                         this.tableEquipes.id_equipeColumn}, new global::System.Data.DataColumn[] {
                         this.tableAlunos.id_equipeColumn}, false);
             this.Relations.Add(this.relationFK__Alunos__id_equip__793DFFAF);
-            this.relationFK__Calculos__id_equ__6AEFE058 = new global::System.Data.DataRelation("FK__Calculos__id_equ__6AEFE058", new global::System.Data.DataColumn[] {
+            this.relationFK__Calculos__id_equ__7FEAFD3E = new global::System.Data.DataRelation("FK__Calculos__id_equ__7FEAFD3E", new global::System.Data.DataColumn[] {
                         this.tableEquipes.id_equipeColumn}, new global::System.Data.DataColumn[] {
                         this.tableCalculos.id_equipeColumn}, false);
-            this.Relations.Add(this.relationFK__Calculos__id_equ__6AEFE058);
-            this.relationFK__Rodas__id_calcul__74794A92 = new global::System.Data.DataRelation("FK__Rodas__id_calcul__74794A92", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Calculos__id_equ__7FEAFD3E);
+            this.relationFK__Rodas__id_calcul__04AFB25B = new global::System.Data.DataRelation("FK__Rodas__id_calcul__04AFB25B", new global::System.Data.DataColumn[] {
                         this.tableCalculos.id_calculoColumn}, new global::System.Data.DataColumn[] {
                         this.tableRodas.id_calculoColumn}, false);
-            this.Relations.Add(this.relationFK__Rodas__id_calcul__74794A92);
+            this.Relations.Add(this.relationFK__Rodas__id_calcul__04AFB25B);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -707,6 +707,10 @@ namespace PI2 {
             
             private global::System.Data.DataColumn columnpeso_total;
             
+            private global::System.Data.DataColumn columnrodas_dianteiras_assimetricas;
+            
+            private global::System.Data.DataColumn columnrodas_traseiras_assimetricas;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CalculosDataTable() {
@@ -766,6 +770,22 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn rodas_dianteiras_assimetricasColumn {
+                get {
+                    return this.columnrodas_dianteiras_assimetricas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn rodas_traseiras_assimetricasColumn {
+                get {
+                    return this.columnrodas_traseiras_assimetricas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -801,14 +821,16 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CalculosRow AddCalculosRow(EquipesRow parentEquipesRowByFK__Calculos__id_equ__6AEFE058, double peso_total) {
+            public CalculosRow AddCalculosRow(EquipesRow parentEquipesRowByFK__Calculos__id_equ__7FEAFD3E, double peso_total, bool rodas_dianteiras_assimetricas, bool rodas_traseiras_assimetricas) {
                 CalculosRow rowCalculosRow = ((CalculosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        peso_total};
-                if ((parentEquipesRowByFK__Calculos__id_equ__6AEFE058 != null)) {
-                    columnValuesArray[1] = parentEquipesRowByFK__Calculos__id_equ__6AEFE058[0];
+                        peso_total,
+                        rodas_dianteiras_assimetricas,
+                        rodas_traseiras_assimetricas};
+                if ((parentEquipesRowByFK__Calculos__id_equ__7FEAFD3E != null)) {
+                    columnValuesArray[1] = parentEquipesRowByFK__Calculos__id_equ__7FEAFD3E[0];
                 }
                 rowCalculosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCalculosRow);
@@ -842,6 +864,8 @@ namespace PI2 {
                 this.columnid_calculo = base.Columns["id_calculo"];
                 this.columnid_equipe = base.Columns["id_equipe"];
                 this.columnpeso_total = base.Columns["peso_total"];
+                this.columnrodas_dianteiras_assimetricas = base.Columns["rodas_dianteiras_assimetricas"];
+                this.columnrodas_traseiras_assimetricas = base.Columns["rodas_traseiras_assimetricas"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -853,6 +877,10 @@ namespace PI2 {
                 base.Columns.Add(this.columnid_equipe);
                 this.columnpeso_total = new global::System.Data.DataColumn("peso_total", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpeso_total);
+                this.columnrodas_dianteiras_assimetricas = new global::System.Data.DataColumn("rodas_dianteiras_assimetricas", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrodas_dianteiras_assimetricas);
+                this.columnrodas_traseiras_assimetricas = new global::System.Data.DataColumn("rodas_traseiras_assimetricas", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrodas_traseiras_assimetricas);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_calculo}, true));
                 this.columnid_calculo.AutoIncrement = true;
@@ -1455,7 +1483,7 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RodasRow AddRodasRow(CalculosRow parentCalculosRowByFK__Rodas__id_calcul__74794A92, string nome, double distribuicao_peso, double distancia_bitola, double distancia_mola, double constante_elastica, double comprimento_braco, double altura, double curso_angular) {
+            public RodasRow AddRodasRow(CalculosRow parentCalculosRowByFK__Rodas__id_calcul__04AFB25B, string nome, double distribuicao_peso, double distancia_bitola, double distancia_mola, double constante_elastica, double comprimento_braco, double altura, double curso_angular) {
                 RodasRow rowRodasRow = ((RodasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1468,8 +1496,8 @@ namespace PI2 {
                         comprimento_braco,
                         altura,
                         curso_angular};
-                if ((parentCalculosRowByFK__Rodas__id_calcul__74794A92 != null)) {
-                    columnValuesArray[1] = parentCalculosRowByFK__Rodas__id_calcul__74794A92[0];
+                if ((parentCalculosRowByFK__Rodas__id_calcul__04AFB25B != null)) {
+                    columnValuesArray[1] = parentCalculosRowByFK__Rodas__id_calcul__04AFB25B[0];
                 }
                 rowRodasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRodasRow);
@@ -1807,12 +1835,46 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EquipesRow EquipesRow {
+            public bool rodas_dianteiras_assimetricas {
                 get {
-                    return ((EquipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Calculos__id_equ__6AEFE058"])));
+                    try {
+                        return ((bool)(this[this.tableCalculos.rodas_dianteiras_assimetricasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rodas_dianteiras_assimetricas\' in table \'Calculos\' is DBNul" +
+                                "l.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Calculos__id_equ__6AEFE058"]);
+                    this[this.tableCalculos.rodas_dianteiras_assimetricasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool rodas_traseiras_assimetricas {
+                get {
+                    try {
+                        return ((bool)(this[this.tableCalculos.rodas_traseiras_assimetricasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rodas_traseiras_assimetricas\' in table \'Calculos\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableCalculos.rodas_traseiras_assimetricasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public EquipesRow EquipesRow {
+                get {
+                    return ((EquipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Calculos__id_equ__7FEAFD3E"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Calculos__id_equ__7FEAFD3E"]);
                 }
             }
             
@@ -1842,12 +1904,36 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isrodas_dianteiras_assimetricasNull() {
+                return this.IsNull(this.tableCalculos.rodas_dianteiras_assimetricasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setrodas_dianteiras_assimetricasNull() {
+                this[this.tableCalculos.rodas_dianteiras_assimetricasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isrodas_traseiras_assimetricasNull() {
+                return this.IsNull(this.tableCalculos.rodas_traseiras_assimetricasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setrodas_traseiras_assimetricasNull() {
+                this[this.tableCalculos.rodas_traseiras_assimetricasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public RodasRow[] GetRodasRows() {
-                if ((this.Table.ChildRelations["FK__Rodas__id_calcul__74794A92"] == null)) {
+                if ((this.Table.ChildRelations["FK__Rodas__id_calcul__04AFB25B"] == null)) {
                     return new RodasRow[0];
                 }
                 else {
-                    return ((RodasRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Rodas__id_calcul__74794A92"])));
+                    return ((RodasRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Rodas__id_calcul__04AFB25B"])));
                 }
             }
         }
@@ -1947,11 +2033,11 @@ namespace PI2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CalculosRow[] GetCalculosRows() {
-                if ((this.Table.ChildRelations["FK__Calculos__id_equ__6AEFE058"] == null)) {
+                if ((this.Table.ChildRelations["FK__Calculos__id_equ__7FEAFD3E"] == null)) {
                     return new CalculosRow[0];
                 }
                 else {
-                    return ((CalculosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Calculos__id_equ__6AEFE058"])));
+                    return ((CalculosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Calculos__id_equ__7FEAFD3E"])));
                 }
             }
         }
@@ -2124,10 +2210,10 @@ namespace PI2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CalculosRow CalculosRow {
                 get {
-                    return ((CalculosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Rodas__id_calcul__74794A92"])));
+                    return ((CalculosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Rodas__id_calcul__04AFB25B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Rodas__id_calcul__74794A92"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Rodas__id_calcul__04AFB25B"]);
                 }
             }
             
@@ -2826,36 +2912,49 @@ SELECT id_aluno, id_equipe, nome FROM Alunos WHERE (id_aluno = @id_aluno) AND (i
             tableMapping.ColumnMappings.Add("id_calculo", "id_calculo");
             tableMapping.ColumnMappings.Add("id_equipe", "id_equipe");
             tableMapping.ColumnMappings.Add("peso_total", "peso_total");
+            tableMapping.ColumnMappings.Add("rodas_dianteiras_assimetricas", "rodas_dianteiras_assimetricas");
+            tableMapping.ColumnMappings.Add("rodas_traseiras_assimetricas", "rodas_traseiras_assimetricas");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Calculos] WHERE (([id_calculo] = @Original_id_calculo) AND ((@IsNull_id_equipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)) AND ((@IsNull_peso_total = 1 AND [peso_total] IS NULL) OR ([peso_total] = @Original_peso_total)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Calculos] WHERE (([id_calculo] = @Original_id_calculo) AND ((@IsNull_id_equipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)) AND ((@IsNull_peso_total = 1 AND [peso_total] IS NULL) OR ([peso_total] = @Original_peso_total)) AND ((@IsNull_rodas_dianteiras_assimetricas = 1 AND [rodas_dianteiras_assimetricas] IS NULL) OR ([rodas_dianteiras_assimetricas] = @Original_rodas_dianteiras_assimetricas)) AND ((@IsNull_rodas_traseiras_assimetricas = 1 AND [rodas_traseiras_assimetricas] IS NULL) OR ([rodas_traseiras_assimetricas] = @Original_rodas_traseiras_assimetricas)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_calculo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_calculo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_peso_total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_total", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_peso_total", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rodas_dianteiras_assimetricas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_dianteiras_assimetricas", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rodas_dianteiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_dianteiras_assimetricas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rodas_traseiras_assimetricas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_traseiras_assimetricas", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rodas_traseiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_traseiras_assimetricas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Calculos] ([id_equipe], [peso_total]) VALUES (@id_equipe, @pes" +
-                "o_total);\r\nSELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calc" +
-                "ulo = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Calculos] ([id_equipe], [peso_total], [rodas_dianteiras_assimetricas], [rodas_traseiras_assimetricas]) VALUES (@id_equipe, @peso_total, @rodas_dianteiras_assimetricas, @rodas_traseiras_assimetricas);
+SELECT id_calculo, id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_traseiras_assimetricas FROM Calculos WHERE (id_calculo = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@peso_total", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rodas_dianteiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_dianteiras_assimetricas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rodas_traseiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_traseiras_assimetricas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Calculos] SET [id_equipe] = @id_equipe, [peso_total] = @peso_total WHERE (([id_calculo] = @Original_id_calculo) AND ((@IsNull_id_equipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)) AND ((@IsNull_peso_total = 1 AND [peso_total] IS NULL) OR ([peso_total] = @Original_peso_total)));
-SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_calculo)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Calculos] SET [id_equipe] = @id_equipe, [peso_total] = @peso_total, [rodas_dianteiras_assimetricas] = @rodas_dianteiras_assimetricas, [rodas_traseiras_assimetricas] = @rodas_traseiras_assimetricas WHERE (([id_calculo] = @Original_id_calculo) AND ((@IsNull_id_equipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)) AND ((@IsNull_peso_total = 1 AND [peso_total] IS NULL) OR ([peso_total] = @Original_peso_total)) AND ((@IsNull_rodas_dianteiras_assimetricas = 1 AND [rodas_dianteiras_assimetricas] IS NULL) OR ([rodas_dianteiras_assimetricas] = @Original_rodas_dianteiras_assimetricas)) AND ((@IsNull_rodas_traseiras_assimetricas = 1 AND [rodas_traseiras_assimetricas] IS NULL) OR ([rodas_traseiras_assimetricas] = @Original_rodas_traseiras_assimetricas)));
+SELECT id_calculo, id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_traseiras_assimetricas FROM Calculos WHERE (id_calculo = @id_calculo)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@peso_total", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rodas_dianteiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_dianteiras_assimetricas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rodas_traseiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_traseiras_assimetricas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_calculo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_calculo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_peso_total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_total", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_peso_total", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rodas_dianteiras_assimetricas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_dianteiras_assimetricas", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rodas_dianteiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_dianteiras_assimetricas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_rodas_traseiras_assimetricas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_traseiras_assimetricas", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rodas_traseiras_assimetricas", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rodas_traseiras_assimetricas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_calculo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_calculo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2872,7 +2971,8 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_calculo, id_equipe, peso_total FROM dbo.Calculos";
+            this._commandCollection[0].CommandText = "SELECT id_calculo, id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_tr" +
+                "aseiras_assimetricas FROM dbo.Calculos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2933,7 +3033,7 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_calculo, global::System.Nullable<int> Original_id_equipe, global::System.Nullable<double> Original_peso_total) {
+        public virtual int Delete(int Original_id_calculo, global::System.Nullable<int> Original_id_equipe, global::System.Nullable<double> Original_peso_total, global::System.Nullable<bool> Original_rodas_dianteiras_assimetricas, global::System.Nullable<bool> Original_rodas_traseiras_assimetricas) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_calculo));
             if ((Original_id_equipe.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -2950,6 +3050,22 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_rodas_dianteiras_assimetricas.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_rodas_dianteiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_rodas_traseiras_assimetricas.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_rodas_traseiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2971,7 +3087,7 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> id_equipe, global::System.Nullable<double> peso_total) {
+        public virtual int Insert(global::System.Nullable<int> id_equipe, global::System.Nullable<double> peso_total, global::System.Nullable<bool> rodas_dianteiras_assimetricas, global::System.Nullable<bool> rodas_traseiras_assimetricas) {
             if ((id_equipe.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_equipe.Value));
             }
@@ -2983,6 +3099,18 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((rodas_dianteiras_assimetricas.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(rodas_dianteiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((rodas_traseiras_assimetricas.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(rodas_traseiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3004,7 +3132,7 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> id_equipe, global::System.Nullable<double> peso_total, int Original_id_calculo, global::System.Nullable<int> Original_id_equipe, global::System.Nullable<double> Original_peso_total, int id_calculo) {
+        public virtual int Update(global::System.Nullable<int> id_equipe, global::System.Nullable<double> peso_total, global::System.Nullable<bool> rodas_dianteiras_assimetricas, global::System.Nullable<bool> rodas_traseiras_assimetricas, int Original_id_calculo, global::System.Nullable<int> Original_id_equipe, global::System.Nullable<double> Original_peso_total, global::System.Nullable<bool> Original_rodas_dianteiras_assimetricas, global::System.Nullable<bool> Original_rodas_traseiras_assimetricas, int id_calculo) {
             if ((id_equipe.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_equipe.Value));
             }
@@ -3017,24 +3145,52 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_calculo));
-            if ((Original_id_equipe.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_equipe.Value));
+            if ((rodas_dianteiras_assimetricas.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(rodas_dianteiras_assimetricas.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_peso_total.HasValue == true)) {
+            if ((rodas_traseiras_assimetricas.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(rodas_traseiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_calculo));
+            if ((Original_id_equipe.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Original_peso_total.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_equipe.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id_calculo));
+            if ((Original_peso_total.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_peso_total.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_rodas_dianteiras_assimetricas.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_rodas_dianteiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_rodas_traseiras_assimetricas.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Original_rodas_traseiras_assimetricas.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(id_calculo));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3055,8 +3211,8 @@ SELECT id_calculo, id_equipe, peso_total FROM Calculos WHERE (id_calculo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> id_equipe, global::System.Nullable<double> peso_total, int Original_id_calculo, global::System.Nullable<int> Original_id_equipe, global::System.Nullable<double> Original_peso_total) {
-            return this.Update(id_equipe, peso_total, Original_id_calculo, Original_id_equipe, Original_peso_total, Original_id_calculo);
+        public virtual int Update(global::System.Nullable<int> id_equipe, global::System.Nullable<double> peso_total, global::System.Nullable<bool> rodas_dianteiras_assimetricas, global::System.Nullable<bool> rodas_traseiras_assimetricas, int Original_id_calculo, global::System.Nullable<int> Original_id_equipe, global::System.Nullable<double> Original_peso_total, global::System.Nullable<bool> Original_rodas_dianteiras_assimetricas, global::System.Nullable<bool> Original_rodas_traseiras_assimetricas) {
+            return this.Update(id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_traseiras_assimetricas, Original_id_calculo, Original_id_equipe, Original_peso_total, Original_rodas_dianteiras_assimetricas, Original_rodas_traseiras_assimetricas, Original_id_calculo);
         }
     }
     

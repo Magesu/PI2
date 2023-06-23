@@ -32,7 +32,7 @@ namespace PI2
             get { return rodas_dianteiras_assimetricas;}
             set {
                 rodas_dianteiras_assimetricas = value;
-                AtualizarSimetriaRodas();
+                Atualizar();
             }
         }
         private bool rodas_traseiras_assimetricas = false;
@@ -42,7 +42,7 @@ namespace PI2
             set
             {
                 rodas_traseiras_assimetricas = value;
-                AtualizarSimetriaRodas();
+                Atualizar();
             }
         }
         private List<Roda> rodas = new List<Roda>();
@@ -63,7 +63,7 @@ namespace PI2
                 r.Carro_Parente = this;
             }
 
-            AtualizarSimetriaRodas();
+            Atualizar();
         }
 
         public List<Roda> GetRodas()
@@ -110,8 +110,12 @@ namespace PI2
             }
         }
 
-        private void AtualizarSimetriaRodas()
+        private void Atualizar()
         {
+            TextBox_peso_total.Text = Peso_Total.ToString();
+            CheckBox_rodas_dianteiras_assimetricas.Checked = Rodas_Dianteiras_Assimetricas;
+            CheckBox_rodas_traseiras_assimetricas.Checked = Rodas_Traseiras_Assimetricas;
+
             rodas.ElementAt(0).Visible = Rodas_Dianteiras_Assimetricas;
             rodas.ElementAt(1).Visible = Rodas_Dianteiras_Assimetricas;
             rodas.ElementAt(2).Visible = !Rodas_Dianteiras_Assimetricas;
@@ -128,10 +132,12 @@ namespace PI2
             {
                 connection.Open();
 
-                using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total) VALUES (@id_equipe, @peso_total); SELECT SCOPE_IDENTITY();", connection))
+                using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_traseiras_assimetricas) VALUES (@id_equipe, @peso_total, @rodas_dianteiras_assimetricas, @rodas_traseiras_assimetricas); SELECT SCOPE_IDENTITY();", connection))
                 {
                     calculosInsertCommand.Parameters.AddWithValue("@id_equipe", 1);
                     calculosInsertCommand.Parameters.AddWithValue("@peso_total", Peso_Total);
+                    calculosInsertCommand.Parameters.AddWithValue("@rodas_dianteiras_assimetricas", Rodas_Dianteiras_Assimetricas);
+                    calculosInsertCommand.Parameters.AddWithValue("@rodas_traseiras_assimetricas", Rodas_Traseiras_Assimetricas);
 
                     int id_calculo = Convert.ToInt32(calculosInsertCommand.ExecuteScalar());
 
@@ -161,7 +167,7 @@ namespace PI2
             }
         }
 
-        public void CarregarCalculo()
+        public void CarregarCalculo(int id_calculo)
         {
             foreach(Roda r in rodas)
             {
@@ -174,29 +180,32 @@ namespace PI2
             {
                 connection.Open();
 
-                using (SqlCommand calculosSelectCommand = new SqlCommand("select c.id_calculo, c.peso_total, r.nome, r.distribuicao_peso, r.distancia_bitola, r.distancia_mola, r.comprimento_braco, r.altura from Calculos c join Rodas r on r.id_calculo = c.id_calculo where c.id_calculo = (SELECT IDENT_CURRENT('Calculos'));", connection))
+                using (SqlCommand calculosSelectCommand = new SqlCommand("select c.peso_total, c.rodas_dianteiras_assimetricas, c.rodas_traseiras_assimetricas, r.nome, r.distribuicao_peso, r.distancia_bitola, r.distancia_mola, r.comprimento_braco, r.altura from Calculos c join Rodas r on r.id_calculo = c.id_calculo where c.id_calculo = @id_calculo;", connection))
                 {
-                    //calculosSelectCommand.Parameters.AddWithValue("@id_calculo", "(SELECT IDENT_CURRENT('Calculos'))");
+                    calculosSelectCommand.Parameters.AddWithValue("@id_calculo", id_calculo);
 
                     using (SqlDataReader reader = calculosSelectCommand.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            int id_calculo = reader.GetInt32(0);
-                            double peso_total_from_db = reader.GetDouble(1);
+                            double peso_total_from_db = reader.GetDouble(0);
+                            bool rodas_dianteiras_assimetricas_from_db = reader.GetBoolean(1);
+                            bool rodas_traseiras_assimetricas_from_db = reader.GetBoolean(2);
 
                             Peso_Total = peso_total_from_db;
+                            Rodas_Dianteiras_Assimetricas = rodas_dianteiras_assimetricas_from_db;
+                            Rodas_Traseiras_Assimetricas = rodas_traseiras_assimetricas_from_db;
 
-                            foreach(Roda r in rodas)
+                            foreach (Roda r in rodas)
                             {
-                                string nome_from_db = reader.GetString(2);
-                                double distribuicao_peso_from_db = reader.GetDouble(3);
-                                double distancia_bitola_from_db = reader.GetDouble(4);
-                                double distancia_mola_from_db = reader.GetDouble(5);
-                                double comprimento_braco_from_db = reader.GetDouble(6);
-                                double altura_from_db = reader.GetDouble(7);
+                                string nome_from_db = reader.GetString(3);
+                                double distribuicao_peso_from_db = reader.GetDouble(4);
+                                double distancia_bitola_from_db = reader.GetDouble(5);
+                                double distancia_mola_from_db = reader.GetDouble(6);
+                                double comprimento_braco_from_db = reader.GetDouble(7);
+                                double altura_from_db = reader.GetDouble(8);
 
-                                if(nome_from_db == r.Nome)
+                                if (nome_from_db == r.Nome)
                                 {
                                     r.Povoar(distribuicao_peso_from_db, distancia_bitola_from_db, distancia_mola_from_db, comprimento_braco_from_db, altura_from_db);
                                     r.Visible = true;
@@ -205,6 +214,8 @@ namespace PI2
                         }
                     }
                 }
+
+                connection.Close();
             }
         }
     }

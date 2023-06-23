@@ -26,7 +26,7 @@ namespace PI2
 
         private void button_carregar_Click(object sender, EventArgs e)
         {
-            carro1.CarregarCalculo();
+            carro1.CarregarCalculo(2);
         }
 
         private void Calculadora_Load(object sender, EventArgs e)
