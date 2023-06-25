@@ -33,5 +33,33 @@ namespace PI2
         {
 
         }
+
+        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+
+            login.Show();
+        }
+
+        private void históricoDeCálculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Histórico histórico = new Histórico();
+
+            histórico.Show();
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+
+            cadastro.Show();
+        }
+
+        private void informaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EquipeInfo equipeInfo = new EquipeInfo(2);
+
+            equipeInfo.Show();
+        }
     }
 }
