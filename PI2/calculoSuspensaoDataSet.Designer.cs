@@ -5525,11 +5525,17 @@ SELECT ra, nome, passhash FROM Usuarios WHERE (ra = @ra)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ra, nome, passhash FROM dbo.Usuarios";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        ra, nome, passhash\r\nFROM            Usuarios\r\nWHERE        (ra = @r" +
+                "a)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ra", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "ra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5551,6 +5557,42 @@ SELECT ra, nome, passhash FROM Usuarios WHERE (ra = @ra)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual calculoSuspensaoDataSet.UsuariosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            calculoSuspensaoDataSet.UsuariosDataTable dataTable = new calculoSuspensaoDataSet.UsuariosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByRA(calculoSuspensaoDataSet.UsuariosDataTable dataTable, string ra) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ra == null)) {
+                throw new global::System.ArgumentNullException("ra");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ra));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual calculoSuspensaoDataSet.UsuariosDataTable GetDataByRA(string ra) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ra == null)) {
+                throw new global::System.ArgumentNullException("ra");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ra));
+            }
             calculoSuspensaoDataSet.UsuariosDataTable dataTable = new calculoSuspensaoDataSet.UsuariosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

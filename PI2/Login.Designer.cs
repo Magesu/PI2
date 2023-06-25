@@ -32,19 +32,21 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_senha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_ra = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button_login = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button_cadastro = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.usuariosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.UsuariosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,12 +73,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(277, 150);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(238, 128);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(246, 150);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(323, 194);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // label1
@@ -95,86 +97,130 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_login, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(15, 35);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(15);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(240, 124);
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(293, 144);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // flowLayoutPanel3
+            // tableLayoutPanel4
             // 
-            this.flowLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel1);
-            this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(33, 30);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(173, 64);
-            this.flowLayoutPanel3.TabIndex = 2;
-            this.flowLayoutPanel3.WrapContents = false;
+            this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel4.AutoSize = true;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel4.Controls.Add(this.textBox_senha, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.textBox_ra, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(74, 14);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(144, 52);
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // textBox_senha
             // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.textBox1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(167, 26);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Username";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.Location = new System.Drawing.Point(64, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.label3);
-            this.flowLayoutPanel2.Controls.Add(this.textBox2);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 35);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(165, 26);
-            this.flowLayoutPanel2.TabIndex = 2;
+            this.textBox_senha.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBox_senha.Location = new System.Drawing.Point(47, 29);
+            this.textBox_senha.Name = "textBox_senha";
+            this.textBox_senha.Size = new System.Drawing.Size(94, 20);
+            this.textBox_senha.TabIndex = 1;
+            this.textBox_senha.TextChanged += new System.EventHandler(this.textBox_senha_TextChanged);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Location = new System.Drawing.Point(3, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Password";
+            this.label3.Text = "Senha";
             // 
-            // textBox2
+            // textBox_ra
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox2.Location = new System.Drawing.Point(62, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBox_ra.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBox_ra.Location = new System.Drawing.Point(47, 3);
+            this.textBox_ra.Name = "textBox_ra";
+            this.textBox_ra.Size = new System.Drawing.Size(94, 20);
+            this.textBox_ra.TabIndex = 0;
+            this.textBox_ra.TextChanged += new System.EventHandler(this.textBox_ra_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "RA";
+            // 
+            // button_login
+            // 
+            this.button_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_login.Enabled = false;
+            this.button_login.Location = new System.Drawing.Point(109, 83);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(75, 23);
+            this.button_login.TabIndex = 1;
+            this.button_login.Text = "Login";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel5.AutoSize = true;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.button_cadastro, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(62, 112);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(168, 29);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // button_cadastro
+            // 
+            this.button_cadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_cadastro.Location = new System.Drawing.Point(88, 3);
+            this.button_cadastro.Name = "button_cadastro";
+            this.button_cadastro.Size = new System.Drawing.Size(75, 23);
+            this.button_cadastro.TabIndex = 0;
+            this.button_cadastro.Text = "Cadastrar-se";
+            this.button_cadastro.UseVisualStyleBackColor = true;
+            this.button_cadastro.Click += new System.EventHandler(this.button_cadastro_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Sem cadastro?";
+            // 
+            // usuariosTableAdapter1
+            // 
+            this.usuariosTableAdapter1.ClearBeforeFill = true;
             // 
             // Login
             // 
@@ -189,12 +235,10 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -203,14 +247,17 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button button_login;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TextBox textBox_senha;
+        private System.Windows.Forms.TextBox textBox_ra;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button button_cadastro;
+        private System.Windows.Forms.Label label4;
+        private calculoSuspensaoDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter1;
     }
 }
