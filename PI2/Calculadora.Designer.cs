@@ -44,6 +44,7 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bemvindoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -187,7 +188,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.equipeToolStripMenuItem1,
             this.equipeToolStripMenuItem,
-            this.cadastroToolStripMenuItem});
+            this.cadastroToolStripMenuItem,
+            this.bemvindoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(962, 24);
@@ -238,6 +240,13 @@
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
+            // bemvindoToolStripMenuItem
+            // 
+            this.bemvindoToolStripMenuItem.Name = "bemvindoToolStripMenuItem";
+            this.bemvindoToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.bemvindoToolStripMenuItem.Text = "Bem-vindo";
+            this.bemvindoToolStripMenuItem.Click += new System.EventHandler(this.bemvindoToolStripMenuItem_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,5 +294,6 @@
         private System.Windows.Forms.ToolStripMenuItem históricoDeCálculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bemvindoToolStripMenuItem;
     }
 }

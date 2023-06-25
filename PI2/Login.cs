@@ -12,9 +12,12 @@ namespace PI2
 {
     public partial class Login : Form
     {
-        public Login()
+        Calculadora calculadora;
+
+        public Login(Calculadora calc)
         {
             InitializeComponent();
+            this.calculadora = calc;
         }
 
         private void button_cadastro_Click(object sender, EventArgs e)
@@ -60,8 +63,15 @@ namespace PI2
 
                 if (usuario["passhash"].Equals(senha))
                 {
+                    calculadora.RA_Usuario_Logado = usuario["ra"].ToString();
+
                     string message = "Seja bem vindo, " + usuario["nome"] + "!";
-                    MessageBox.Show(message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show(message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (result == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
                 else
                 {

@@ -65,7 +65,12 @@ namespace PI2
                 }
             }
 
-            MessageBox.Show("Cadastro realizado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Cadastro realizado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void textBox_ra_TextChanged(object sender, EventArgs e)
