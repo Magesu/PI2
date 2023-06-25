@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,68 +56,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroAluno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroAluno.Designer.cs">
-      <DependentUpon>CadastroAluno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroEquipe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroEquipe.Designer.cs">
-      <DependentUpon>CadastroEquipe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Calculadora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Calculadora.Designer.cs">
       <DependentUpon>Calculadora.cs</DependentUpon>
     </Compile>
-    <Compile Include="CalcularConstanteElastica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CalcularConstanteElastica.Designer.cs">
-      <DependentUpon>CalcularConstanteElastica.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CalcularCursoAngular.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CalcularCursoAngular.Designer.cs">
-      <DependentUpon>CalcularCursoAngular.cs</DependentUpon>
-    </Compile>
     <Compile Include="CalculoSuspensao.cs" />
+    <Compile Include="calculoSuspensaoDataSet.cs">
+      <DependentUpon>calculoSuspensaoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="calculoSuspensaoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>calculoSuspensaoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro.Designer.cs">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipeInfo.Designer.cs">
+      <DependentUpon>EquipeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Histórico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histórico.Designer.cs">
+      <DependentUpon>Histórico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teste.Designer.cs">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CadastroAluno.resx">
-      <DependentUpon>CadastroAluno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastroEquipe.resx">
-      <DependentUpon>CadastroEquipe.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Roda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Roda.Designer.cs">
+      <DependentUpon>Roda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Carro.Designer.cs">
+      <DependentUpon>Carro.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cadastro.resx">
+      <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calculadora.resx">
       <DependentUpon>Calculadora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CalcularConstanteElastica.resx">
-      <DependentUpon>CalcularConstanteElastica.cs</DependentUpon>
+    <EmbeddedResource Include="Carro.resx">
+      <DependentUpon>Carro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CalcularCursoAngular.resx">
-      <DependentUpon>CalcularCursoAngular.cs</DependentUpon>
+    <EmbeddedResource Include="EquipeInfo.resx">
+      <DependentUpon>EquipeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histórico.resx">
+      <DependentUpon>Histórico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teste.resx">
+      <DependentUpon>Teste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Roda.resx">
+      <DependentUpon>Roda.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="calculoSuspensaoDataSet.xsc">
       <DependentUpon>calculoSuspensaoDataSet.xsd</DependentUpon>
     </None>
@@ -119,6 +160,7 @@
     <None Include="calculoSuspensaoDataSet.xss">
       <DependentUpon>calculoSuspensaoDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +173,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseCarro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

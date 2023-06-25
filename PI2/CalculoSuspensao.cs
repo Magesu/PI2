@@ -8,38 +8,51 @@ namespace PI2
 {
     public static class CalculoSuspensao
     {
-        public static decimal CalcularConstanteElastica(decimal f, decimal bd, decimal sd)
+        public static double CalcularConstanteElastica(double f, double bd, double sd)
         {
-            decimal resultado;
+            if (sd == 0)
+            {
+                throw new DivideByZeroException("Não dá pra dividir por 0.");
+            }
 
-            resultado = (f * bd) / sd;
+            double resultado_em_kg_mm, resultado_em_N_m;
+
+            resultado_em_kg_mm = (f * bd) / sd;
+            resultado_em_N_m = resultado_em_kg_mm * 10 * 1000;
+
+            return resultado_em_N_m;
+        }
+
+        public static double CalcularCursoAngular(double a, double b)
+        {
+            if (b == 0)
+            {
+                throw new DivideByZeroException("Não dá pra dividir por 0.");
+            }
+
+            double resultado;
+
+            resultado = 2 * Math.Asin(a / b);
+
+            resultado = RadianosParaGraus(resultado);
 
             return resultado;
         }
 
-        public static decimal CalcularCursoAngular(decimal a, decimal b)
+        public static double RadianosParaGraus(double a)
         {
-            decimal resultado;
+            double resultado;
 
-            resultado = 2 * (a / 2) / b;
+            resultado = a * 180 / Math.PI;
 
             return resultado;
         }
 
-        public static decimal RadianosParaGraus(decimal a)
+        public static double GrausParaRadianos(double a)
         {
-            decimal resultado;
+            double resultado;
 
-            resultado = a * 180 / Convert.ToDecimal(Math.PI);
-
-            return resultado;
-        }
-
-        public static decimal GrausParaRadianos(decimal a)
-        {
-            decimal resultado;
-
-            resultado = a * Convert.ToDecimal(Math.PI) / 180;
+            resultado = a * Math.PI / 180;
 
             return resultado;
         }

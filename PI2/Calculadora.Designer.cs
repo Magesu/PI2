@@ -28,469 +28,262 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.PictureBox pictureBox1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
-            this.cadastroAluno = new System.Windows.Forms.Button();
-            this.cadastroEquipe = new System.Windows.Forms.Button();
-            this.constanteElasticaButton = new System.Windows.Forms.Button();
-            this.cursoAngularButton = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fazerLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarEquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.salvarConstanteElasticaButton = new System.Windows.Forms.Button();
-            this.resultadoConstanteElastica = new System.Windows.Forms.NumericUpDown();
-            this.calcularConstanteElasticaButton = new System.Windows.Forms.Button();
-            this.F = new System.Windows.Forms.NumericUpDown();
-            this.bd = new System.Windows.Forms.NumericUpDown();
-            this.resultadoLabel = new System.Windows.Forms.Label();
-            this.sd = new System.Windows.Forms.NumericUpDown();
-            this.bdLabel = new System.Windows.Forms.Label();
-            this.FLabel = new System.Windows.Forms.Label();
-            this.sdLabel = new System.Windows.Forms.Label();
-            this.salvarCursoAngularButton = new System.Windows.Forms.Button();
-            this.resultadoCursoAngular = new System.Windows.Forms.NumericUpDown();
-            this.calcularCursoAngularButton = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.b = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.menuStrip1.SuspendLayout();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.carro1 = new PI2.Carro();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button_carregar = new System.Windows.Forms.Button();
+            this.button_salvar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.equipeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.informaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.históricoDeCálculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoConstanteElastica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.F)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoCursoAngular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cadastroAluno
+            // pictureBox1
             // 
-            this.cadastroAluno.Location = new System.Drawing.Point(296, 141);
-            this.cadastroAluno.Name = "cadastroAluno";
-            this.cadastroAluno.Size = new System.Drawing.Size(167, 23);
-            this.cadastroAluno.TabIndex = 0;
-            this.cadastroAluno.Text = "Cadastrar";
-            this.cadastroAluno.UseVisualStyleBackColor = true;
-            this.cadastroAluno.Click += new System.EventHandler(this.cadastro_Click);
-            // 
-            // cadastroEquipe
-            // 
-            this.cadastroEquipe.Location = new System.Drawing.Point(296, 170);
-            this.cadastroEquipe.Name = "cadastroEquipe";
-            this.cadastroEquipe.Size = new System.Drawing.Size(167, 23);
-            this.cadastroEquipe.TabIndex = 1;
-            this.cadastroEquipe.Text = "Cadastrar equipe";
-            this.cadastroEquipe.UseVisualStyleBackColor = true;
-            this.cadastroEquipe.Click += new System.EventHandler(this.cadastroEquipe_Click);
-            // 
-            // constanteElasticaButton
-            // 
-            this.constanteElasticaButton.Location = new System.Drawing.Point(296, 199);
-            this.constanteElasticaButton.Name = "constanteElasticaButton";
-            this.constanteElasticaButton.Size = new System.Drawing.Size(167, 23);
-            this.constanteElasticaButton.TabIndex = 2;
-            this.constanteElasticaButton.Text = "Calcular Constante Elástica";
-            this.constanteElasticaButton.UseVisualStyleBackColor = true;
-            this.constanteElasticaButton.Click += new System.EventHandler(this.constanteElasticaButton_Click);
-            // 
-            // cursoAngularButton
-            // 
-            this.cursoAngularButton.Location = new System.Drawing.Point(296, 228);
-            this.cursoAngularButton.Name = "cursoAngularButton";
-            this.cursoAngularButton.Size = new System.Drawing.Size(167, 23);
-            this.cursoAngularButton.TabIndex = 3;
-            this.cursoAngularButton.Text = "Calcular Curso Angular";
-            this.cursoAngularButton.UseVisualStyleBackColor = true;
-            this.cursoAngularButton.Click += new System.EventHandler(this.cursoAngularButton_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // contaToolStripMenuItem
-            // 
-            this.contaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.fazerLoginToolStripMenuItem,
-            this.cadastrarEquipeToolStripMenuItem});
-            this.contaToolStripMenuItem.Name = "contaToolStripMenuItem";
-            this.contaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.contaToolStripMenuItem.Text = "Conta";
-            // 
-            // cadastrarToolStripMenuItem
-            // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
-            // 
-            // fazerLoginToolStripMenuItem
-            // 
-            this.fazerLoginToolStripMenuItem.Name = "fazerLoginToolStripMenuItem";
-            this.fazerLoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fazerLoginToolStripMenuItem.Text = "Login";
-            // 
-            // cadastrarEquipeToolStripMenuItem
-            // 
-            this.cadastrarEquipeToolStripMenuItem.Name = "cadastrarEquipeToolStripMenuItem";
-            this.cadastrarEquipeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarEquipeToolStripMenuItem.Text = "Cadastrar equipe";
+            pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            pictureBox1.Image = global::PI2.Properties.Resources.baseCarro;
+            pictureBox1.Location = new System.Drawing.Point(20, 20);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(210, 440);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 27);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.salvarConstanteElasticaButton);
-            this.splitContainer1.Panel1.Controls.Add(this.resultadoConstanteElastica);
-            this.splitContainer1.Panel1.Controls.Add(this.calcularConstanteElasticaButton);
-            this.splitContainer1.Panel1.Controls.Add(this.F);
-            this.splitContainer1.Panel1.Controls.Add(this.bd);
-            this.splitContainer1.Panel1.Controls.Add(this.resultadoLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.sd);
-            this.splitContainer1.Panel1.Controls.Add(this.bdLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.FLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.sdLabel);
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer1.Panel1.Controls.Add(pictureBox1);
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(20);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.salvarCursoAngularButton);
-            this.splitContainer1.Panel2.Controls.Add(this.resultadoCursoAngular);
-            this.splitContainer1.Panel2.Controls.Add(this.calcularCursoAngularButton);
-            this.splitContainer1.Panel2.Controls.Add(this.a);
-            this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Panel2.Controls.Add(this.b);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 377);
-            this.splitContainer1.SplitterDistance = 393;
-            this.splitContainer1.TabIndex = 0;
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(956, 480);
+            this.splitContainer1.SplitterDistance = 250;
+            this.splitContainer1.TabIndex = 17;
+            this.splitContainer1.TabStop = false;
             // 
-            // salvarConstanteElasticaButton
+            // splitContainer2
             // 
-            this.salvarConstanteElasticaButton.Location = new System.Drawing.Point(212, 297);
-            this.salvarConstanteElasticaButton.Name = "salvarConstanteElasticaButton";
-            this.salvarConstanteElasticaButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarConstanteElasticaButton.TabIndex = 20;
-            this.salvarConstanteElasticaButton.Text = "Salvar";
-            this.salvarConstanteElasticaButton.UseVisualStyleBackColor = true;
-            this.salvarConstanteElasticaButton.Click += new System.EventHandler(this.salvarConstanteElasticaButton_Click);
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer2.IsSplitterFixed = true;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // resultadoConstanteElastica
+            // splitContainer2.Panel1
             // 
-            this.resultadoConstanteElastica.BackColor = System.Drawing.SystemColors.Window;
-            this.resultadoConstanteElastica.DecimalPlaces = 2;
-            this.resultadoConstanteElastica.Increment = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.resultadoConstanteElastica.Location = new System.Drawing.Point(144, 234);
-            this.resultadoConstanteElastica.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.resultadoConstanteElastica.Name = "resultadoConstanteElastica";
-            this.resultadoConstanteElastica.ReadOnly = true;
-            this.resultadoConstanteElastica.Size = new System.Drawing.Size(120, 20);
-            this.resultadoConstanteElastica.TabIndex = 18;
+            this.splitContainer2.Panel1.Controls.Add(this.carro1);
             // 
-            // calcularConstanteElasticaButton
+            // splitContainer2.Panel2
             // 
-            this.calcularConstanteElasticaButton.Location = new System.Drawing.Point(113, 297);
-            this.calcularConstanteElasticaButton.Name = "calcularConstanteElasticaButton";
-            this.calcularConstanteElasticaButton.Size = new System.Drawing.Size(75, 23);
-            this.calcularConstanteElasticaButton.TabIndex = 19;
-            this.calcularConstanteElasticaButton.Text = "Calcular";
-            this.calcularConstanteElasticaButton.UseVisualStyleBackColor = true;
-            this.calcularConstanteElasticaButton.Click += new System.EventHandler(this.calcularConstanteElasticaButton_Click);
+            this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer2.Size = new System.Drawing.Size(702, 480);
+            this.splitContainer2.SplitterDistance = 451;
+            this.splitContainer2.TabIndex = 0;
+            this.splitContainer2.TabStop = false;
             // 
-            // F
+            // carro1
             // 
-            this.F.DecimalPlaces = 2;
-            this.F.Location = new System.Drawing.Point(144, 104);
-            this.F.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.F.Name = "F";
-            this.F.Size = new System.Drawing.Size(120, 20);
-            this.F.TabIndex = 11;
+            this.carro1.BackColor = System.Drawing.Color.Transparent;
+            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.carro1.Location = new System.Drawing.Point(0, 0);
+            this.carro1.Name = "carro1";
+            this.carro1.Nome = "Calculadora";
+            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
+            this.carro1.Peso_Total = 0D;
+            this.carro1.Rodas_Dianteiras_Assimetricas = false;
+            this.carro1.Rodas_Traseiras_Assimetricas = false;
+            this.carro1.Size = new System.Drawing.Size(702, 451);
+            this.carro1.TabIndex = 0;
             // 
-            // bd
+            // tableLayoutPanel1
             // 
-            this.bd.DecimalPlaces = 2;
-            this.bd.Location = new System.Drawing.Point(144, 144);
-            this.bd.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.bd.Name = "bd";
-            this.bd.Size = new System.Drawing.Size(120, 20);
-            this.bd.TabIndex = 12;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.button_carregar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_salvar, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(702, 25);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // resultadoLabel
+            // button_carregar
             // 
-            this.resultadoLabel.AutoSize = true;
-            this.resultadoLabel.BackColor = System.Drawing.Color.LightGray;
-            this.resultadoLabel.Location = new System.Drawing.Point(83, 236);
-            this.resultadoLabel.Name = "resultadoLabel";
-            this.resultadoLabel.Size = new System.Drawing.Size(55, 13);
-            this.resultadoLabel.TabIndex = 17;
-            this.resultadoLabel.Text = "Resultado";
+            this.button_carregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_carregar.Location = new System.Drawing.Point(118, 3);
+            this.button_carregar.Name = "button_carregar";
+            this.button_carregar.Size = new System.Drawing.Size(115, 19);
+            this.button_carregar.TabIndex = 1;
+            this.button_carregar.Text = "Carregar resultado";
+            this.button_carregar.UseVisualStyleBackColor = true;
+            this.button_carregar.Click += new System.EventHandler(this.button_carregar_Click);
             // 
-            // sd
+            // button_salvar
             // 
-            this.sd.DecimalPlaces = 2;
-            this.sd.Location = new System.Drawing.Point(144, 187);
-            this.sd.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.sd.Name = "sd";
-            this.sd.Size = new System.Drawing.Size(120, 20);
-            this.sd.TabIndex = 13;
+            this.button_salvar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_salvar.Location = new System.Drawing.Point(475, 3);
+            this.button_salvar.Name = "button_salvar";
+            this.button_salvar.Size = new System.Drawing.Size(103, 19);
+            this.button_salvar.TabIndex = 2;
+            this.button_salvar.Text = "Salvar resultado";
+            this.button_salvar.UseVisualStyleBackColor = true;
+            this.button_salvar.Click += new System.EventHandler(this.button_salvar_Click);
             // 
-            // bdLabel
+            // tableLayoutPanel2
             // 
-            this.bdLabel.AutoSize = true;
-            this.bdLabel.BackColor = System.Drawing.Color.LightGray;
-            this.bdLabel.Location = new System.Drawing.Point(125, 146);
-            this.bdLabel.Name = "bdLabel";
-            this.bdLabel.Size = new System.Drawing.Size(15, 13);
-            this.bdLabel.TabIndex = 16;
-            this.bdLabel.Text = "D";
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.splitContainer1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(962, 510);
+            this.tableLayoutPanel2.TabIndex = 18;
             // 
-            // FLabel
+            // menuStrip1
             // 
-            this.FLabel.AutoSize = true;
-            this.FLabel.BackColor = System.Drawing.Color.LightGray;
-            this.FLabel.Location = new System.Drawing.Point(125, 106);
-            this.FLabel.Name = "FLabel";
-            this.FLabel.Size = new System.Drawing.Size(13, 13);
-            this.FLabel.TabIndex = 14;
-            this.FLabel.Text = "F";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.equipeToolStripMenuItem1,
+            this.equipeToolStripMenuItem,
+            this.cadastroToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(962, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // sdLabel
+            // equipeToolStripMenuItem1
             // 
-            this.sdLabel.AutoSize = true;
-            this.sdLabel.BackColor = System.Drawing.Color.LightGray;
-            this.sdLabel.Location = new System.Drawing.Point(125, 189);
-            this.sdLabel.Name = "sdLabel";
-            this.sdLabel.Size = new System.Drawing.Size(13, 13);
-            this.sdLabel.TabIndex = 15;
-            this.sdLabel.Text = "d";
+            this.equipeToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informaçõesToolStripMenuItem,
+            this.históricoDeCálculosToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.equipeToolStripMenuItem1.Name = "equipeToolStripMenuItem1";
+            this.equipeToolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
+            this.equipeToolStripMenuItem1.Text = "Equipe";
             // 
-            // salvarCursoAngularButton
+            // informaçõesToolStripMenuItem
             // 
-            this.salvarCursoAngularButton.Location = new System.Drawing.Point(211, 297);
-            this.salvarCursoAngularButton.Name = "salvarCursoAngularButton";
-            this.salvarCursoAngularButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarCursoAngularButton.TabIndex = 28;
-            this.salvarCursoAngularButton.Text = "Salvar";
-            this.salvarCursoAngularButton.UseVisualStyleBackColor = true;
-            this.salvarCursoAngularButton.Click += new System.EventHandler(this.salvarCursoAngularButton_Click);
+            this.informaçõesToolStripMenuItem.Name = "informaçõesToolStripMenuItem";
+            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.informaçõesToolStripMenuItem.Text = "Informações";
+            this.informaçõesToolStripMenuItem.Click += new System.EventHandler(this.informaçõesToolStripMenuItem_Click);
             // 
-            // resultadoCursoAngular
+            // históricoDeCálculosToolStripMenuItem
             // 
-            this.resultadoCursoAngular.BackColor = System.Drawing.SystemColors.Window;
-            this.resultadoCursoAngular.DecimalPlaces = 2;
-            this.resultadoCursoAngular.Increment = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.resultadoCursoAngular.Location = new System.Drawing.Point(141, 234);
-            this.resultadoCursoAngular.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.resultadoCursoAngular.Name = "resultadoCursoAngular";
-            this.resultadoCursoAngular.ReadOnly = true;
-            this.resultadoCursoAngular.Size = new System.Drawing.Size(120, 20);
-            this.resultadoCursoAngular.TabIndex = 23;
+            this.históricoDeCálculosToolStripMenuItem.Name = "históricoDeCálculosToolStripMenuItem";
+            this.históricoDeCálculosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.históricoDeCálculosToolStripMenuItem.Text = "Histórico de cálculos";
+            this.históricoDeCálculosToolStripMenuItem.Click += new System.EventHandler(this.históricoDeCálculosToolStripMenuItem_Click);
             // 
-            // calcularCursoAngularButton
+            // logoutToolStripMenuItem
             // 
-            this.calcularCursoAngularButton.Location = new System.Drawing.Point(111, 297);
-            this.calcularCursoAngularButton.Name = "calcularCursoAngularButton";
-            this.calcularCursoAngularButton.Size = new System.Drawing.Size(75, 23);
-            this.calcularCursoAngularButton.TabIndex = 27;
-            this.calcularCursoAngularButton.Text = "Calcular";
-            this.calcularCursoAngularButton.UseVisualStyleBackColor = true;
-            this.calcularCursoAngularButton.Click += new System.EventHandler(this.calcularCursoAngularButton_Click);
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
             // 
-            // a
+            // equipeToolStripMenuItem
             // 
-            this.a.DecimalPlaces = 2;
-            this.a.Location = new System.Drawing.Point(141, 106);
-            this.a.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(120, 20);
-            this.a.TabIndex = 21;
+            this.equipeToolStripMenuItem.Name = "equipeToolStripMenuItem";
+            this.equipeToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.equipeToolStripMenuItem.Text = "Login";
+            this.equipeToolStripMenuItem.Click += new System.EventHandler(this.equipeToolStripMenuItem_Click);
             // 
-            // label3
+            // cadastroToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(80, 236);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Resultado";
-            // 
-            // b
-            // 
-            this.b.DecimalPlaces = 2;
-            this.b.Location = new System.Drawing.Point(141, 144);
-            this.b.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
-            0,
-            0});
-            this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(120, 20);
-            this.b.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(122, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "b";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(122, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "a";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Location = new System.Drawing.Point(79, 41);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 302);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Calcular Constante Elástica";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox2.Location = new System.Drawing.Point(72, 41);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 302);
-            this.groupBox2.TabIndex = 31;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Calcular Curso Angular";
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 401);
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.cursoAngularButton);
-            this.Controls.Add(this.constanteElasticaButton);
-            this.Controls.Add(this.cadastroEquipe);
-            this.Controls.Add(this.cadastroAluno);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(962, 510);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(18000, -18000);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(836, 260);
             this.Name = "Calculadora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Calculadora_Load);
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoConstanteElastica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.F)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoCursoAngular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cadastroAluno;
-        private System.Windows.Forms.Button cadastroEquipe;
-        private System.Windows.Forms.Button constanteElasticaButton;
-        private System.Windows.Forms.Button cursoAngularButton;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button salvarConstanteElasticaButton;
-        private System.Windows.Forms.NumericUpDown resultadoConstanteElastica;
-        private System.Windows.Forms.Button calcularConstanteElasticaButton;
-        private System.Windows.Forms.NumericUpDown F;
-        private System.Windows.Forms.NumericUpDown bd;
-        private System.Windows.Forms.Label resultadoLabel;
-        private System.Windows.Forms.NumericUpDown sd;
-        private System.Windows.Forms.Label bdLabel;
-        private System.Windows.Forms.Label FLabel;
-        private System.Windows.Forms.Label sdLabel;
-        private System.Windows.Forms.Button salvarCursoAngularButton;
-        private System.Windows.Forms.NumericUpDown resultadoCursoAngular;
-        private System.Windows.Forms.Button calcularCursoAngularButton;
-        private System.Windows.Forms.NumericUpDown a;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown b;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem contaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fazerLoginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarEquipeToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private Carro carro1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button button_salvar;
+        private System.Windows.Forms.Button button_carregar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem equipeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem equipeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem informaçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem históricoDeCálculosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
     }
 }
