@@ -56,7 +56,7 @@ namespace PI2
         private void EquipeInfo_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.Alunos' table. You can move, or remove it, as needed.
-            this.alunosTableAdapter.FillBy(this.calculoSuspensaoDataSet.Alunos, id_equipe);
+            //this.alunosTableAdapter.FillBy(this.calculoSuspensaoDataSet.Alunos, id_equipe);
         }
     }
 }
