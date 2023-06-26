@@ -36,6 +36,7 @@ namespace PI2
                     DataRow alunoRow = alunosTableAdapter1.GetDataByRA(calculadora.RA_Usuario_Logado).Rows[0];
 
                     alunoRow["id_equipe"] = id_equipe;
+                    alunoRow["cargo"] = "fundador";
 
                     alunosTableAdapter1.Update(alunoRow);
 

@@ -85,8 +85,8 @@ namespace PI2
         }
 
         private void DisplayErrorMessage(Exception ex)
-            {
-                MessageBox.Show("Um erro ocorreu: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        {
+            MessageBox.Show("Um erro ocorreu: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+    }
 }

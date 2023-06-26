@@ -4,6 +4,9 @@
 
     partial class calculoSuspensaoDataSet
     {
+        partial class AlunosDataTable
+        {
+        }
     }
 }
 

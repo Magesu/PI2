@@ -54,6 +54,7 @@
             this.tableAdapterManager = new PI2.calculoSuspensaoDataSetTableAdapters.TableAdapterManager();
             this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
+            this.button_editar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -99,14 +100,16 @@
             // 
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_editar, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(543, 66);
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(543, 95);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -178,7 +181,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 92);
+            this.label2.Location = new System.Drawing.Point(3, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 20);
             this.label2.TabIndex = 1;
@@ -195,10 +198,10 @@
             this.dataGridViewTextBoxColumn2});
             this.participantesDataGridView.DataSource = this.participantesBindingSource;
             this.participantesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.participantesDataGridView.Location = new System.Drawing.Point(3, 115);
+            this.participantesDataGridView.Location = new System.Drawing.Point(3, 144);
             this.participantesDataGridView.Name = "participantesDataGridView";
             this.participantesDataGridView.ReadOnly = true;
-            this.participantesDataGridView.Size = new System.Drawing.Size(543, 218);
+            this.participantesDataGridView.Size = new System.Drawing.Size(543, 189);
             this.participantesDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -323,6 +326,16 @@
             // 
             this.equipesTableAdapter1.ClearBeforeFill = true;
             // 
+            // button_editar
+            // 
+            this.button_editar.Location = new System.Drawing.Point(26, 69);
+            this.button_editar.Margin = new System.Windows.Forms.Padding(26, 3, 3, 3);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(75, 23);
+            this.button_editar.TabIndex = 1;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            // 
             // EquipeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,5 +387,6 @@
         private System.Windows.Forms.Button button_remover_participante;
         private calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter1;
         private calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter equipesTableAdapter1;
+        private System.Windows.Forms.Button button_editar;
     }
 }

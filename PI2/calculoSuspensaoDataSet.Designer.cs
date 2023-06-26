@@ -542,6 +542,8 @@ namespace PI2 {
             
             private global::System.Data.DataColumn columnid_equipe;
             
+            private global::System.Data.DataColumn columncargo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AlunosDataTable() {
@@ -593,6 +595,14 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cargoColumn {
+                get {
+                    return this.columncargo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -628,11 +638,12 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AlunosRow AddAlunosRow(UsuariosRow parentUsuariosRowByFK__Alunos__ra_aluno__11158940, EquipesRow parentEquipesRowByFK__Alunos__id_equip__2610A626) {
+            public AlunosRow AddAlunosRow(UsuariosRow parentUsuariosRowByFK__Alunos__ra_aluno__11158940, EquipesRow parentEquipesRowByFK__Alunos__id_equip__2610A626, string cargo) {
                 AlunosRow rowAlunosRow = ((AlunosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null};
+                        null,
+                        cargo};
                 if ((parentUsuariosRowByFK__Alunos__ra_aluno__11158940 != null)) {
                     columnValuesArray[0] = parentUsuariosRowByFK__Alunos__ra_aluno__11158940[0];
                 }
@@ -670,6 +681,7 @@ namespace PI2 {
             internal void InitVars() {
                 this.columnra_aluno = base.Columns["ra_aluno"];
                 this.columnid_equipe = base.Columns["id_equipe"];
+                this.columncargo = base.Columns["cargo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -679,11 +691,14 @@ namespace PI2 {
                 base.Columns.Add(this.columnra_aluno);
                 this.columnid_equipe = new global::System.Data.DataColumn("id_equipe", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_equipe);
+                this.columncargo = new global::System.Data.DataColumn("cargo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncargo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnra_aluno}, true));
                 this.columnra_aluno.AllowDBNull = false;
                 this.columnra_aluno.Unique = true;
                 this.columnra_aluno.MaxLength = 100;
+                this.columncargo.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2685,6 +2700,22 @@ namespace PI2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cargo {
+                get {
+                    try {
+                        return ((string)(this[this.tableAlunos.cargoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cargo\' in table \'Alunos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAlunos.cargoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public UsuariosRow UsuariosRow {
                 get {
                     return ((UsuariosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Alunos__ra_aluno__11158940"])));
@@ -2726,6 +2757,18 @@ namespace PI2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setid_equipeNull() {
                 this[this.tableAlunos.id_equipeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscargoNull() {
+                return this.IsNull(this.tableAlunos.cargoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcargoNull() {
+                this[this.tableAlunos.cargoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3843,32 +3886,41 @@ namespace PI2.calculoSuspensaoDataSetTableAdapters {
             tableMapping.DataSetTable = "Alunos";
             tableMapping.ColumnMappings.Add("ra_aluno", "ra_aluno");
             tableMapping.ColumnMappings.Add("id_equipe", "id_equipe");
+            tableMapping.ColumnMappings.Add("cargo", "cargo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [Alunos] WHERE (([ra_aluno] = @Original_ra_aluno) AND ((@IsNull_id_eq" +
-                "uipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)))";
+                "uipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)) AND ((" +
+                "@IsNull_cargo = 1 AND [cargo] IS NULL) OR ([cargo] = @Original_cargo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ra_aluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ra_aluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Alunos] ([ra_aluno], [id_equipe]) VALUES (@ra_aluno, @id_equipe);\r\nS" +
-                "ELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Alunos] ([ra_aluno], [id_equipe], [cargo]) VALUES (@ra_aluno, @id_eq" +
+                "uipe, @cargo);\r\nSELECT ra_aluno, id_equipe, cargo FROM Alunos WHERE (ra_aluno = " +
+                "@ra_aluno)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ra_aluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ra_aluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Alunos] SET [ra_aluno] = @ra_aluno, [id_equipe] = @id_equipe WHERE (([ra_aluno] = @Original_ra_aluno) AND ((@IsNull_id_equipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)));
-SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Alunos] SET [ra_aluno] = @ra_aluno, [id_equipe] = @id_equipe, [cargo] = @cargo WHERE (([ra_aluno] = @Original_ra_aluno) AND ((@IsNull_id_equipe = 1 AND [id_equipe] IS NULL) OR ([id_equipe] = @Original_id_equipe)) AND ((@IsNull_cargo = 1 AND [cargo] IS NULL) OR ([cargo] = @Original_cargo)));
+SELECT ra_aluno, id_equipe, cargo FROM Alunos WHERE (ra_aluno = @ra_aluno)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ra_aluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ra_aluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ra_aluno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ra_aluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_equipe", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3884,21 +3936,21 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ra_aluno, id_equipe FROM Alunos";
+            this._commandCollection[0].CommandText = "SELECT ra_aluno, id_equipe, cargo FROM Alunos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ra_aluno, id_equipe\r\nFROM            Alunos\r\nWHERE        (ra_aluno" +
-                " = @ra)";
+            this._commandCollection[1].CommandText = "SELECT ra_aluno, id_equipe, cargo FROM Alunos WHERE (ra_aluno = @ra)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ra", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "ra_aluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE       Alunos\r\nSET                id_equipe = @new_id_equipe\r\nWHERE        " +
-                "(ra_aluno = @ra_aluno);\r\nSELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno " +
-                "= @ra_aluno)";
+            this._commandCollection[2].CommandText = "UPDATE       Alunos\r\nSET                id_equipe = @new_id_equipe, cargo = @carg" +
+                "o\r\nWHERE        (ra_aluno = @ra_aluno); \r\nSELECT ra_aluno, id_equipe,cargo FROM " +
+                "Alunos WHERE (ra_aluno = @ra_aluno)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@new_id_equipe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_equipe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cargo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ra_aluno", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "ra_aluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -3995,7 +4047,7 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ra_aluno, global::System.Nullable<int> Original_id_equipe) {
+        public virtual int Delete(string Original_ra_aluno, global::System.Nullable<int> Original_id_equipe, string Original_cargo) {
             if ((Original_ra_aluno == null)) {
                 throw new global::System.ArgumentNullException("Original_ra_aluno");
             }
@@ -4009,6 +4061,14 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cargo == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_cargo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4030,7 +4090,7 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ra_aluno, global::System.Nullable<int> id_equipe) {
+        public virtual int Insert(string ra_aluno, global::System.Nullable<int> id_equipe, string cargo) {
             if ((ra_aluno == null)) {
                 throw new global::System.ArgumentNullException("ra_aluno");
             }
@@ -4042,6 +4102,12 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((cargo == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(cargo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4063,7 +4129,7 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ra_aluno, global::System.Nullable<int> id_equipe, string Original_ra_aluno, global::System.Nullable<int> Original_id_equipe) {
+        public virtual int Update(string ra_aluno, global::System.Nullable<int> id_equipe, string cargo, string Original_ra_aluno, global::System.Nullable<int> Original_id_equipe, string Original_cargo) {
             if ((ra_aluno == null)) {
                 throw new global::System.ArgumentNullException("ra_aluno");
             }
@@ -4076,19 +4142,33 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
+            if ((cargo == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(cargo));
+            }
             if ((Original_ra_aluno == null)) {
                 throw new global::System.ArgumentNullException("Original_ra_aluno");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_ra_aluno));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_ra_aluno));
             }
             if ((Original_id_equipe.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_equipe.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_equipe.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cargo == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_cargo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4110,15 +4190,15 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> id_equipe, string Original_ra_aluno, global::System.Nullable<int> Original_id_equipe) {
-            return this.Update(Original_ra_aluno, id_equipe, Original_ra_aluno, Original_id_equipe);
+        public virtual int Update(global::System.Nullable<int> id_equipe, string cargo, string Original_ra_aluno, global::System.Nullable<int> Original_id_equipe, string Original_cargo) {
+            return this.Update(Original_ra_aluno, id_equipe, cargo, Original_ra_aluno, Original_id_equipe, Original_cargo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateIDEquipe(global::System.Nullable<int> new_id_equipe, string ra_aluno) {
+        public virtual int UpdateAlunoEquipe(global::System.Nullable<int> new_id_equipe, string cargo, string ra_aluno) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((new_id_equipe.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(new_id_equipe.Value));
@@ -4126,11 +4206,17 @@ SELECT ra_aluno, id_equipe FROM Alunos WHERE (ra_aluno = @ra_aluno)";
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
+            if ((cargo == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(cargo));
+            }
             if ((ra_aluno == null)) {
                 throw new global::System.ArgumentNullException("ra_aluno");
             }
             else {
-                command.Parameters[1].Value = ((string)(ra_aluno));
+                command.Parameters[2].Value = ((string)(ra_aluno));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -13,13 +13,18 @@ namespace PI2
 {
     public partial class EquipeInfo : Form
     {
+        private Calculadora calculadora;
         private int id_equipe;
 
-        public EquipeInfo(int id_e)
+        public EquipeInfo(Calculadora calculadora)
         {
             InitializeComponent();
 
-            id_equipe = id_e;
+            this.calculadora = calculadora;
+
+            DataRow alunoRow = alunosTableAdapter1.GetDataByRA(calculadora.RA_Usuario_Logado).Rows[0];
+
+            id_equipe = (int) alunoRow["id_equipe"];
         }
 
         private void EquipeInfo_Load(object sender, EventArgs e)
@@ -30,6 +35,21 @@ namespace PI2
             nome_carro.Text = equipeRow["nome_carro"].ToString();
 
             AtualizarTabelaParticipantes();
+
+            DataRow alunoRow = alunosTableAdapter1.GetDataByRA(calculadora.RA_Usuario_Logado).Rows[0];
+
+            if (alunoRow["cargo"].Equals("fundador"))
+            {
+                // Se usuário logado for fundador, habilita a opção de edição
+                button_editar.Visible = true;
+                tableLayoutPanel4.Visible = true;
+            }
+            else if (alunoRow["cargo"].Equals("participante"))
+            {
+                // Se for participante, não habilita a opção de edição
+                button_editar.Visible = false;
+                tableLayoutPanel4.Visible = false;
+            }
         }
 
         private void button_adicionar_participante_Click(object sender, EventArgs e)
@@ -38,14 +58,32 @@ namespace PI2
 
             try
             {
-                alunosTableAdapter1.UpdateIDEquipe(id_equipe, ra_novo_participante);
+                DataRow novo_participante_row = alunosTableAdapter1.GetDataByRA(ra_novo_participante).Rows[0];
 
-                AtualizarTabelaParticipantes();
+                if (novo_participante_row.IsNull("id_equipe"))
+                {
+                    alunosTableAdapter1.UpdateAlunoEquipe(id_equipe, "participante", ra_novo_participante);
+                    AtualizarTabelaParticipantes();
+                }
+                else
+                { 
+                    if (novo_participante_row["id_equipe"].Equals(id_equipe))
+                    {
+                        MessageBox.Show("Aluno já faz parte dessa equipe.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Aluno já faz parte de outra equipe.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-            catch (Exception)
+            catch (IndexOutOfRangeException)
             {
                 MessageBox.Show("RA não foi encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Um erro ocorreu: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -53,26 +91,36 @@ namespace PI2
         {
             string ra_participante = textBox_ra.Text;
 
-            try
+            if(calculadora.RA_Usuario_Logado == ra_participante)
             {
-                DataRow participanteRow = alunosTableAdapter1.GetDataByRA(ra_participante).Rows[0];
-
-                if ((int) participanteRow["id_equipe"] == id_equipe)
-                {
-                    alunosTableAdapter1.UpdateIDEquipe(null, ra_participante);
-
-                    AtualizarTabelaParticipantes();
-                }
-                else
-                {
-                    MessageBox.Show("Aluno não faz parte dessa equipe.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                MessageBox.Show("Aluno não pode se remover do grupo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(Exception)
+            else
             {
-                MessageBox.Show("RA não foi encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                try
+                {
+                    DataRow participanteRow = alunosTableAdapter1.GetDataByRA(ra_participante).Rows[0];
+
+                    if (participanteRow["id_equipe"].Equals(id_equipe))
+                    {
+                        alunosTableAdapter1.UpdateAlunoEquipe(null, null, ra_participante);
+
+                        AtualizarTabelaParticipantes();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Aluno não faz parte dessa equipe.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    MessageBox.Show("RA não foi encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Um erro ocorreu: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

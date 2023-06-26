@@ -85,11 +85,7 @@ namespace PI2
 
         private void informaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataRow alunoRow = alunosTableAdapter1.GetDataByRA(RA_Usuario_Logado).Rows[0];
-
-            int id_equipe = (int) alunoRow["id_equipe"];
-
-            EquipeInfo equipeInfo = new EquipeInfo(id_equipe);
+            EquipeInfo equipeInfo = new EquipeInfo(this);
 
             equipeInfo.Show();
         }
@@ -105,6 +101,11 @@ namespace PI2
             CriarEquipe criarEquipe = new CriarEquipe(this);
 
             criarEquipe.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RA_Usuario_Logado = null;
         }
     }
 }
