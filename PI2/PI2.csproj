@@ -77,6 +77,12 @@
     <Compile Include="Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarEquipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEquipe.Designer.cs">
+      <DependentUpon>EditarEquipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="EquipeInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CriarEquipe.resx">
       <DependentUpon>CriarEquipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarEquipe.resx">
+      <DependentUpon>EditarEquipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EquipeInfo.resx">
       <DependentUpon>EquipeInfo.cs</DependentUpon>

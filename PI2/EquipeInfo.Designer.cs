@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.num_carro = new System.Windows.Forms.Label();
             this.nome_carro = new System.Windows.Forms.Label();
+            this.button_editar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.participantesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,6 @@
             this.tableAdapterManager = new PI2.calculoSuspensaoDataSetTableAdapters.TableAdapterManager();
             this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
-            this.button_editar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -175,6 +175,17 @@
             this.nome_carro.Size = new System.Drawing.Size(38, 13);
             this.nome_carro.TabIndex = 3;
             this.nome_carro.Text = "Batata";
+            // 
+            // button_editar
+            // 
+            this.button_editar.Location = new System.Drawing.Point(26, 69);
+            this.button_editar.Margin = new System.Windows.Forms.Padding(26, 3, 3, 3);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(75, 23);
+            this.button_editar.TabIndex = 1;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
             // 
             // label2
             // 
@@ -325,16 +336,6 @@
             // equipesTableAdapter1
             // 
             this.equipesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button_editar
-            // 
-            this.button_editar.Location = new System.Drawing.Point(26, 69);
-            this.button_editar.Margin = new System.Windows.Forms.Padding(26, 3, 3, 3);
-            this.button_editar.Name = "button_editar";
-            this.button_editar.Size = new System.Drawing.Size(75, 23);
-            this.button_editar.TabIndex = 1;
-            this.button_editar.Text = "Editar";
-            this.button_editar.UseVisualStyleBackColor = true;
             // 
             // EquipeInfo
             // 

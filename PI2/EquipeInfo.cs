@@ -29,10 +29,7 @@ namespace PI2
 
         private void EquipeInfo_Load(object sender, EventArgs e)
         {
-            DataRow equipeRow = equipesTableAdapter1.GetDataByIDEquipe(id_equipe).Rows[0];
-
-            num_carro.Text = equipeRow["num_carro"].ToString();
-            nome_carro.Text = equipeRow["nome_carro"].ToString();
+            AtualizarInfo();
 
             AtualizarTabelaParticipantes();
 
@@ -127,6 +124,26 @@ namespace PI2
         private void AtualizarTabelaParticipantes()
         {
             this.participantesTableAdapter.Fill(this.calculoSuspensaoDataSet.Participantes, id_equipe);
+        }
+
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+            EditarEquipe editarEquipe = new EditarEquipe(this, id_equipe);
+
+            editarEquipe.Show();
+        }
+
+        private void AtualizarInfo()
+        {
+            DataRow equipeRow = equipesTableAdapter1.GetDataByIDEquipe(id_equipe).Rows[0];
+
+            num_carro.Text = equipeRow["num_carro"].ToString();
+            nome_carro.Text = equipeRow["nome_carro"].ToString();
+        }
+
+        public void ForcarAtualizarInfo()
+        {
+            AtualizarInfo();
         }
     }
 }
