@@ -85,7 +85,11 @@ namespace PI2
 
         private void informaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EquipeInfo equipeInfo = new EquipeInfo(2);
+            DataRow alunoRow = alunosTableAdapter1.GetDataByRA(RA_Usuario_Logado).Rows[0];
+
+            int id_equipe = (int) alunoRow["id_equipe"];
+
+            EquipeInfo equipeInfo = new EquipeInfo(id_equipe);
 
             equipeInfo.Show();
         }

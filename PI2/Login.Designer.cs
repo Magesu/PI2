@@ -136,6 +136,7 @@
             this.textBox_senha.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBox_senha.Location = new System.Drawing.Point(47, 29);
             this.textBox_senha.Name = "textBox_senha";
+            this.textBox_senha.PasswordChar = '*';
             this.textBox_senha.Size = new System.Drawing.Size(94, 20);
             this.textBox_senha.TabIndex = 1;
             this.textBox_senha.TextChanged += new System.EventHandler(this.textBox_senha_TextChanged);

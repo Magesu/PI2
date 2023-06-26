@@ -20,43 +20,65 @@ namespace PI2
             InitializeComponent();
 
             id_equipe = id_e;
-
-            string filter = string.Format("id_equipe = {0}", id_equipe);
-
-            DataRow[] equipe_data = equipesTableAdapter.GetData().Select(filter);
-
-            num_carro.Text = equipe_data[0]["num_carro"].ToString();
-            nome_carro.Text = equipe_data[0]["nome_carro"].ToString();
-        }
-
-        private void alunosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.alunosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calculoSuspensaoDataSet);
-
-        }
-
-        private void alunosBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.alunosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calculoSuspensaoDataSet);
-
-        }
-
-        private void alunosBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.alunosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calculoSuspensaoDataSet);
-
         }
 
         private void EquipeInfo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'calculoSuspensaoDataSet.Alunos' table. You can move, or remove it, as needed.
-            //this.alunosTableAdapter.FillBy(this.calculoSuspensaoDataSet.Alunos, id_equipe);
+            DataRow equipeRow = equipesTableAdapter1.GetDataByIDEquipe(id_equipe).Rows[0];
+
+            num_carro.Text = equipeRow["num_carro"].ToString();
+            nome_carro.Text = equipeRow["nome_carro"].ToString();
+
+            AtualizarTabelaParticipantes();
+        }
+
+        private void button_adicionar_participante_Click(object sender, EventArgs e)
+        {
+            string ra_novo_participante = textBox_ra.Text;
+
+            try
+            {
+                alunosTableAdapter1.UpdateIDEquipe(id_equipe, ra_novo_participante);
+
+                AtualizarTabelaParticipantes();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("RA não foi encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void button_remover_participante_Click(object sender, EventArgs e)
+        {
+            string ra_participante = textBox_ra.Text;
+
+            try
+            {
+                DataRow participanteRow = alunosTableAdapter1.GetDataByRA(ra_participante).Rows[0];
+
+                if ((int) participanteRow["id_equipe"] == id_equipe)
+                {
+                    alunosTableAdapter1.UpdateIDEquipe(null, ra_participante);
+
+                    AtualizarTabelaParticipantes();
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não faz parte dessa equipe.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("RA não foi encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void AtualizarTabelaParticipantes()
+        {
+            this.participantesTableAdapter.Fill(this.calculoSuspensaoDataSet.Participantes, id_equipe);
         }
     }
 }

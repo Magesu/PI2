@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.carro1 = new PI2.Carro();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_carregar = new System.Windows.Forms.Button();
             this.button_salvar = new System.Windows.Forms.Button();
@@ -46,6 +45,9 @@
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bemvindoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carro1 = new PI2.Carro();
+            this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
+            this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -116,21 +118,6 @@
             this.splitContainer2.SplitterDistance = 440;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
-            // 
-            // carro1
-            // 
-            this.carro1.BackColor = System.Drawing.Color.Transparent;
-            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.carro1.Location = new System.Drawing.Point(0, 0);
-            this.carro1.Name = "carro1";
-            this.carro1.Nome = "Calculadora";
-            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
-            this.carro1.Peso_Total = 0D;
-            this.carro1.Rodas_Dianteiras_Assimetricas = false;
-            this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(702, 440);
-            this.carro1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -257,6 +244,29 @@
             this.bemvindoToolStripMenuItem.Text = "Bem-vindo";
             this.bemvindoToolStripMenuItem.Click += new System.EventHandler(this.bemvindoToolStripMenuItem_Click);
             // 
+            // carro1
+            // 
+            this.carro1.BackColor = System.Drawing.Color.Transparent;
+            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.carro1.Location = new System.Drawing.Point(0, 0);
+            this.carro1.Name = "carro1";
+            this.carro1.Nome = "Calculadora";
+            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
+            this.carro1.Peso_Total = 0D;
+            this.carro1.Rodas_Dianteiras_Assimetricas = false;
+            this.carro1.Rodas_Traseiras_Assimetricas = false;
+            this.carro1.Size = new System.Drawing.Size(702, 440);
+            this.carro1.TabIndex = 0;
+            // 
+            // equipesTableAdapter1
+            // 
+            this.equipesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // alunosTableAdapter1
+            // 
+            this.alunosTableAdapter1.ClearBeforeFill = true;
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bemvindoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem criarEquipeToolStripMenuItem;
+        private calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter equipesTableAdapter1;
+        private calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter1;
     }
 }
