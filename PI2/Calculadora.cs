@@ -13,7 +13,33 @@ namespace PI2
 {
     public partial class Calculadora : Form
     {
-        public string RA_Usuario_Logado { get; set; }
+        private string ra_usuario_logado;
+        public string RA_Usuario_Logado 
+        {
+            get { return ra_usuario_logado; }
+            set
+            {
+                ra_usuario_logado = value;
+                if(ra_usuario_logado == null)
+                {
+                    Deslogar();
+                }
+                else
+                {
+                    Logar();
+                }
+            }
+        }
+
+        private void Logar()
+        {
+            button_salvar.Enabled = true;
+        }
+
+        private void Deslogar()
+        {
+            button_salvar.Enabled = false;
+        }
 
         public Calculadora()
         {
@@ -68,6 +94,13 @@ namespace PI2
         {
             string message = "Seja bem vindo, " + RA_Usuario_Logado + "!";
             MessageBox.Show(message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void criarEquipeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CriarEquipe criarEquipe = new CriarEquipe(this);
+
+            criarEquipe.Show();
         }
     }
 }

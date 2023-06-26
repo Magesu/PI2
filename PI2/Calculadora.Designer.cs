@@ -39,6 +39,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.equipeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarEquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.históricoDeCálculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,7 +113,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer2.Size = new System.Drawing.Size(702, 480);
-            this.splitContainer2.SplitterDistance = 451;
+            this.splitContainer2.SplitterDistance = 440;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
@@ -128,7 +129,7 @@
             this.carro1.Peso_Total = 0D;
             this.carro1.Rodas_Dianteiras_Assimetricas = false;
             this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(702, 451);
+            this.carro1.Size = new System.Drawing.Size(702, 440);
             this.carro1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -143,15 +144,15 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(702, 25);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(702, 36);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button_carregar
             // 
             this.button_carregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_carregar.Location = new System.Drawing.Point(118, 3);
+            this.button_carregar.Location = new System.Drawing.Point(118, 6);
             this.button_carregar.Name = "button_carregar";
-            this.button_carregar.Size = new System.Drawing.Size(115, 19);
+            this.button_carregar.Size = new System.Drawing.Size(115, 23);
             this.button_carregar.TabIndex = 1;
             this.button_carregar.Text = "Carregar resultado";
             this.button_carregar.UseVisualStyleBackColor = true;
@@ -160,9 +161,10 @@
             // button_salvar
             // 
             this.button_salvar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_salvar.Location = new System.Drawing.Point(475, 3);
+            this.button_salvar.Enabled = false;
+            this.button_salvar.Location = new System.Drawing.Point(475, 6);
             this.button_salvar.Name = "button_salvar";
-            this.button_salvar.Size = new System.Drawing.Size(103, 19);
+            this.button_salvar.Size = new System.Drawing.Size(103, 23);
             this.button_salvar.TabIndex = 2;
             this.button_salvar.Text = "Salvar resultado";
             this.button_salvar.UseVisualStyleBackColor = true;
@@ -199,12 +201,20 @@
             // equipeToolStripMenuItem1
             // 
             this.equipeToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarEquipeToolStripMenuItem,
             this.informaçõesToolStripMenuItem,
             this.históricoDeCálculosToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.equipeToolStripMenuItem1.Name = "equipeToolStripMenuItem1";
             this.equipeToolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
             this.equipeToolStripMenuItem1.Text = "Equipe";
+            // 
+            // criarEquipeToolStripMenuItem
+            // 
+            this.criarEquipeToolStripMenuItem.Name = "criarEquipeToolStripMenuItem";
+            this.criarEquipeToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.criarEquipeToolStripMenuItem.Text = "Criar Equipe";
+            this.criarEquipeToolStripMenuItem.Click += new System.EventHandler(this.criarEquipeToolStripMenuItem_Click);
             // 
             // informaçõesToolStripMenuItem
             // 
@@ -295,5 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bemvindoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarEquipeToolStripMenuItem;
     }
 }

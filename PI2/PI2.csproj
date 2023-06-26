@@ -83,6 +83,12 @@
     <Compile Include="EquipeInfo.Designer.cs">
       <DependentUpon>EquipeInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CriarEquipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarEquipe.Designer.cs">
+      <DependentUpon>CriarEquipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Histórico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Carro.resx">
       <DependentUpon>Carro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CriarEquipe.resx">
+      <DependentUpon>CriarEquipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EquipeInfo.resx">
       <DependentUpon>EquipeInfo.cs</DependentUpon>

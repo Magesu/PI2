@@ -9,6 +9,10 @@
 
 namespace PI2.calculoSuspensaoDataSetTableAdapters
 {
+    partial class EquipesTableAdapter
+    {
+    }
+
     partial class AlunosTableAdapter
     {
     }
