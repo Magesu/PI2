@@ -36,17 +36,22 @@ namespace PI2
 
             foreach(DataRow row in sortedCalculosTable.Rows)
             {
-                if(i >= 0)
+                if(i < 3)
                 {
                     int id_calculo = (int)row[0];
 
                     carros.ElementAt(i).CarregarCalculo(id_calculo);
-                    i--;
+                    i++;
                 }
             }
         }
 
         private void Histórico_Load(object sender, EventArgs e)
+        {
+            CarregarHistorico();
+        }
+
+        private void button_recarregar_Click(object sender, EventArgs e)
         {
             CarregarHistorico();
         }
