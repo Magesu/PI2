@@ -52,10 +52,13 @@ namespace PI2
             set { nomeLabel.Text = value; }
         }
         private List<Roda> rodas = new List<Roda>();
+        public int limite_calculos { get; set; }
 
         public Carro()
         {
             InitializeComponent();
+
+            limite_calculos = 3;
 
             rodas.Add(roda1);
             rodas.Add(roda2);
@@ -130,46 +133,42 @@ namespace PI2
             rodas.ElementAt(5).Visible = !Rodas_Traseiras_Assimetricas;
         }
         
-        public void SalvarCalculo()
+        public void SalvarCalculo(int id_equipe)
         {
-            string connectionString = Properties.Settings.Default.calculoSuspensaoConnectionString;
+            int id_calculo = (int) calculosTableAdapter1.InsertQuery(id_equipe, Peso_Total, Rodas_Dianteiras_Assimetricas, Rodas_Traseiras_Assimetricas);
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            foreach(Roda r in rodas)
             {
-                connection.Open();
-
-                using (SqlCommand calculosInsertCommand = new SqlCommand("INSERT INTO Calculos(id_equipe, peso_total, rodas_dianteiras_assimetricas, rodas_traseiras_assimetricas) VALUES (@id_equipe, @peso_total, @rodas_dianteiras_assimetricas, @rodas_traseiras_assimetricas); SELECT SCOPE_IDENTITY();", connection))
+                if (r.Visible)
                 {
-                    calculosInsertCommand.Parameters.AddWithValue("@id_equipe", 1);
-                    calculosInsertCommand.Parameters.AddWithValue("@peso_total", Peso_Total);
-                    calculosInsertCommand.Parameters.AddWithValue("@rodas_dianteiras_assimetricas", Rodas_Dianteiras_Assimetricas);
-                    calculosInsertCommand.Parameters.AddWithValue("@rodas_traseiras_assimetricas", Rodas_Traseiras_Assimetricas);
-
-                    int id_calculo = Convert.ToInt32(calculosInsertCommand.ExecuteScalar());
-
-                    foreach(Roda r in rodas)
-                    {
-                        if (r.Visible)
-                        {
-                            using (SqlCommand rodaInsertCommand = new SqlCommand("INSERT INTO Rodas VALUES(@id_calculo, @nome, @distribuicao_peso, @distancia_bitola, @distancia_mola, @constante_elastica, @comprimento_braco, @altura, @curso_angular)", connection))
-                            {
-                                rodaInsertCommand.Parameters.AddWithValue("@id_calculo", id_calculo);
-                                rodaInsertCommand.Parameters.AddWithValue("@nome", r.Nome);
-                                rodaInsertCommand.Parameters.AddWithValue("@distribuicao_peso", r.Distribuicao_Peso);
-                                rodaInsertCommand.Parameters.AddWithValue("@distancia_bitola", r.Distancia_Bitola);
-                                rodaInsertCommand.Parameters.AddWithValue("@distancia_mola", r.Distancia_Mola);
-                                rodaInsertCommand.Parameters.AddWithValue("@constante_elastica", r.Constante_Elastica);
-                                rodaInsertCommand.Parameters.AddWithValue("@comprimento_braco", r.Comprimento_Braco);
-                                rodaInsertCommand.Parameters.AddWithValue("@altura", r.Altura);
-                                rodaInsertCommand.Parameters.AddWithValue("@curso_angular", r.Curso_Angular);
-
-                                rodaInsertCommand.ExecuteNonQuery();
-                            }
-                        }
-                    }
+                    rodasTableAdapter1.Insert(id_calculo, r.Nome, r.Distribuicao_Peso, r.Distancia_Bitola, r.Distancia_Mola, r.Constante_Elastica, r.Comprimento_Braco, r.Altura, r.Curso_Angular);
                 }
+            }
 
-                connection.Close();
+            // Deleta os resultados mais antigos para manter os resultados salvos dentro do limite
+
+            DataTable calculosTable = calculosTableAdapter1.GetDataByIDEquipe(id_equipe);
+
+            if(calculosTable.Rows.Count > limite_calculos)
+            {
+                // Arruma os cálculos em ordem ascendente
+                calculosTable.DefaultView.Sort = "id_calculo ASC";
+                DataTable sortedCalculosTable = calculosTable.DefaultView.ToTable();
+
+                // Calcula o número de entradas para deletar
+                int entradasParaDeletar = sortedCalculosTable.Rows.Count - 3;
+
+                // Deleta as entradas mais antigas
+                for (int i = 0; i < entradasParaDeletar; i++)
+                {
+                    // Encontre o id do cálculo correspondente e deleta;
+                    int id_calculo_a_ser_deletado = (int) sortedCalculosTable.Rows[i]["id_calculo"];
+
+                    // Deleta as rodas do cálculo
+                    rodasTableAdapter1.DeleteQuery(id_calculo_a_ser_deletado);
+
+                    calculosTableAdapter1.DeleteQuery(id_calculo_a_ser_deletado);
+                }
             }
         }
 
@@ -180,48 +179,25 @@ namespace PI2
                 r.Visible = false;
             }
 
-            string connectionString = Properties.Settings.Default.calculoSuspensaoConnectionString;
+            DataRow calculoRow = calculosTableAdapter1.GetDataByIDCalculo(id_calculo).Rows[0];
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            DataTable rodasTable = rodasTableAdapter1.GetDataByIDCalculo(id_calculo);
+
+            Nome = "ID do cálculo: " + calculoRow["id_calculo"].ToString();
+            Peso_Total = (double) calculoRow["peso_total"];
+            Rodas_Dianteiras_Assimetricas = (bool) calculoRow["rodas_dianteiras_assimetricas"];
+            Rodas_Traseiras_Assimetricas = (bool) calculoRow["rodas_traseiras_assimetricas"];
+
+            foreach(DataRow row in rodasTable.Rows)
             {
-                connection.Open();
-
-                using (SqlCommand calculosSelectCommand = new SqlCommand("select c.peso_total, c.rodas_dianteiras_assimetricas, c.rodas_traseiras_assimetricas, r.nome, r.distribuicao_peso, r.distancia_bitola, r.distancia_mola, r.comprimento_braco, r.altura from Calculos c join Rodas r on r.id_calculo = c.id_calculo where c.id_calculo = @id_calculo;", connection))
+                foreach (Roda r in rodas)
                 {
-                    calculosSelectCommand.Parameters.AddWithValue("@id_calculo", id_calculo);
-
-                    using (SqlDataReader reader = calculosSelectCommand.ExecuteReader())
+                    if ((string) row["nome"] == r.Nome)
                     {
-                        while (reader.Read())
-                        {
-                            double peso_total_from_db = reader.GetDouble(0);
-                            bool rodas_dianteiras_assimetricas_from_db = reader.GetBoolean(1);
-                            bool rodas_traseiras_assimetricas_from_db = reader.GetBoolean(2);
-
-                            Peso_Total = peso_total_from_db;
-                            Rodas_Dianteiras_Assimetricas = rodas_dianteiras_assimetricas_from_db;
-                            Rodas_Traseiras_Assimetricas = rodas_traseiras_assimetricas_from_db;
-
-                            foreach (Roda r in rodas)
-                            {
-                                string nome_from_db = reader.GetString(3);
-                                double distribuicao_peso_from_db = reader.GetDouble(4);
-                                double distancia_bitola_from_db = reader.GetDouble(5);
-                                double distancia_mola_from_db = reader.GetDouble(6);
-                                double comprimento_braco_from_db = reader.GetDouble(7);
-                                double altura_from_db = reader.GetDouble(8);
-
-                                if (nome_from_db == r.Nome)
-                                {
-                                    r.Povoar(distribuicao_peso_from_db, distancia_bitola_from_db, distancia_mola_from_db, comprimento_braco_from_db, altura_from_db);
-                                    r.Visible = true;
-                                }
-                            }
-                        }
+                        r.Povoar((double) row["distribuicao_peso"], (double) row["distancia_bitola"], (double) row["distancia_mola"], (double) row["comprimento_braco"], (double) row["altura"]);
+                        r.Visible = true;
                     }
                 }
-
-                connection.Close();
             }
         }
     }

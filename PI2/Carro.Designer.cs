@@ -38,6 +38,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.nomeLabel = new System.Windows.Forms.Label();
+            this.calculosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter();
+            this.rodasTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.RodasTableAdapter();
             this.roda1 = new PI2.Roda();
             this.roda2 = new PI2.Roda();
             this.roda3 = new PI2.Roda();
@@ -151,7 +153,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 73);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(687, 265);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(687, 190);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -170,7 +172,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 341);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 266);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // nomeLabel
@@ -182,9 +184,17 @@
             this.nomeLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.nomeLabel.Location = new System.Drawing.Point(3, 6);
             this.nomeLabel.Name = "nomeLabel";
-            this.nomeLabel.Size = new System.Drawing.Size(130, 24);
+            this.nomeLabel.Size = new System.Drawing.Size(166, 24);
             this.nomeLabel.TabIndex = 2;
-            this.nomeLabel.Text = "Id do cálculo";
+            this.nomeLabel.Text = "Id do cálculo : -1";
+            // 
+            // calculosTableAdapter1
+            // 
+            this.calculosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // rodasTableAdapter1
+            // 
+            this.rodasTableAdapter1.ClearBeforeFill = true;
             // 
             // roda1
             // 
@@ -300,7 +310,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Carro";
-            this.Size = new System.Drawing.Size(693, 341);
+            this.Size = new System.Drawing.Size(693, 266);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -330,5 +340,7 @@
         private Roda roda6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label nomeLabel;
+        private calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter calculosTableAdapter1;
+        private calculoSuspensaoDataSetTableAdapters.RodasTableAdapter rodasTableAdapter1;
     }
 }

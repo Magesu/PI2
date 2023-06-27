@@ -44,12 +44,12 @@
             this.TextBox_curso_angular = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.nomeLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
@@ -164,6 +164,7 @@
             this.TextBox_constante_elastica.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.TextBox_constante_elastica.Location = new System.Drawing.Point(194, 81);
             this.TextBox_constante_elastica.Name = "TextBox_constante_elastica";
+            this.TextBox_constante_elastica.ReadOnly = true;
             this.TextBox_constante_elastica.Size = new System.Drawing.Size(100, 20);
             this.TextBox_constante_elastica.TabIndex = 3;
             // 
@@ -190,6 +191,7 @@
             this.TextBox_curso_angular.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.TextBox_curso_angular.Location = new System.Drawing.Point(122, 81);
             this.TextBox_curso_angular.Name = "TextBox_curso_angular";
+            this.TextBox_curso_angular.ReadOnly = true;
             this.TextBox_curso_angular.Size = new System.Drawing.Size(100, 20);
             this.TextBox_curso_angular.TabIndex = 6;
             // 
@@ -208,7 +210,7 @@
             this.tableLayoutPanel1.Controls.Add(this.TextBox_distancia_mola, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.TextBox_distancia_bitola, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.TextBox_distribuicao_peso, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 31);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 34);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -232,7 +234,7 @@
             this.tableLayoutPanel3.Controls.Add(this.TextBox_comprimento_braco, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.TextBox_altura, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(375, 31);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(365, 34);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -241,6 +243,17 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.Size = new System.Drawing.Size(225, 104);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 55);
+            this.label11.Margin = new System.Windows.Forms.Padding(3);
+            this.label11.MinimumSize = new System.Drawing.Size(0, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(10, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = " ";
             // 
             // tableLayoutPanel2
             // 
@@ -279,7 +292,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(335, 5);
+            this.label10.Location = new System.Drawing.Point(328, 5);
             this.label10.Margin = new System.Windows.Forms.Padding(10, 5, 0, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(111, 17);
@@ -313,17 +326,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.Size = new System.Drawing.Size(657, 175);
             this.tableLayoutPanel4.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 55);
-            this.label11.Margin = new System.Windows.Forms.Padding(3);
-            this.label11.MinimumSize = new System.Drawing.Size(0, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(10, 20);
-            this.label11.TabIndex = 7;
-            this.label11.Text = " ";
             // 
             // Roda
             // 
