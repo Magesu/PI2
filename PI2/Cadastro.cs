@@ -44,7 +44,7 @@ namespace PI2
             {
                 try
                 {
-                    alunosTableAdapter1.Insert(ra, null, "");
+                    alunosTableAdapter1.Insert(ra, null, null);
                 }
                 catch (Exception ex)
                 {
