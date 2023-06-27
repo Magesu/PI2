@@ -65,6 +65,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_id_equipe = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_remover = new System.Windows.Forms.Button();
+            this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.equipesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).BeginInit();
@@ -76,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rodasBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // equipesDataGridView
@@ -93,7 +99,7 @@
             this.equipesDataGridView.Location = new System.Drawing.Point(3, 23);
             this.equipesDataGridView.Name = "equipesDataGridView";
             this.equipesDataGridView.ReadOnly = true;
-            this.equipesDataGridView.Size = new System.Drawing.Size(393, 141);
+            this.equipesDataGridView.Size = new System.Drawing.Size(393, 139);
             this.equipesDataGridView.TabIndex = 0;
             this.equipesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.equipesGridView_CellClick);
             // 
@@ -146,7 +152,7 @@
             this.participantesDataGridView.Location = new System.Drawing.Point(402, 23);
             this.participantesDataGridView.Name = "participantesDataGridView";
             this.participantesDataGridView.ReadOnly = true;
-            this.participantesDataGridView.Size = new System.Drawing.Size(393, 141);
+            this.participantesDataGridView.Size = new System.Drawing.Size(393, 139);
             this.participantesDataGridView.TabIndex = 1;
             // 
             // raDataGridViewTextBoxColumn
@@ -185,10 +191,10 @@
             this.rodastraseirasassimetricasDataGridViewCheckBoxColumn});
             this.calculosDataGridView.DataSource = this.calculosBindingSource;
             this.calculosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calculosDataGridView.Location = new System.Drawing.Point(3, 196);
+            this.calculosDataGridView.Location = new System.Drawing.Point(3, 194);
             this.calculosDataGridView.Name = "calculosDataGridView";
             this.calculosDataGridView.ReadOnly = true;
-            this.calculosDataGridView.Size = new System.Drawing.Size(798, 167);
+            this.calculosDataGridView.Size = new System.Drawing.Size(798, 166);
             this.calculosDataGridView.TabIndex = 2;
             this.calculosDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calculosDataGridView_CellClick);
             // 
@@ -246,10 +252,10 @@
             this.cursoangularDataGridViewTextBoxColumn});
             this.rodasDataGridView.DataSource = this.rodasBindingSource;
             this.rodasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rodasDataGridView.Location = new System.Drawing.Point(3, 389);
+            this.rodasDataGridView.Location = new System.Drawing.Point(3, 386);
             this.rodasDataGridView.Name = "rodasDataGridView";
             this.rodasDataGridView.ReadOnly = true;
-            this.rodasDataGridView.Size = new System.Drawing.Size(798, 167);
+            this.rodasDataGridView.Size = new System.Drawing.Size(798, 166);
             this.rodasDataGridView.TabIndex = 3;
             // 
             // nomeDataGridViewTextBoxColumn1
@@ -326,16 +332,18 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.calculosDataGridView, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(804, 559);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(804, 591);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // tableLayoutPanel2
@@ -353,7 +361,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(798, 167);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(798, 165);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label2
@@ -386,7 +394,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(3, 173);
+            this.label4.Location = new System.Drawing.Point(3, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 3;
@@ -398,17 +406,72 @@
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(3, 366);
+            this.label6.Location = new System.Drawing.Point(3, 363);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Rodas";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.textBox_id_equipe, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button_remover, 3, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 558);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(798, 30);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // textBox_id_equipe
+            // 
+            this.textBox_id_equipe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_id_equipe.Location = new System.Drawing.Point(345, 5);
+            this.textBox_id_equipe.Name = "textBox_id_equipe";
+            this.textBox_id_equipe.Size = new System.Drawing.Size(100, 20);
+            this.textBox_id_equipe.TabIndex = 0;
+            this.textBox_id_equipe.TextChanged += new System.EventHandler(this.textBox_id_equipe_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(271, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ID da equipe";
+            // 
+            // button_remover
+            // 
+            this.button_remover.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_remover.Enabled = false;
+            this.button_remover.Location = new System.Drawing.Point(451, 3);
+            this.button_remover.Name = "button_remover";
+            this.button_remover.Size = new System.Drawing.Size(75, 23);
+            this.button_remover.TabIndex = 2;
+            this.button_remover.Text = "Excluir";
+            this.button_remover.UseVisualStyleBackColor = true;
+            this.button_remover.Click += new System.EventHandler(this.button_remover_Click);
+            // 
+            // alunosTableAdapter1
+            // 
+            this.alunosTableAdapter1.ClearBeforeFill = true;
+            // 
             // Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 559);
+            this.ClientSize = new System.Drawing.Size(804, 591);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Database";
             this.Text = "Base de dados";
@@ -426,6 +489,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -468,5 +533,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TextBox textBox_id_equipe;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_remover;
+        private calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PI2.calculoSuspensaoDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,6 +81,74 @@ namespace PI2
 
             // Vincula rodasData com rodasDataGridView
             rodasDataGridView.DataSource = rodasData;
+        }
+
+        private void textBox_id_equipe_TextChanged(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(textBox_id_equipe.Text))
+            {
+                button_remover.Enabled = false;
+            }
+            else
+            {
+                button_remover.Enabled = true;
+            }
+        }
+
+        private void button_remover_Click(object sender, EventArgs e)
+        {
+            int id_equipe = Convert.ToInt32(textBox_id_equipe.Text);
+
+            DataTable equipeData = equipesTableAdapter.GetDataByIDEquipe(id_equipe);
+
+            if(equipeData.Rows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Tem certeza de que deseja excluir essa equipe e seu histórico de cálculos?\nObserve que os alunos participantes não serão excluídos.", "Excluir equipe", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Define que os participantes estão em nenhuma equipe
+                    DataTable participantesTable = alunosTableAdapter1.GetDataByIDEquipe(id_equipe);
+
+                    foreach (DataRow row in participantesTable.Rows)
+                    {
+                        alunosTableAdapter1.UpdateAlunoEquipe(null, null, (string)row["ra_aluno"]);
+                    }
+
+                    // Exclui cálculos
+                    DataTable calculosTable = calculosTableAdapter.GetDataByIDEquipe(id_equipe);
+
+                    foreach (DataRow row in calculosTable.Rows)
+                    {
+                        int id_calculo = (int)row["id_calculo"];
+
+                        DataTable rodasTable = rodasTableAdapter.GetDataByIDCalculo(id_calculo);
+
+                        rodasTableAdapter.DeleteQuery(id_calculo);
+
+                        calculosTableAdapter.DeleteQuery(id_calculo);
+                    }
+
+                    // Exclui a equipe
+                    equipesTableAdapter.DeleteQuery(id_equipe);
+
+                    // Atualiza a tabela de equipes
+                    this.equipesTableAdapter.Fill(this.calculoSuspensaoDataSet.Equipes);
+
+                    // Deixa as outras tabelas vazias
+                    DataTable dataTableVazia = new DataTable();
+
+                    participantesDataGridView.DataSource = dataTableVazia;
+
+                    calculosDataGridView.DataSource = dataTableVazia;
+
+                    rodasDataGridView.DataSource = dataTableVazia;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Equipe não encontrada.", "Excluir equipe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
