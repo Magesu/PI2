@@ -284,14 +284,14 @@ namespace PI2
 
         private void AtualizarParaParRoda()
         {
-            label2.Text = "Comprimento da bitola";
+            label2.Text = "Comprimento da bitola (mm)";
             Distribuicao_Peso = Distribuicao_Peso * 2;
             Distancia_Bitola = Distancia_Bitola * 2;
         }
 
         private void AtualizarParaRodaUnica()
         {
-            label2.Text = "Distância da bitola até o centro";
+            label2.Text = "Distância da bitola até o centro (mm)";
             Distribuicao_Peso = Distribuicao_Peso / 2;
             Distancia_Bitola = Distancia_Bitola / 2;
         }

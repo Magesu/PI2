@@ -36,16 +36,16 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.TextBox_peso_total = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.nomeLabel = new System.Windows.Forms.Label();
-            this.calculosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter();
-            this.rodasTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.RodasTableAdapter();
             this.roda1 = new PI2.Roda();
             this.roda2 = new PI2.Roda();
             this.roda3 = new PI2.Roda();
             this.roda4 = new PI2.Roda();
             this.roda5 = new PI2.Roda();
             this.roda6 = new PI2.Roda();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.nomeLabel = new System.Windows.Forms.Label();
+            this.calculosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter();
+            this.rodasTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.RodasTableAdapter();
             label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -62,9 +62,9 @@
             label11.ForeColor = System.Drawing.SystemColors.MenuText;
             label11.Location = new System.Drawing.Point(3, 6);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(58, 13);
+            label11.Size = new System.Drawing.Size(79, 13);
             label11.TabIndex = 8;
-            label11.Text = "Peso Total";
+            label11.Text = "Peso Total (kg)";
             // 
             // tableLayoutPanel3
             // 
@@ -124,15 +124,15 @@
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Controls.Add(label11);
             this.flowLayoutPanel3.Controls.Add(this.TextBox_peso_total);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(17, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(7, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(170, 26);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(191, 26);
             this.flowLayoutPanel3.TabIndex = 4;
             // 
             // TextBox_peso_total
             // 
             this.TextBox_peso_total.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextBox_peso_total.Location = new System.Drawing.Point(67, 3);
+            this.TextBox_peso_total.Location = new System.Drawing.Point(88, 3);
             this.TextBox_peso_total.Name = "TextBox_peso_total";
             this.TextBox_peso_total.Size = new System.Drawing.Size(100, 20);
             this.TextBox_peso_total.TabIndex = 0;
@@ -156,45 +156,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(687, 190);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.nomeLabel, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 266);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // nomeLabel
-            // 
-            this.nomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nomeLabel.AutoSize = true;
-            this.nomeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.nomeLabel.Location = new System.Drawing.Point(3, 6);
-            this.nomeLabel.Name = "nomeLabel";
-            this.nomeLabel.Size = new System.Drawing.Size(166, 24);
-            this.nomeLabel.TabIndex = 2;
-            this.nomeLabel.Text = "Id do cálculo : -1";
-            // 
-            // calculosTableAdapter1
-            // 
-            this.calculosTableAdapter1.ClearBeforeFill = true;
-            // 
-            // rodasTableAdapter1
-            // 
-            this.rodasTableAdapter1.ClearBeforeFill = true;
             // 
             // roda1
             // 
@@ -303,6 +264,45 @@
             this.roda6.Peso = 0D;
             this.roda6.Size = new System.Drawing.Size(657, 175);
             this.roda6.TabIndex = 5;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nomeLabel, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 266);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // nomeLabel
+            // 
+            this.nomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nomeLabel.AutoSize = true;
+            this.nomeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.nomeLabel.Location = new System.Drawing.Point(3, 6);
+            this.nomeLabel.Name = "nomeLabel";
+            this.nomeLabel.Size = new System.Drawing.Size(166, 24);
+            this.nomeLabel.TabIndex = 2;
+            this.nomeLabel.Text = "Id do cálculo : -1";
+            // 
+            // calculosTableAdapter1
+            // 
+            this.calculosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // rodasTableAdapter1
+            // 
+            this.rodasTableAdapter1.ClearBeforeFill = true;
             // 
             // Carro
             // 
