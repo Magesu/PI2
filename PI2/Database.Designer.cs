@@ -41,20 +41,41 @@
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.participantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.participantesTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.ParticipantesTableAdapter();
-            this.calculosGridView = new System.Windows.Forms.DataGridView();
+            this.calculosDataGridView = new System.Windows.Forms.DataGridView();
             this.idcalculoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pesototalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rodasdianteirasassimetricasDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.rodastraseirasassimetricasDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.calculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calculosTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter();
+            this.rodasDataGridView = new System.Windows.Forms.DataGridView();
+            this.nomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distribuicaopesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanciabitolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanciamolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.constanteelasticaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comprimentobracoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoangularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rodasTableAdapter = new PI2.calculoSuspensaoDataSetTableAdapters.RodasTableAdapter();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.equipesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.participantesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.participantesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calculosGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rodasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rodasBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // equipesDataGridView
@@ -68,10 +89,11 @@
             this.numcarroDataGridViewTextBoxColumn,
             this.nomecarroDataGridViewTextBoxColumn});
             this.equipesDataGridView.DataSource = this.equipesBindingSource;
-            this.equipesDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.equipesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.equipesDataGridView.Location = new System.Drawing.Point(3, 23);
             this.equipesDataGridView.Name = "equipesDataGridView";
             this.equipesDataGridView.ReadOnly = true;
-            this.equipesDataGridView.Size = new System.Drawing.Size(422, 150);
+            this.equipesDataGridView.Size = new System.Drawing.Size(393, 141);
             this.equipesDataGridView.TabIndex = 0;
             this.equipesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.equipesGridView_CellClick);
             // 
@@ -120,10 +142,11 @@
             this.raDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn});
             this.participantesDataGridView.DataSource = this.participantesBindingSource;
-            this.participantesDataGridView.Location = new System.Drawing.Point(449, 12);
+            this.participantesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.participantesDataGridView.Location = new System.Drawing.Point(402, 23);
             this.participantesDataGridView.Name = "participantesDataGridView";
             this.participantesDataGridView.ReadOnly = true;
-            this.participantesDataGridView.Size = new System.Drawing.Size(254, 150);
+            this.participantesDataGridView.Size = new System.Drawing.Size(393, 141);
             this.participantesDataGridView.TabIndex = 1;
             // 
             // raDataGridViewTextBoxColumn
@@ -149,23 +172,25 @@
             // 
             this.participantesTableAdapter.ClearBeforeFill = true;
             // 
-            // calculosGridView
+            // calculosDataGridView
             // 
-            this.calculosGridView.AllowUserToAddRows = false;
-            this.calculosGridView.AllowUserToDeleteRows = false;
-            this.calculosGridView.AutoGenerateColumns = false;
-            this.calculosGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.calculosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.calculosDataGridView.AllowUserToAddRows = false;
+            this.calculosDataGridView.AllowUserToDeleteRows = false;
+            this.calculosDataGridView.AutoGenerateColumns = false;
+            this.calculosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.calculosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idcalculoDataGridViewTextBoxColumn,
             this.pesototalDataGridViewTextBoxColumn,
             this.rodasdianteirasassimetricasDataGridViewCheckBoxColumn,
             this.rodastraseirasassimetricasDataGridViewCheckBoxColumn});
-            this.calculosGridView.DataSource = this.calculosBindingSource;
-            this.calculosGridView.Location = new System.Drawing.Point(12, 168);
-            this.calculosGridView.Name = "calculosGridView";
-            this.calculosGridView.ReadOnly = true;
-            this.calculosGridView.Size = new System.Drawing.Size(422, 150);
-            this.calculosGridView.TabIndex = 2;
+            this.calculosDataGridView.DataSource = this.calculosBindingSource;
+            this.calculosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculosDataGridView.Location = new System.Drawing.Point(3, 196);
+            this.calculosDataGridView.Name = "calculosDataGridView";
+            this.calculosDataGridView.ReadOnly = true;
+            this.calculosDataGridView.Size = new System.Drawing.Size(798, 167);
+            this.calculosDataGridView.TabIndex = 2;
+            this.calculosDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calculosDataGridView_CellClick);
             // 
             // idcalculoDataGridViewTextBoxColumn
             // 
@@ -204,24 +229,203 @@
             // 
             this.calculosTableAdapter.ClearBeforeFill = true;
             // 
+            // rodasDataGridView
+            // 
+            this.rodasDataGridView.AllowUserToAddRows = false;
+            this.rodasDataGridView.AllowUserToDeleteRows = false;
+            this.rodasDataGridView.AutoGenerateColumns = false;
+            this.rodasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rodasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nomeDataGridViewTextBoxColumn1,
+            this.distribuicaopesoDataGridViewTextBoxColumn,
+            this.distanciabitolaDataGridViewTextBoxColumn,
+            this.distanciamolaDataGridViewTextBoxColumn,
+            this.constanteelasticaDataGridViewTextBoxColumn,
+            this.comprimentobracoDataGridViewTextBoxColumn,
+            this.alturaDataGridViewTextBoxColumn,
+            this.cursoangularDataGridViewTextBoxColumn});
+            this.rodasDataGridView.DataSource = this.rodasBindingSource;
+            this.rodasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rodasDataGridView.Location = new System.Drawing.Point(3, 389);
+            this.rodasDataGridView.Name = "rodasDataGridView";
+            this.rodasDataGridView.ReadOnly = true;
+            this.rodasDataGridView.Size = new System.Drawing.Size(798, 167);
+            this.rodasDataGridView.TabIndex = 3;
+            // 
+            // nomeDataGridViewTextBoxColumn1
+            // 
+            this.nomeDataGridViewTextBoxColumn1.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn1.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn1.Name = "nomeDataGridViewTextBoxColumn1";
+            this.nomeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // distribuicaopesoDataGridViewTextBoxColumn
+            // 
+            this.distribuicaopesoDataGridViewTextBoxColumn.DataPropertyName = "distribuicao_peso";
+            this.distribuicaopesoDataGridViewTextBoxColumn.HeaderText = "distribuicao_peso";
+            this.distribuicaopesoDataGridViewTextBoxColumn.Name = "distribuicaopesoDataGridViewTextBoxColumn";
+            this.distribuicaopesoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // distanciabitolaDataGridViewTextBoxColumn
+            // 
+            this.distanciabitolaDataGridViewTextBoxColumn.DataPropertyName = "distancia_bitola";
+            this.distanciabitolaDataGridViewTextBoxColumn.HeaderText = "distancia_bitola";
+            this.distanciabitolaDataGridViewTextBoxColumn.Name = "distanciabitolaDataGridViewTextBoxColumn";
+            this.distanciabitolaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // distanciamolaDataGridViewTextBoxColumn
+            // 
+            this.distanciamolaDataGridViewTextBoxColumn.DataPropertyName = "distancia_mola";
+            this.distanciamolaDataGridViewTextBoxColumn.HeaderText = "distancia_mola";
+            this.distanciamolaDataGridViewTextBoxColumn.Name = "distanciamolaDataGridViewTextBoxColumn";
+            this.distanciamolaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // constanteelasticaDataGridViewTextBoxColumn
+            // 
+            this.constanteelasticaDataGridViewTextBoxColumn.DataPropertyName = "constante_elastica";
+            this.constanteelasticaDataGridViewTextBoxColumn.HeaderText = "constante_elastica";
+            this.constanteelasticaDataGridViewTextBoxColumn.Name = "constanteelasticaDataGridViewTextBoxColumn";
+            this.constanteelasticaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // comprimentobracoDataGridViewTextBoxColumn
+            // 
+            this.comprimentobracoDataGridViewTextBoxColumn.DataPropertyName = "comprimento_braco";
+            this.comprimentobracoDataGridViewTextBoxColumn.HeaderText = "comprimento_braco";
+            this.comprimentobracoDataGridViewTextBoxColumn.Name = "comprimentobracoDataGridViewTextBoxColumn";
+            this.comprimentobracoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alturaDataGridViewTextBoxColumn
+            // 
+            this.alturaDataGridViewTextBoxColumn.DataPropertyName = "altura";
+            this.alturaDataGridViewTextBoxColumn.HeaderText = "altura";
+            this.alturaDataGridViewTextBoxColumn.Name = "alturaDataGridViewTextBoxColumn";
+            this.alturaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cursoangularDataGridViewTextBoxColumn
+            // 
+            this.cursoangularDataGridViewTextBoxColumn.DataPropertyName = "curso_angular";
+            this.cursoangularDataGridViewTextBoxColumn.HeaderText = "curso_angular";
+            this.cursoangularDataGridViewTextBoxColumn.Name = "cursoangularDataGridViewTextBoxColumn";
+            this.cursoangularDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rodasBindingSource
+            // 
+            this.rodasBindingSource.DataMember = "Rodas";
+            this.rodasBindingSource.DataSource = this.calculoSuspensaoDataSet;
+            // 
+            // rodasTableAdapter
+            // 
+            this.rodasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.rodasDataGridView, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.calculosDataGridView, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(804, 559);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.equipesDataGridView, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.participantesDataGridView, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(798, 167);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Equipes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Location = new System.Drawing.Point(402, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Participantes";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Location = new System.Drawing.Point(3, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cálculos";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(3, 366);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Rodas";
+            // 
             // Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 674);
-            this.Controls.Add(this.calculosGridView);
-            this.Controls.Add(this.participantesDataGridView);
-            this.Controls.Add(this.equipesDataGridView);
+            this.ClientSize = new System.Drawing.Size(804, 559);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Database";
-            this.Text = "Database";
+            this.Text = "Base de dados";
             this.Load += new System.EventHandler(this.Database_Load);
             ((System.ComponentModel.ISupportInitialize)(this.equipesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculoSuspensaoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.participantesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.participantesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calculosGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calculosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rodasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rodasBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,12 +444,29 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource participantesBindingSource;
         private calculoSuspensaoDataSetTableAdapters.ParticipantesTableAdapter participantesTableAdapter;
-        private System.Windows.Forms.DataGridView calculosGridView;
+        private System.Windows.Forms.DataGridView calculosDataGridView;
         private System.Windows.Forms.BindingSource calculosBindingSource;
         private calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter calculosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idcalculoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pesototalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rodasdianteirasassimetricasDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn rodastraseirasassimetricasDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridView rodasDataGridView;
+        private System.Windows.Forms.BindingSource rodasBindingSource;
+        private calculoSuspensaoDataSetTableAdapters.RodasTableAdapter rodasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distribuicaopesoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanciabitolaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanciamolaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn constanteelasticaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comprimentobracoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cursoangularDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
     }
 }
