@@ -343,7 +343,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 371);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(324, 330);
             this.Name = "EquipeInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informações da equipe";
             this.Load += new System.EventHandler(this.EquipeInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

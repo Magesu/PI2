@@ -55,7 +55,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 459);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1067, 459);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // carro1
@@ -68,7 +68,7 @@
             this.carro1.Peso_Total = 0D;
             this.carro1.Rodas_Dianteiras_Assimetricas = false;
             this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(693, 436);
+            this.carro1.Size = new System.Drawing.Size(693, 453);
             this.carro1.TabIndex = 0;
             // 
             // carro2
@@ -81,7 +81,7 @@
             this.carro2.Peso_Total = 0D;
             this.carro2.Rodas_Dianteiras_Assimetricas = false;
             this.carro2.Rodas_Traseiras_Assimetricas = false;
-            this.carro2.Size = new System.Drawing.Size(693, 436);
+            this.carro2.Size = new System.Drawing.Size(693, 453);
             this.carro2.TabIndex = 1;
             // 
             // carro3
@@ -94,7 +94,7 @@
             this.carro3.Peso_Total = 0D;
             this.carro3.Rodas_Dianteiras_Assimetricas = false;
             this.carro3.Rodas_Traseiras_Assimetricas = false;
-            this.carro3.Size = new System.Drawing.Size(693, 436);
+            this.carro3.Size = new System.Drawing.Size(693, 453);
             this.carro3.TabIndex = 2;
             // 
             // equipesTableAdapter1
@@ -117,13 +117,13 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 502);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1073, 502);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // button_recarregar
             // 
             this.button_recarregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_recarregar.Location = new System.Drawing.Point(337, 472);
+            this.button_recarregar.Location = new System.Drawing.Point(473, 472);
             this.button_recarregar.Margin = new System.Windows.Forms.Padding(7);
             this.button_recarregar.Name = "button_recarregar";
             this.button_recarregar.Size = new System.Drawing.Size(126, 23);
@@ -136,9 +136,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.ClientSize = new System.Drawing.Size(1073, 502);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(740, 361);
             this.Name = "Histórico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Histórico de cálculos";
             this.Load += new System.EventHandler(this.Histórico_Load);
             this.tableLayoutPanel2.ResumeLayout(false);

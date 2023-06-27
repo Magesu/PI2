@@ -32,26 +32,26 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_ra = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_nome = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_senha = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_cadastrar = new System.Windows.Forms.Button();
+            this.textBox_senha = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.radioButton_aluno = new System.Windows.Forms.RadioButton();
             this.radioButton_professor = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_ra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_nome = new System.Windows.Forms.TextBox();
+            this.button_cadastrar = new System.Windows.Forms.Button();
             this.usuariosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.UsuariosTableAdapter();
             this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             this.professoresTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.ProfessoresTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(608, 384);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -78,7 +78,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(235, 111);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(139, 78);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -116,119 +116,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(310, 188);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "RA";
-            // 
-            // textBox_ra
-            // 
-            this.textBox_ra.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox_ra.Location = new System.Drawing.Point(96, 3);
-            this.textBox_ra.Name = "textBox_ra";
-            this.textBox_ra.Size = new System.Drawing.Size(133, 20);
-            this.textBox_ra.TabIndex = 0;
-            this.textBox_ra.TextChanged += new System.EventHandler(this.textBox_ra_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nome";
-            // 
-            // textBox_nome
-            // 
-            this.textBox_nome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox_nome.Location = new System.Drawing.Point(96, 29);
-            this.textBox_nome.Name = "textBox_nome";
-            this.textBox_nome.Size = new System.Drawing.Size(133, 20);
-            this.textBox_nome.TabIndex = 1;
-            this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Senha";
-            // 
-            // textBox_senha
-            // 
-            this.textBox_senha.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox_senha.Location = new System.Drawing.Point(96, 55);
-            this.textBox_senha.Name = "textBox_senha";
-            this.textBox_senha.PasswordChar = '*';
-            this.textBox_senha.Size = new System.Drawing.Size(133, 20);
-            this.textBox_senha.TabIndex = 2;
-            this.textBox_senha.TextChanged += new System.EventHandler(this.textBox_senha_TextChanged);
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoSize = true;
-            this.flowLayoutPanel4.Controls.Add(this.radioButton_aluno);
-            this.flowLayoutPanel4.Controls.Add(this.radioButton_professor);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(96, 81);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(133, 23);
-            this.flowLayoutPanel4.TabIndex = 4;
-            this.flowLayoutPanel4.WrapContents = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Tipo de cadastro";
-            // 
-            // button_cadastrar
-            // 
-            this.button_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_cadastrar.Enabled = false;
-            this.button_cadastrar.Location = new System.Drawing.Point(117, 162);
-            this.button_cadastrar.Name = "button_cadastrar";
-            this.button_cadastrar.Size = new System.Drawing.Size(75, 23);
-            this.button_cadastrar.TabIndex = 5;
-            this.button_cadastrar.Text = "Cadastrar";
-            this.button_cadastrar.UseVisualStyleBackColor = true;
-            this.button_cadastrar.Click += new System.EventHandler(this.button_cadastrar_Click);
-            // 
-            // radioButton_aluno
-            // 
-            this.radioButton_aluno.AutoSize = true;
-            this.radioButton_aluno.Checked = true;
-            this.radioButton_aluno.Location = new System.Drawing.Point(3, 3);
-            this.radioButton_aluno.Name = "radioButton_aluno";
-            this.radioButton_aluno.Size = new System.Drawing.Size(52, 17);
-            this.radioButton_aluno.TabIndex = 4;
-            this.radioButton_aluno.TabStop = true;
-            this.radioButton_aluno.Text = "Aluno";
-            this.radioButton_aluno.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_professor
-            // 
-            this.radioButton_professor.AutoSize = true;
-            this.radioButton_professor.Location = new System.Drawing.Point(61, 3);
-            this.radioButton_professor.Name = "radioButton_professor";
-            this.radioButton_professor.Size = new System.Drawing.Size(69, 17);
-            this.radioButton_professor.TabIndex = 5;
-            this.radioButton_professor.Text = "Professor";
-            this.radioButton_professor.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -254,6 +141,119 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(232, 107);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Tipo de cadastro";
+            // 
+            // textBox_senha
+            // 
+            this.textBox_senha.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_senha.Location = new System.Drawing.Point(96, 55);
+            this.textBox_senha.Name = "textBox_senha";
+            this.textBox_senha.PasswordChar = '*';
+            this.textBox_senha.Size = new System.Drawing.Size(133, 20);
+            this.textBox_senha.TabIndex = 2;
+            this.textBox_senha.TextChanged += new System.EventHandler(this.textBox_senha_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Senha";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoSize = true;
+            this.flowLayoutPanel4.Controls.Add(this.radioButton_aluno);
+            this.flowLayoutPanel4.Controls.Add(this.radioButton_professor);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(96, 81);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(133, 23);
+            this.flowLayoutPanel4.TabIndex = 4;
+            this.flowLayoutPanel4.WrapContents = false;
+            // 
+            // radioButton_aluno
+            // 
+            this.radioButton_aluno.AutoSize = true;
+            this.radioButton_aluno.Checked = true;
+            this.radioButton_aluno.Location = new System.Drawing.Point(3, 3);
+            this.radioButton_aluno.Name = "radioButton_aluno";
+            this.radioButton_aluno.Size = new System.Drawing.Size(52, 17);
+            this.radioButton_aluno.TabIndex = 4;
+            this.radioButton_aluno.TabStop = true;
+            this.radioButton_aluno.Text = "Aluno";
+            this.radioButton_aluno.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_professor
+            // 
+            this.radioButton_professor.AutoSize = true;
+            this.radioButton_professor.Location = new System.Drawing.Point(61, 3);
+            this.radioButton_professor.Name = "radioButton_professor";
+            this.radioButton_professor.Size = new System.Drawing.Size(69, 17);
+            this.radioButton_professor.TabIndex = 5;
+            this.radioButton_professor.Text = "Professor";
+            this.radioButton_professor.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nome";
+            // 
+            // textBox_ra
+            // 
+            this.textBox_ra.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_ra.Location = new System.Drawing.Point(96, 3);
+            this.textBox_ra.Name = "textBox_ra";
+            this.textBox_ra.Size = new System.Drawing.Size(133, 20);
+            this.textBox_ra.TabIndex = 0;
+            this.textBox_ra.TextChanged += new System.EventHandler(this.textBox_ra_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(68, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "RA";
+            // 
+            // textBox_nome
+            // 
+            this.textBox_nome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_nome.Location = new System.Drawing.Point(96, 29);
+            this.textBox_nome.Name = "textBox_nome";
+            this.textBox_nome.Size = new System.Drawing.Size(133, 20);
+            this.textBox_nome.TabIndex = 1;
+            this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
+            // 
+            // button_cadastrar
+            // 
+            this.button_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_cadastrar.Enabled = false;
+            this.button_cadastrar.Location = new System.Drawing.Point(117, 162);
+            this.button_cadastrar.Name = "button_cadastrar";
+            this.button_cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.button_cadastrar.TabIndex = 5;
+            this.button_cadastrar.Text = "Cadastrar";
+            this.button_cadastrar.UseVisualStyleBackColor = true;
+            this.button_cadastrar.Click += new System.EventHandler(this.button_cadastrar_Click);
+            // 
             // usuariosTableAdapter1
             // 
             this.usuariosTableAdapter1.ClearBeforeFill = true;
@@ -270,19 +270,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(608, 384);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(378, 304);
             this.Name = "Cadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
