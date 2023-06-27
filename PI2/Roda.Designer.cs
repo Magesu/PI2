@@ -67,49 +67,49 @@
             label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             label6.Location = new System.Drawing.Point(3, 6);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(113, 13);
+            label6.Size = new System.Drawing.Size(138, 13);
             label6.TabIndex = 3;
-            label6.Text = "Comprimento do braço";
+            label6.Text = "Comprimento do braço (mm)";
             label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
             label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            label7.Location = new System.Drawing.Point(28, 32);
+            label7.Location = new System.Drawing.Point(24, 32);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(88, 13);
+            label7.Size = new System.Drawing.Size(117, 13);
             label7.TabIndex = 4;
-            label7.Text = "Altura até o chão";
+            label7.Text = "Altura até o chão (mm)";
             label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label9
             // 
             label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            label9.Location = new System.Drawing.Point(43, 84);
+            label9.Location = new System.Drawing.Point(49, 84);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(73, 13);
+            label9.Size = new System.Drawing.Size(92, 13);
             label9.TabIndex = 5;
-            label9.Text = "Curso Angular";
+            label9.Text = "Curso Angular (°)";
             label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label1
             // 
             label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            label1.Location = new System.Drawing.Point(85, 6);
+            label1.Location = new System.Drawing.Point(67, 6);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(103, 13);
+            label1.Size = new System.Drawing.Size(121, 13);
             label1.TabIndex = 2;
-            label1.Text = "Distribuição de peso";
+            label1.Text = "Distribuição de peso (%)";
             label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
             // 
             label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            label8.Location = new System.Drawing.Point(93, 84);
+            label8.Location = new System.Drawing.Point(59, 84);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(95, 13);
+            label8.Size = new System.Drawing.Size(129, 13);
             label8.TabIndex = 2;
-            label8.Text = "Constante Elástica";
+            label8.Text = "Constante Elástica (N/m)";
             label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
@@ -119,17 +119,17 @@
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(185, 13);
             label3.TabIndex = 2;
-            label3.Text = "Distância da mola até a ponta do eixo";
+            label3.Text = "Distância da mola até a ponta (mm)";
             label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.Location = new System.Drawing.Point(34, 32);
+            this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 13);
+            this.label2.Size = new System.Drawing.Size(182, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Distância da bitola até o centro";
+            this.label2.Text = "Distância da bitola até o centro (mm)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // TextBox_distribuicao_peso
@@ -171,7 +171,7 @@
             // TextBox_comprimento_braco
             // 
             this.TextBox_comprimento_braco.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBox_comprimento_braco.Location = new System.Drawing.Point(122, 3);
+            this.TextBox_comprimento_braco.Location = new System.Drawing.Point(147, 3);
             this.TextBox_comprimento_braco.Name = "TextBox_comprimento_braco";
             this.TextBox_comprimento_braco.Size = new System.Drawing.Size(100, 20);
             this.TextBox_comprimento_braco.TabIndex = 4;
@@ -180,7 +180,7 @@
             // TextBox_altura
             // 
             this.TextBox_altura.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBox_altura.Location = new System.Drawing.Point(122, 29);
+            this.TextBox_altura.Location = new System.Drawing.Point(147, 29);
             this.TextBox_altura.Name = "TextBox_altura";
             this.TextBox_altura.Size = new System.Drawing.Size(100, 20);
             this.TextBox_altura.TabIndex = 5;
@@ -189,7 +189,7 @@
             // TextBox_curso_angular
             // 
             this.TextBox_curso_angular.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBox_curso_angular.Location = new System.Drawing.Point(122, 81);
+            this.TextBox_curso_angular.Location = new System.Drawing.Point(147, 81);
             this.TextBox_curso_angular.Name = "TextBox_curso_angular";
             this.TextBox_curso_angular.ReadOnly = true;
             this.TextBox_curso_angular.Size = new System.Drawing.Size(100, 20);
@@ -234,14 +234,14 @@
             this.tableLayoutPanel3.Controls.Add(this.TextBox_comprimento_braco, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.TextBox_altura, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(365, 34);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(352, 34);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(225, 104);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(250, 104);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label11
