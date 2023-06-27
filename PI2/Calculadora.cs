@@ -136,25 +136,42 @@ namespace PI2
                 usuarioToolStripMenuItem.Visible = false;
                 equipeToolStripMenuItem.Visible = false;
                 loginToolStripMenuItem.Visible = true;
+                databaseToolStripMenuItem.Visible = false;
             }
             else
             {
                 usuarioToolStripMenuItem.Visible = true;
                 loginToolStripMenuItem.Visible = false;
 
-                DataRow alunoRow = alunosTableAdapter1.GetDataByRA(RA_Usuario_Logado).Rows[0];
+                DataTable alunoTable = alunosTableAdapter1.GetDataByRA(RA_Usuario_Logado);
+                DataTable professorTable = professoresTableAdapter1.GetDataByRA(RA_Usuario_Logado);
 
-                if (alunoRow.IsNull("id_equipe"))
+                if(alunoTable.Rows.Count > 0)
+                {
+                    databaseToolStripMenuItem.Visible = false;
+
+                    DataRow alunoRow = alunosTableAdapter1.GetDataByRA(RA_Usuario_Logado).Rows[0];
+
+                    if (alunoRow.IsNull("id_equipe"))
+                    {
+                        button_salvar.Enabled = false;
+                        criarEquipeToolStripMenuItem.Visible = true;
+                        equipeToolStripMenuItem.Visible = false;
+                        
+                    }
+                    else
+                    {
+                        button_salvar.Enabled = true;
+                        criarEquipeToolStripMenuItem.Visible = false;
+                        equipeToolStripMenuItem.Visible = true;
+                    }
+                }
+                else if(professorTable.Rows.Count > 0)
                 {
                     button_salvar.Enabled = false;
-                    criarEquipeToolStripMenuItem.Visible = true;
-                    equipeToolStripMenuItem.Visible = false;
-                }
-                else
-                {
-                    button_salvar.Enabled = true;
                     criarEquipeToolStripMenuItem.Visible = false;
-                    equipeToolStripMenuItem.Visible = true;
+                    equipeToolStripMenuItem.Visible = false;
+                    databaseToolStripMenuItem.Visible = true;
                 }
             }
         }
@@ -164,7 +181,7 @@ namespace PI2
             Atualizar();
         }
 
-        private void professoraToolStripMenuItem_Click(object sender, EventArgs e)
+        private void databaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Database database = new Database();
 
