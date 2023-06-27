@@ -34,7 +34,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.carro1 = new PI2.Carro();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_carregar = new System.Windows.Forms.Button();
             this.button_salvar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -136,10 +135,10 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button_carregar, 0, 0);
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.button_salvar, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -149,22 +148,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(702, 36);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button_carregar
-            // 
-            this.button_carregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_carregar.Location = new System.Drawing.Point(118, 6);
-            this.button_carregar.Name = "button_carregar";
-            this.button_carregar.Size = new System.Drawing.Size(115, 23);
-            this.button_carregar.TabIndex = 1;
-            this.button_carregar.Text = "Carregar resultado";
-            this.button_carregar.UseVisualStyleBackColor = true;
-            this.button_carregar.Click += new System.EventHandler(this.button_carregar_Click);
-            // 
             // button_salvar
             // 
             this.button_salvar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_salvar.Enabled = false;
-            this.button_salvar.Location = new System.Drawing.Point(475, 6);
+            this.button_salvar.Location = new System.Drawing.Point(299, 6);
             this.button_salvar.Name = "button_salvar";
             this.button_salvar.Size = new System.Drawing.Size(103, 23);
             this.button_salvar.TabIndex = 2;
@@ -306,7 +294,6 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button_salvar;
-        private System.Windows.Forms.Button button_carregar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem equipeToolStripMenuItem;

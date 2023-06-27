@@ -32,6 +32,8 @@
             this.carro1 = new PI2.Carro();
             this.carro2 = new PI2.Carro();
             this.carro3 = new PI2.Carro();
+            this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
+            this.calculosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             this.carro1.Peso_Total = 0D;
             this.carro1.Rodas_Dianteiras_Assimetricas = false;
             this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(693, 445);
+            this.carro1.Size = new System.Drawing.Size(693, 462);
             this.carro1.TabIndex = 0;
             // 
             // carro2
@@ -74,7 +76,7 @@
             this.carro2.Peso_Total = 0D;
             this.carro2.Rodas_Dianteiras_Assimetricas = false;
             this.carro2.Rodas_Traseiras_Assimetricas = false;
-            this.carro2.Size = new System.Drawing.Size(693, 445);
+            this.carro2.Size = new System.Drawing.Size(693, 462);
             this.carro2.TabIndex = 1;
             // 
             // carro3
@@ -86,8 +88,16 @@
             this.carro3.Peso_Total = 0D;
             this.carro3.Rodas_Dianteiras_Assimetricas = false;
             this.carro3.Rodas_Traseiras_Assimetricas = false;
-            this.carro3.Size = new System.Drawing.Size(693, 445);
+            this.carro3.Size = new System.Drawing.Size(693, 462);
             this.carro3.TabIndex = 2;
+            // 
+            // equipesTableAdapter1
+            // 
+            this.equipesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // calculosTableAdapter1
+            // 
+            this.calculosTableAdapter1.ClearBeforeFill = true;
             // 
             // Histórico
             // 
@@ -97,6 +107,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Histórico";
             this.Text = "Histórico de cálculos";
+            this.Load += new System.EventHandler(this.Histórico_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -108,5 +119,7 @@
         private Carro carro1;
         private Carro carro2;
         private Carro carro3;
+        private calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter equipesTableAdapter1;
+        private calculoSuspensaoDataSetTableAdapters.CalculosTableAdapter calculosTableAdapter1;
     }
 }
