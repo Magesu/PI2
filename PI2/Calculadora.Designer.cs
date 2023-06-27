@@ -32,23 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.carro1 = new PI2.Carro();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_salvar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criarEquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detalhesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.históricoDeCálculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
             this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             this.professoresTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.ProfessoresTableAdapter();
+            this.carro1 = new PI2.Carro();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -120,22 +120,6 @@
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
-            // carro1
-            // 
-            this.carro1.BackColor = System.Drawing.Color.Transparent;
-            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.carro1.limite_calculos = 3;
-            this.carro1.Location = new System.Drawing.Point(0, 0);
-            this.carro1.Name = "carro1";
-            this.carro1.Nome = "Calculadora";
-            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
-            this.carro1.Peso_Total = 0D;
-            this.carro1.Rodas_Dianteiras_Assimetricas = false;
-            this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(702, 440);
-            this.carro1.TabIndex = 0;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
@@ -192,6 +176,13 @@
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -238,25 +229,19 @@
             this.históricoDeCálculosToolStripMenuItem.Text = "Histórico de cálculos";
             this.históricoDeCálculosToolStripMenuItem.Click += new System.EventHandler(this.históricoDeCálculosToolStripMenuItem_Click);
             // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            // 
             // databaseToolStripMenuItem
             // 
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.databaseToolStripMenuItem.Text = "Base de dados";
             this.databaseToolStripMenuItem.Click += new System.EventHandler(this.databaseToolStripMenuItem_Click);
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // equipesTableAdapter1
             // 
@@ -270,6 +255,22 @@
             // 
             this.professoresTableAdapter1.ClearBeforeFill = true;
             // 
+            // carro1
+            // 
+            this.carro1.BackColor = System.Drawing.Color.Transparent;
+            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.carro1.limite_calculos = 3;
+            this.carro1.Location = new System.Drawing.Point(0, 0);
+            this.carro1.Name = "carro1";
+            this.carro1.Nome = "Calculadora";
+            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
+            this.carro1.Peso_Total = 0D;
+            this.carro1.Rodas_Dianteiras_Assimetricas = false;
+            this.carro1.Rodas_Traseiras_Assimetricas = false;
+            this.carro1.Size = new System.Drawing.Size(702, 440);
+            this.carro1.TabIndex = 0;
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +280,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(18000, -18000);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(836, 260);
+            this.MinimumSize = new System.Drawing.Size(905, 362);
             this.Name = "Calculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";

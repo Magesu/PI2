@@ -187,5 +187,12 @@ namespace PI2
 
             database.Show();
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sobre sobre = new Sobre();
+
+            sobre.Show();
+        }
     }
 }

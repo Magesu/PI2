@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Desenvolvido para equipes de engenharia automobilística, a Calculadora é uma ferramenta que permite calcular a constante elástica da mola e o curso angular do carro do projeto. Os alunos podem se cadastrar, formar equipes e armazenar informações relevantes, como o número e nome do carro, além dos participantes da equipe. Os cálculos realizados podem ser salvos para referência futura e os resultados podem ser visualizados e comparados. Os professores têm acesso privilegiado para monitorar o progresso das equipes e acompanhar seu desempenho.</value>
+  </data>
 </root>

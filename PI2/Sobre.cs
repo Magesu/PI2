@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PI2
 {
-    public partial class Teste : Form
+    public partial class Sobre : Form
     {
-        public Teste()
+        public Sobre()
         {
             InitializeComponent();
-            
         }
     }
 }
