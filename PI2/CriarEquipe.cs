@@ -84,5 +84,10 @@ namespace PI2
                 button_criar.Enabled = false;
             }
         }
+
+        private void CriarEquipe_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            calculadora.ForcarAtualizar();
+        }
     }
 }

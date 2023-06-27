@@ -193,6 +193,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CriarEquipe";
             this.Text = "Criar Equipe";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CriarEquipe_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();

@@ -292,9 +292,9 @@
             this.nomeLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.nomeLabel.Location = new System.Drawing.Point(3, 6);
             this.nomeLabel.Name = "nomeLabel";
-            this.nomeLabel.Size = new System.Drawing.Size(130, 24);
+            this.nomeLabel.Size = new System.Drawing.Size(166, 24);
             this.nomeLabel.TabIndex = 2;
-            this.nomeLabel.Text = "Id do cálculo";
+            this.nomeLabel.Text = "Id do cálculo : -1";
             // 
             // calculosTableAdapter1
             // 

@@ -29,17 +29,19 @@ namespace PI2
         public void CarregarHistorico()
         {
             DataTable calculosTable = calculosTableAdapter1.GetDataByIDEquipe(id_equipe);
+            calculosTable.DefaultView.Sort = "id_calculo desc";
+            DataTable sortedCalculosTable = calculosTable.DefaultView.ToTable();
 
             int i = 0;
 
-            foreach(DataRow row in calculosTable.Rows)
+            foreach(DataRow row in sortedCalculosTable.Rows)
             {
-                if(i < 3)
+                if(i >= 0)
                 {
                     int id_calculo = (int)row[0];
 
                     carros.ElementAt(i).CarregarCalculo(id_calculo);
-                    i++;
+                    i--;
                 }
             }
         }

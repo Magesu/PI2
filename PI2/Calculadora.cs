@@ -34,11 +34,13 @@ namespace PI2
         private void Logar()
         {
             button_salvar.Enabled = true;
+            Atualizar();
         }
 
         private void Deslogar()
         {
             button_salvar.Enabled = false;
+            Atualizar();
         }
 
         public Calculadora()
@@ -70,17 +72,12 @@ namespace PI2
             }
         }
 
-        private void button_carregar_Click(object sender, EventArgs e)
-        {
-            carro1.CarregarCalculo(2);
-        }
-
         private void Calculadora_Load(object sender, EventArgs e)
         {
-
+            Atualizar();
         }
 
-        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login login = new Login(this);
 
@@ -112,24 +109,11 @@ namespace PI2
             }
         }
 
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cadastro cadastro = new Cadastro();
-
-            cadastro.Show();
-        }
-
-        private void informaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void detalhesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EquipeInfo equipeInfo = new EquipeInfo(this);
 
             equipeInfo.Show();
-        }
-
-        private void bemvindoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string message = "Seja bem vindo, " + RA_Usuario_Logado + "!";
-            MessageBox.Show(message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void criarEquipeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,7 +125,43 @@ namespace PI2
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RA_Usuario_Logado = null;
+           RA_Usuario_Logado = null;
+        }
+
+        private void Atualizar()
+        {
+            if(RA_Usuario_Logado == null)
+            {
+                button_salvar.Enabled = false;
+                usuarioToolStripMenuItem.Visible = false;
+                equipeToolStripMenuItem.Visible = false;
+                loginToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                usuarioToolStripMenuItem.Visible = true;
+                loginToolStripMenuItem.Visible = false;
+
+                DataRow alunoRow = alunosTableAdapter1.GetDataByRA(RA_Usuario_Logado).Rows[0];
+
+                if (alunoRow.IsNull("id_equipe"))
+                {
+                    button_salvar.Enabled = false;
+                    criarEquipeToolStripMenuItem.Visible = true;
+                    equipeToolStripMenuItem.Visible = false;
+                }
+                else
+                {
+                    button_salvar.Enabled = true;
+                    criarEquipeToolStripMenuItem.Visible = false;
+                    equipeToolStripMenuItem.Visible = true;
+                }
+            }
+        }
+
+        public void ForcarAtualizar()
+        {
+            Atualizar();
         }
     }
 }
