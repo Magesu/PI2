@@ -47,8 +47,8 @@
             this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
             this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             this.carro1 = new PI2.Carro();
+            this.professoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,20 +60,8 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            pictureBox1.Image = global::PI2.Properties.Resources.baseCarro;
-            pictureBox1.Location = new System.Drawing.Point(20, 20);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(210, 440);
-            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
             // 
             // splitContainer1
             // 
@@ -166,7 +154,8 @@
             this.usuarioToolStripMenuItem,
             this.equipeToolStripMenuItem,
             this.loginToolStripMenuItem,
-            this.sobreToolStripMenuItem});
+            this.sobreToolStripMenuItem,
+            this.professoraToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(962, 24);
@@ -256,6 +245,26 @@
             this.carro1.Size = new System.Drawing.Size(702, 440);
             this.carro1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            pictureBox1.Image = global::PI2.Properties.Resources.baseCarro;
+            pictureBox1.Location = new System.Drawing.Point(20, 20);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(210, 440);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
+            // professoraToolStripMenuItem
+            // 
+            this.professoraToolStripMenuItem.Name = "professoraToolStripMenuItem";
+            this.professoraToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.professoraToolStripMenuItem.Text = "Professora";
+            this.professoraToolStripMenuItem.Click += new System.EventHandler(this.professoraToolStripMenuItem_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,7 +279,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
             this.Load += new System.EventHandler(this.Calculadora_Load);
-            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -284,6 +292,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,5 +315,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem criarEquipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem professoraToolStripMenuItem;
     }
 }

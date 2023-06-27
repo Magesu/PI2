@@ -163,5 +163,12 @@ namespace PI2
         {
             Atualizar();
         }
+
+        private void professoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Database database = new Database();
+
+            database.Show();
+        }
     }
 }
