@@ -26,8 +26,8 @@ namespace PI2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RTCVLH9;Initial Catalog=calculoSuspensao;User ID=sa;Password=" +
-            "senhasa@1234")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sqlacad-sls.utp.local;Initial Catalog=calculoSuspensao;User ID=sa;Pas" +
+            "sword=Curitiba@PR")]
         public string calculoSuspensaoConnectionString {
             get {
                 return ((string)(this["calculoSuspensaoConnectionString"]));
