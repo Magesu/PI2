@@ -61,7 +61,12 @@ namespace PI2
             {
                 DataRow usuario = usuariosTableAdapter1.GetDataByRA(ra).Rows[0];
 
-                if (usuario["passhash"].Equals(senha))
+                string passhash = (string)usuario["passhash"];
+                string salt = (string)usuario["salt"];
+
+                string senha_hash = PasswordHasher.HashPassword(senha, salt);
+
+                if (passhash.Equals(senha_hash))
                 {
                     calculadora.RA_Usuario_Logado = usuario["ra"].ToString();
 
