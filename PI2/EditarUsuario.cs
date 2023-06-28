@@ -78,16 +78,21 @@ namespace PI2
         {
             DataRow usuarioRow = usuariosTableAdapter1.GetDataByRA(ra_usuario).Rows[0];
 
-            string passhash_atual = textBox_senha_atual.Text;
+            string salt_original = (string)usuarioRow["salt"];
 
-            if ((string) usuarioRow["passhash"] == passhash_atual)
+            string senha_original_hash = PasswordHasher.HashPassword(textBox_senha_atual.Text, salt_original);
+
+            if (usuarioRow["passhash"].Equals(senha_original_hash))
             {
-                string passhash_novo = textBox_senha_nova1.Text;
-                string passhash_para_confirmar = textBox_senha_nova2.Text;
+                string senha_nova = textBox_senha_nova1.Text;
+                string senha_para_confirmar = textBox_senha_nova2.Text;
 
-                if (passhash_novo == passhash_para_confirmar)
+                if (senha_nova == senha_para_confirmar)
                 {
-                    usuariosTableAdapter1.UpdatePasshashQuery(passhash_novo, ra_usuario);
+                    string salt_novo = PasswordHasher.GenerateSalt();
+                    string passhash_novo = PasswordHasher.HashPassword(senha_nova, salt_novo);
+
+                    usuariosTableAdapter1.UpdatePasshashQuery(passhash_novo, salt_novo, ra_usuario);
 
                     MessageBox.Show("Senha alterada.", "Alterar senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

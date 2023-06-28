@@ -27,11 +27,13 @@ namespace PI2
         {
             string ra = textBox_ra.Text;
             string nome = textBox_nome.Text;
-            string passhash = textBox_senha.Text;
+            string senha = textBox_senha.Text;
+            string salt = PasswordHasher.GenerateSalt();
+            string passhash = PasswordHasher.HashPassword(senha, salt);
 
             try
             {
-                usuariosTableAdapter1.Insert(ra, nome, passhash);
+                usuariosTableAdapter1.Insert(ra, nome, passhash, salt);
             }
             catch (Exception ex)
             {
