@@ -49,10 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>A37705E4341F1BA1BD9AE48BE399EFDB94EC5209</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9F229D7BF3BC25CE328C8C390EB7649DAC721A31</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>PI2_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>PI2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -228,6 +228,7 @@
     <None Include="packages.config" />
     <None Include="PI2_1_TemporaryKey.pfx" />
     <None Include="PI2_2_TemporaryKey.pfx" />
+    <None Include="PI2_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

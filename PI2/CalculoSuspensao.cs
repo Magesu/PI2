@@ -15,12 +15,15 @@ namespace PI2
                 throw new DivideByZeroException("Não dá pra dividir por 0.");
             }
 
-            double resultado_em_kg_mm, resultado_em_N_m;
+            double f_N, bd_m, sd_m, resultado;
 
-            resultado_em_kg_mm = (f * bd) / sd;
-            resultado_em_N_m = resultado_em_kg_mm * 10 * 1000;
+            f_N = f * 9.81;
+            bd_m = bd / 1000;
+            sd_m = sd / 1000;
 
-            return resultado_em_N_m;
+            resultado = (f_N * bd_m) / sd_m;
+
+            return resultado;
         }
 
         public static double CalcularCursoAngular(double a, double b)
