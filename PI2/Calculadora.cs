@@ -194,5 +194,12 @@ namespace PI2
 
             sobre.Show();
         }
+
+        private void editarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarUsuario editarUsuario = new EditarUsuario(RA_Usuario_Logado);
+
+            editarUsuario.Show();
+        }
     }
 }

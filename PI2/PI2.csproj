@@ -49,10 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>87D07E66873B5D49DFC6A7D5736C424CA54CFA0C</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7AC76E01DF242584CA832D471B661A761E14DAEA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>PI2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>PI2_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -116,6 +116,12 @@
     </Compile>
     <Compile Include="EditarEquipe.Designer.cs">
       <DependentUpon>EditarEquipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="EquipeInfo.cs">
       <SubType>Form</SubType>
@@ -184,6 +190,9 @@
     <EmbeddedResource Include="EditarEquipe.resx">
       <DependentUpon>EditarEquipe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EquipeInfo.resx">
       <DependentUpon>EquipeInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,7 +225,7 @@
       <DependentUpon>calculoSuspensaoDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="PI2_TemporaryKey.pfx" />
+    <None Include="PI2_1_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

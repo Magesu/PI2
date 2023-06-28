@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.carro1 = new PI2.Carro();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_salvar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,7 +49,7 @@
             this.equipesTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.EquipesTableAdapter();
             this.alunosTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.AlunosTableAdapter();
             this.professoresTableAdapter1 = new PI2.calculoSuspensaoDataSetTableAdapters.ProfessoresTableAdapter();
-            this.carro1 = new PI2.Carro();
+            this.editarCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -120,6 +121,22 @@
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
+            // carro1
+            // 
+            this.carro1.BackColor = System.Drawing.Color.Transparent;
+            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.carro1.limite_calculos = 3;
+            this.carro1.Location = new System.Drawing.Point(0, 0);
+            this.carro1.Name = "carro1";
+            this.carro1.Nome = "Calculadora";
+            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
+            this.carro1.Peso_Total = 0D;
+            this.carro1.Rodas_Dianteiras_Assimetricas = false;
+            this.carro1.Rodas_Traseiras_Assimetricas = false;
+            this.carro1.Size = new System.Drawing.Size(702, 440);
+            this.carro1.TabIndex = 0;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
@@ -187,6 +204,7 @@
             // 
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarEquipeToolStripMenuItem,
+            this.editarCadastroToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
@@ -195,14 +213,14 @@
             // criarEquipeToolStripMenuItem
             // 
             this.criarEquipeToolStripMenuItem.Name = "criarEquipeToolStripMenuItem";
-            this.criarEquipeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.criarEquipeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.criarEquipeToolStripMenuItem.Text = "Criar Equipe";
             this.criarEquipeToolStripMenuItem.Click += new System.EventHandler(this.criarEquipeToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -255,21 +273,12 @@
             // 
             this.professoresTableAdapter1.ClearBeforeFill = true;
             // 
-            // carro1
+            // editarCadastroToolStripMenuItem
             // 
-            this.carro1.BackColor = System.Drawing.Color.Transparent;
-            this.carro1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.carro1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.carro1.limite_calculos = 3;
-            this.carro1.Location = new System.Drawing.Point(0, 0);
-            this.carro1.Name = "carro1";
-            this.carro1.Nome = "Calculadora";
-            this.carro1.Padding = new System.Windows.Forms.Padding(5, 0, 7, 0);
-            this.carro1.Peso_Total = 0D;
-            this.carro1.Rodas_Dianteiras_Assimetricas = false;
-            this.carro1.Rodas_Traseiras_Assimetricas = false;
-            this.carro1.Size = new System.Drawing.Size(702, 440);
-            this.carro1.TabIndex = 0;
+            this.editarCadastroToolStripMenuItem.Name = "editarCadastroToolStripMenuItem";
+            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarCadastroToolStripMenuItem.Text = "Editar cadastro";
+            this.editarCadastroToolStripMenuItem.Click += new System.EventHandler(this.editarCadastroToolStripMenuItem_Click);
             // 
             // Calculadora
             // 
@@ -323,5 +332,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private calculoSuspensaoDataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter1;
+        private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem;
     }
 }
