@@ -5,10 +5,10 @@
     <Setting Name="calculoSuspensaoConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=sqlacad-sls.utp.local;Initial Catalog=RA2022179693;User ID=sa;Password=Curitiba@PR&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-RTCVLH9;Initial Catalog=calculoSuspensao;User ID=sa;Password=senhasa@1234&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=sqlacad-sls.utp.local;Initial Catalog=RA2022179693;User ID=sa;Password=Curitiba@PR</Value>
+      <Value Profile="(Default)">Data Source=DESKTOP-RTCVLH9;Initial Catalog=calculoSuspensao;User ID=sa;Password=senhasa@1234</Value>
     </Setting>
   </Settings>
 </SettingsFile>

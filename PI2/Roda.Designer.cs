@@ -109,7 +109,7 @@
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(129, 13);
             label8.TabIndex = 2;
-            label8.Text = "Constante Elástica (N/m)";
+            label8.Text = "Constante Elástica (N)";
             label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
